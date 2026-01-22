@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Unity WebGL Player | Varma Intelligence</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background: #231F20;
+    }
+
+    #unity-canvas {
+      width: 100%;
+      height: 100vh;
+      background: #231F20;
+    }
+
+    #loader {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-family: sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="loader">Loading 3D Model...</div>
+  <canvas id="unity-canvas"></canvas>
+
+  <script src="http://localhost:3001/Web_text/Build/Web_text.loader.js"></script>
+  <script>
+    var canvas = document.querySelector("#unity-canvas");
+    var loader = document.querySelector("#loader");
+    var myUnityInstance = null;
+
+    // Use the dedicated 3001 server for assets to avoid Webpack issues
+    var buildUrl = "http://localhost:3001/Web_text/Build";
+    var streamingUrl = "http://localhost:3001/Web_text/StreamingAssets";
+
+    createUnityInstance(canvas, {
+      dataUrl: buildUrl + "/Web_text.data",
+      frameworkUrl: buildUrl + "/Web_text.framework.js",
+      codeUrl: buildUrl + "/Web_text.wasm",
+      streamingAssetsUrl: streamingUrl,
+      companyName: "DefaultCompany",
+      productName: "Sample1",
+      productVersion: "0.1.0",
+      captureAllKeyboardInput: false // Ensure this is false
+    }).then((unityInstance) => {
+      myUnityInstance = unityInstance;
+      loader.style.display = "none";
+
+      // Double check input capture
+      try {
+        if (unityInstance.Module) {
+          unityInstance.Module.captureAllKeyboardInput = false;
+        }
+      } catch (e) { }
+
+      // Notify parent we are ready
+      window.parent.postMessage({ type: 'UNITY_LOADED' }, '*');
+
+    }).catch((message) => {
+      alert(message);
+    });
+
+    // Listen for messages from React
+    window.addEventListener('message', function (event) {
+      // Validation: verify origin if needed, but for localhost same-origin is fine or '*'
+
+      if (!myUnityInstance) return;
+
+      const data = event.data;
+      if (data.type === 'HighlightPoint') {
+        myUnityInstance.SendMessage('VarmaPointHighlighter', 'HighlightPoint', data.payload);
+      } else if (data.type === 'ClearAllHighlights') {
+        myUnityInstance.SendMessage('VarmaPointHighlighter', 'ClearAllHighlights', '');
+      } else if (data.type === 'SelectPoint') {
+        myUnityInstance.SendMessage('VarmaPointHighlighter', 'SelectPoint', data.payload);
+      } else if (data.type === 'ResetCamera') {
+        myUnityInstance.SendMessage('CameraController', 'ResetCamera', '');
+      }
+    });
+  </script>
+</body>
+
+</html>

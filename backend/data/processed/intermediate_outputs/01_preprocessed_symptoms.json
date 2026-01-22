@@ -1,0 +1,1537 @@
+[
+  {
+    "varma_point_id": "VP001",
+    "varma_point_name": "Utchi_Varmam",
+    "symptom_text_raw": "Loss of head control, headache, delirium, loss of libido, tinnitus, ear pain, abdomen distension, urinary retention, lacrimation, rhinorrhea, tremors, bromhidrosis, general debility, wheezing., Loss of head control",
+    "symptom_tokens": [
+      "loss of head control",
+      "headache",
+      "delirium",
+      "loss of libido",
+      "tinnitus",
+      "ear pain",
+      "abdomen distension",
+      "urinary retention",
+      "lacrimation",
+      "rhinorrhea",
+      "tremors",
+      "bromhidrosis",
+      "general debility",
+      "wheezing",
+      "loss of head control"
+    ]
+  },
+  {
+    "varma_point_id": "VP002",
+    "varma_point_name": "Kondai_Kolli",
+    "symptom_text_raw": "Dyspnoea, tongue retraction, sexual frigidity, convulsion, trismus, ejaculation of sperm, giddiness, red eye, epiphora, amnesia, unconsciousness., Torticollis",
+    "symptom_tokens": [
+      "dyspnoea",
+      "tongue retraction",
+      "sexual frigidity",
+      "convulsion",
+      "trismus",
+      "ejaculation of sperm",
+      "giddiness",
+      "red eye",
+      "epiphora",
+      "amnesia",
+      "unconsciousness",
+      "torticollis"
+    ]
+  },
+  {
+    "varma_point_id": "VP003",
+    "varma_point_name": "Seerungkolli",
+    "symptom_text_raw": "Blepharospasm, trismus, ptyalism, myokymia, lip fasciculation, emesis, cephalalgia, rapid pulsation, mydriasis, ophthalmalgia, otalgia, tongue retraction, kyphosis, hiccups., Hiccups",
+    "symptom_tokens": [
+      "blepharospasm",
+      "trismus",
+      "ptyalism",
+      "myokymia",
+      "lip fasciculation",
+      "emesis",
+      "cephalalgia",
+      "rapid pulsation",
+      "mydriasis",
+      "ophthalmalgia",
+      "otalgia",
+      "tongue retraction",
+      "kyphosis",
+      "hiccups",
+      "hiccups"
+    ]
+  },
+  {
+    "varma_point_id": "VP004",
+    "varma_point_name": "Pidari_Varmam",
+    "symptom_text_raw": "Unexpected stabbing pain which disappear rapidly, neck pain, cephalalgia, emesis, otalgia, limb weakness, tongue protrusion, tachypnea, visual impairment., Tongue protrusion",
+    "symptom_tokens": [
+      "unexpected stabbing pain which disappear rapidly",
+      "neck pain",
+      "cephalalgia",
+      "emesis",
+      "otalgia",
+      "limb weakness",
+      "tongue protrusion",
+      "tachypnea",
+      "visual impairment",
+      "tongue protrusion"
+    ]
+  },
+  {
+    "varma_point_id": "VP005",
+    "varma_point_name": "Suruthi_Varmam",
+    "symptom_text_raw": "Paraesthesia, ophthalmalgia, prostration, vomiting, diminished vision, tinnitus, deafness, trismus, hyperhidrosis, blindness, delirium., Rigor",
+    "symptom_tokens": [
+      "paraesthesia",
+      "ophthalmalgia",
+      "prostration",
+      "vomiting",
+      "diminished vision",
+      "tinnitus",
+      "deafness",
+      "trismus",
+      "hyperhidrosis",
+      "blindness",
+      "delirium",
+      "rigor"
+    ]
+  },
+  {
+    "varma_point_id": "VP006",
+    "varma_point_name": "Porchai_Varmam",
+    "symptom_text_raw": "Red eye, cloudy with low vision, opthalmalgia, otalgia, blepharospasm, trismus, ejaculation of semen, mydriasis, fixed pupil, hyper emesis, blindness, unconsciousness., Supra orbital neuralgia",
+    "symptom_tokens": [
+      "red eye",
+      "cloudy with low vision",
+      "opthalmalgia",
+      "otalgia",
+      "blepharospasm",
+      "trismus",
+      "ejaculation of semen",
+      "mydriasis",
+      "fixed pupil",
+      "hyper emesis",
+      "blindness",
+      "unconsciousness",
+      "supra orbital neuralgia"
+    ]
+  },
+  {
+    "varma_point_id": "VP007",
+    "varma_point_name": "Suzhiyadi_varmam",
+    "symptom_text_raw": "Unable to move upper and lower limb, angular salivation, giddiness, psychiatric illness, erectile dysfunction., Lunacy",
+    "symptom_tokens": [
+      "unable to move upper and lower limb",
+      "angular salivation",
+      "giddiness",
+      "psychiatric illness",
+      "erectile dysfunction",
+      "lunacy"
+    ]
+  },
+  {
+    "varma_point_id": "VP008",
+    "varma_point_name": "Kutri_Varmam",
+    "symptom_text_raw": "Giddiness, trismus, fatigue, loss of hearing, hyperemesis, cephalalgia, mydriasis on the affected side, epistaxis, otalgia, unconsciousness followed by seizure, tachypnea., Lunacy",
+    "symptom_tokens": [
+      "giddiness",
+      "trismus",
+      "fatigue",
+      "loss of hearing",
+      "hyperemesis",
+      "cephalalgia",
+      "mydriasis on the affected side",
+      "epistaxis",
+      "otalgia",
+      "unconsciousness followed by seizure",
+      "tachypnea",
+      "lunacy"
+    ]
+  },
+  {
+    "varma_point_id": "VP009",
+    "varma_point_name": "Sevikuttri_Kaalam",
+    "symptom_text_raw": "Headache, hearing impairment, otalgia, tinnitus, mouth deviation to one side, occipital neuralgia, tongue retracted, rhinorrhea, status epilepticus, akathisia, bluish discoloration of the skin., Epistaxis, haematemesis",
+    "symptom_tokens": [
+      "headache",
+      "hearing impairment",
+      "otalgia",
+      "tinnitus",
+      "mouth deviation to one side",
+      "occipital neuralgia",
+      "tongue retracted",
+      "rhinorrhea",
+      "status epilepticus",
+      "akathisia",
+      "bluish discoloration of the skin",
+      "epistaxis",
+      "haematemesis"
+    ]
+  },
+  {
+    "varma_point_id": "VP010",
+    "varma_point_name": "Poigai_Kaalam",
+    "symptom_text_raw": "Drooling of saliva, dizziness with otalgia, hyperhidrosis, mydriasis, low vision, rapid or irregular heartbeat, cervicalgia, emesis, epilepsy, Impairment of five senses",
+    "symptom_tokens": [
+      "drooling of saliva",
+      "dizziness with otalgia",
+      "hyperhidrosis",
+      "mydriasis",
+      "low vision",
+      "rapid or irregular heartbeat",
+      "cervicalgia",
+      "emesis",
+      "epilepsy",
+      "impairment of five senses"
+    ]
+  },
+  {
+    "varma_point_id": "VP011",
+    "varma_point_name": "Chenni_Varmam",
+    "symptom_text_raw": "Blepharospasm, emesis, trismus, frothy sputum, oral breathing, extreme exhaustion, loss of hearing, absent pulse, confused mental state, muscle spasm, Lock jaw",
+    "symptom_tokens": [
+      "blepharospasm",
+      "emesis",
+      "trismus",
+      "frothy sputum",
+      "oral breathing",
+      "extreme exhaustion",
+      "loss of hearing",
+      "absent pulse",
+      "confused mental state",
+      "muscle spasm",
+      "lock jaw"
+    ]
+  },
+  {
+    "varma_point_id": "VP012",
+    "varma_point_name": "Aasan_Kalam",
+    "symptom_text_raw": "Tinnitus, epiphora, unconsciousness followed by seizure, fever, bleeding from the sense organs (except skin), loss of hearing, hypothermia followed by tremor, red eye, cephalalgia, deviation of mouth., Facial palsy",
+    "symptom_tokens": [
+      "tinnitus",
+      "epiphora",
+      "unconsciousness followed by seizure",
+      "fever",
+      "bleeding from the sense organs  except skin",
+      "loss of hearing",
+      "hypothermia followed by tremor",
+      "red eye",
+      "cephalalgia",
+      "deviation of mouth",
+      "facial palsy"
+    ]
+  },
+  {
+    "varma_point_id": "VP013",
+    "varma_point_name": "Annan_Kalam",
+    "symptom_text_raw": "Hyperhidrosis, tremors, nausea, palpitation, Tremor",
+    "symptom_tokens": [
+      "hyperhidrosis",
+      "tremors",
+      "nausea",
+      "palpitation",
+      "tremor"
+    ]
+  },
+  {
+    "varma_point_id": "VP014",
+    "varma_point_name": "Peruchal_Varmam",
+    "symptom_text_raw": "Heaviness of head, clogged ears, giddiness, Clogged ears",
+    "symptom_tokens": [
+      "heaviness of head",
+      "clogged ears",
+      "giddiness",
+      "clogged ears"
+    ]
+  },
+  {
+    "varma_point_id": "VP015",
+    "varma_point_name": "Thilardha_Varmam",
+    "symptom_text_raw": "Open-mouthed, singultus, ophthalmalgia, otalgia, seizure followed by broncho spasm, mydriasis, ejaculation of semen., Mouth remains opened and look upwards",
+    "symptom_tokens": [
+      "open mouthed",
+      "singultus",
+      "ophthalmalgia",
+      "otalgia",
+      "seizure followed by broncho spasm",
+      "mydriasis",
+      "ejaculation of semen",
+      "mouth remains opened and look upwards"
+    ]
+  },
+  {
+    "varma_point_id": "VP016",
+    "varma_point_name": "Patchi_Varmam",
+    "symptom_text_raw": "Bronchiectasis, bruxism, mydriasis, seizure, hyperhidrosis, epistaxis, akathisia, hyperthermia, trismus, Lock jaw",
+    "symptom_tokens": [
+      "bronchiectasis",
+      "bruxism",
+      "mydriasis",
+      "seizure",
+      "hyperhidrosis",
+      "epistaxis",
+      "akathisia",
+      "hyperthermia",
+      "trismus",
+      "lock jaw"
+    ]
+  },
+  {
+    "varma_point_id": "VP017",
+    "varma_point_name": "Naema_Varmam",
+    "symptom_text_raw": "Dyspnoea, nodding of head, increased kabam, delirium, Nasal blockage",
+    "symptom_tokens": [
+      "dyspnoea",
+      "nodding of head",
+      "increased kabam",
+      "delirium",
+      "nasal blockage"
+    ]
+  },
+  {
+    "varma_point_id": "VP018",
+    "varma_point_name": "Kannadi_Kaalam",
+    "symptom_text_raw": "Nasal congestion, epistaxis, occasionally vomiting, reduced vision, dyspnoea, unconsciousness, hyperhidrosis, hypothermia, mouth deviation, Giddiness",
+    "symptom_tokens": [
+      "nasal congestion",
+      "epistaxis",
+      "occasionally vomiting",
+      "reduced vision",
+      "dyspnoea",
+      "unconsciousness",
+      "hyperhidrosis",
+      "hypothermia",
+      "mouth deviation",
+      "giddiness"
+    ]
+  },
+  {
+    "varma_point_id": "VP019",
+    "varma_point_name": "Paala_Varmam",
+    "symptom_text_raw": "Emesis, epistaxis, blindness, mydriasis, akathisia, unconsciousness, rapid and irregular heartbeat, hyperthermia, stuttering, Swollen tongue",
+    "symptom_tokens": [
+      "emesis",
+      "epistaxis",
+      "blindness",
+      "mydriasis",
+      "akathisia",
+      "unconsciousness",
+      "rapid and irregular heartbeat",
+      "hyperthermia",
+      "stuttering",
+      "swollen tongue"
+    ]
+  },
+  {
+    "varma_point_id": "VP020",
+    "varma_point_name": "Chundigai_Varmam",
+    "symptom_text_raw": "Paraesthesia in face and nose, hyperhidrosis, formication, subconjunctival haemorrhage, titubation, epiphora, rhinorrhoea., Fainting",
+    "symptom_tokens": [
+      "paraesthesia in face and nose",
+      "hyperhidrosis",
+      "formication",
+      "subconjunctival haemorrhage",
+      "titubation",
+      "epiphora",
+      "rhinorrhoea",
+      "fainting"
+    ]
+  },
+  {
+    "varma_point_id": "VP021",
+    "varma_point_name": "Minvetti_Varmam",
+    "symptom_text_raw": "Ophthalmalgia, open- mouthed, hearing impairment, cephalalgia, photophobia, hyperhidrosis, confused mental state, akathisia, unconsciousness, cyanosis., Hearing impairment",
+    "symptom_tokens": [
+      "ophthalmalgia",
+      "open  mouthed",
+      "hearing impairment",
+      "cephalalgia",
+      "photophobia",
+      "hyperhidrosis",
+      "confused mental state",
+      "akathisia",
+      "unconsciousness",
+      "cyanosis",
+      "hearing impairment"
+    ]
+  },
+  {
+    "varma_point_id": "VP022",
+    "varma_point_name": "Manthira_Kaalam",
+    "symptom_text_raw": "Yawning, dyspepsia, hypersomnia, tremor, hyperhidrosis, red eye, abdomen distension, unconsciousness, cephalalgia, otalgia, bruxism, Yawning",
+    "symptom_tokens": [
+      "yawning",
+      "dyspepsia",
+      "hypersomnia",
+      "tremor",
+      "hyperhidrosis",
+      "red eye",
+      "abdomen distension",
+      "unconsciousness",
+      "cephalalgia",
+      "otalgia",
+      "bruxism",
+      "yawning"
+    ]
+  },
+  {
+    "varma_point_id": "VP023",
+    "varma_point_name": "Puruva_Varmam",
+    "symptom_text_raw": "Discoloration of tooth, cephalalgia, supraorbital neuralgia, tenesmus, akathisia, hyperhidrosis, unconsciousness followed by seizure, mydriasis, Discoloration of tooth",
+    "symptom_tokens": [
+      "discoloration of tooth",
+      "cephalalgia",
+      "supraorbital neuralgia",
+      "tenesmus",
+      "akathisia",
+      "hyperhidrosis",
+      "unconsciousness followed by seizure",
+      "mydriasis",
+      "discoloration of tooth"
+    ]
+  },
+  {
+    "varma_point_id": "VP024",
+    "varma_point_name": "NatchathiraP_Varmam",
+    "symptom_text_raw": "Eye floaters, diplophobia, yellow eyes, blepharospasm, emesis followed by hyper hydrosis, hypothermia present in the lateral side of the trunk, discharge of semen and faeces, cephalalgia muscles spasm in the lateral side of the trunk, Yellowish discoloration of eyes",
+    "symptom_tokens": [
+      "eye floaters",
+      "diplophobia",
+      "yellow eyes",
+      "blepharospasm",
+      "emesis followed by hyper hydrosis",
+      "hypothermia present in the lateral side of the trunk",
+      "discharge of semen and faeces",
+      "cephalalgia muscles spasm in the lateral side of the trunk",
+      "yellowish discoloration of eyes"
+    ]
+  },
+  {
+    "varma_point_id": "VP025",
+    "varma_point_name": "Kaamboodhari_Kaalam",
+    "symptom_text_raw": "Paraesthesia, grunting, hyperhidrosis, mydriasis, otalgia, mouth deviation, trismus, rapid or irregular heartbeat, rhinorrhoea, frothy sputum, increased temperature, visual disturbances., Weakness of five sensory organs",
+    "symptom_tokens": [
+      "paraesthesia",
+      "grunting",
+      "hyperhidrosis",
+      "mydriasis",
+      "otalgia",
+      "mouth deviation",
+      "trismus",
+      "rapid or irregular heartbeat",
+      "rhinorrhoea",
+      "frothy sputum",
+      "increased temperature",
+      "visual disturbances",
+      "weakness of five sensory organs"
+    ]
+  },
+  {
+    "varma_point_id": "VP026",
+    "varma_point_name": "Valamoorthi_Varmam",
+    "symptom_text_raw": "Sinus headache, mydriasis, unconsciousness, hyperemesis, tongue chewing, dyspnoea, turning of eyeball toward lateral side, bronchospasm, Rhinorrhoea",
+    "symptom_tokens": [
+      "sinus headache",
+      "mydriasis",
+      "unconsciousness",
+      "hyperemesis",
+      "tongue chewing",
+      "dyspnoea",
+      "turning of eyeball toward lateral side",
+      "bronchospasm",
+      "rhinorrhoea"
+    ]
+  },
+  {
+    "varma_point_id": "VP027",
+    "varma_point_name": "Konasanni_Varmam",
+    "symptom_text_raw": "Excessive thirst, tiredness, sweating of face, Angular deviation of mouth",
+    "symptom_tokens": [
+      "excessive thirst",
+      "tiredness",
+      "sweating of face",
+      "angular deviation of mouth"
+    ]
+  },
+  {
+    "varma_point_id": "VP028",
+    "varma_point_name": "Urakka_Kaalam",
+    "symptom_text_raw": "Giddiness, drowsiness, lock jaw, Sleep with snoring",
+    "symptom_tokens": [
+      "giddiness",
+      "drowsiness",
+      "lock jaw",
+      "sleep with snoring"
+    ]
+  },
+  {
+    "varma_point_id": "VP029",
+    "varma_point_name": "Udhira_Kaalam",
+    "symptom_text_raw": "Asphyxia, gasping, severe prostration, cephalalgia, seizure, tinnitus, dryness of tongue, reduced pulse, Aphasia",
+    "symptom_tokens": [
+      "asphyxia",
+      "gasping",
+      "severe prostration",
+      "cephalalgia",
+      "seizure",
+      "tinnitus",
+      "dryness of tongue",
+      "reduced pulse",
+      "aphasia"
+    ]
+  },
+  {
+    "varma_point_id": "VP030",
+    "varma_point_name": "Ottu_Varmam",
+    "symptom_text_raw": "Pain in the lower jaw, giddiness, rhinorrhoea, Lock jaw",
+    "symptom_tokens": [
+      "pain in the lower jaw",
+      "giddiness",
+      "rhinorrhoea",
+      "lock jaw"
+    ]
+  },
+  {
+    "varma_point_id": "VP031",
+    "varma_point_name": "Sanguthiri_Varmam",
+    "symptom_text_raw": "Extreme tiredness, asphyxia, epiphora, protusion and retrusion of tongue, unconsciousness, singultus, mydriasis, dyspneoa, palpitation, heaviness of abdomen, increased body heat., Neck stiffness",
+    "symptom_tokens": [
+      "extreme tiredness",
+      "asphyxia",
+      "epiphora",
+      "protusion and retrusion of tongue",
+      "unconsciousness",
+      "singultus",
+      "mydriasis",
+      "dyspneoa",
+      "palpitation",
+      "heaviness of abdomen",
+      "increased body heat",
+      "neck stiffness"
+    ]
+  },
+  {
+    "varma_point_id": "VP032",
+    "varma_point_name": "Sumai_Varmam",
+    "symptom_text_raw": "Dysphonia, akathisia, exophthalmos, productive cough, tremor, palpitation, asphyxia, hyperpigmentation of body, running nose, frothing of mouth, productive cough",
+    "symptom_tokens": [
+      "dysphonia",
+      "akathisia",
+      "exophthalmos",
+      "productive cough",
+      "tremor",
+      "palpitation",
+      "asphyxia",
+      "hyperpigmentation of body",
+      "running nose",
+      "frothing of mouth",
+      "productive cough"
+    ]
+  },
+  {
+    "varma_point_id": "VP033",
+    "varma_point_name": "Thummi_Kalam",
+    "symptom_text_raw": "Hyperventilation, frequent sneezing, angular salivation, Fainting",
+    "symptom_tokens": [
+      "hyperventilation",
+      "frequent sneezing",
+      "angular salivation",
+      "fainting"
+    ]
+  },
+  {
+    "varma_point_id": "VP034",
+    "varma_point_name": "Kathir_varmam",
+    "symptom_text_raw": "Exophthalmos, hiccup, giddiness, rigor., Loss of head control",
+    "symptom_tokens": [
+      "exophthalmos",
+      "hiccup",
+      "giddiness",
+      "rigor",
+      "loss of head control"
+    ]
+  },
+  {
+    "varma_point_id": "VP035",
+    "varma_point_name": "Kathirkaama_varmam",
+    "symptom_text_raw": "Shivering with chillness, painful breathing, shortness of breath, sudation, chest pain, fatigue, hyperhidrosis, hypoxic breath, loss of bladder control, tremor and discomfort., Shivering with chillness",
+    "symptom_tokens": [
+      "shivering with chillness",
+      "painful breathing",
+      "shortness of breath",
+      "sudation",
+      "chest pain",
+      "fatigue",
+      "hyperhidrosis",
+      "hypoxic breath",
+      "loss of bladder control",
+      "tremor and discomfort",
+      "shivering with chillness"
+    ]
+  },
+  {
+    "varma_point_id": "VP036",
+    "varma_point_name": "Buththi_varmam",
+    "symptom_text_raw": "Tremor, anxiety, bending the body anteriorly due to asphyxiation and pain, fatigue followed by drowsy, haematemesis, haematuria, bleeding per rectum,  Hypoxia, shortness of breathing, seizure, Haematemesis, haematuria, bleeding per rectum",
+    "symptom_tokens": [
+      "tremor",
+      "anxiety",
+      "bending the body anteriorly due to asphyxiation and pain",
+      "fatigue followed by drowsy",
+      "haematemesis",
+      "haematuria",
+      "bleeding per rectum",
+      "hypoxia",
+      "shortness of breathing",
+      "seizure",
+      "haematemesis",
+      "haematuria",
+      "bleeding per rectum"
+    ]
+  },
+  {
+    "varma_point_id": "VP037",
+    "varma_point_name": "Sakthi_varmam",
+    "symptom_text_raw": "Fatigue, delirium, dyspnoea, fever, unconsciousness, Excessive fatigue",
+    "symptom_tokens": [
+      "fatigue",
+      "delirium",
+      "dyspnoea",
+      "fever",
+      "unconsciousness",
+      "excessive fatigue"
+    ]
+  },
+  {
+    "varma_point_id": "VP038",
+    "varma_point_name": "Koombu_varmam",
+    "symptom_text_raw": "Sense of chocking, chest pain, haematemesis, frailty of lower extremities, frothy mucus, stomach distension, bluish discoloration, convulsion, tighten the lung muscle, excessive sweat, cough with suffocation, anxiety, Cyanosis",
+    "symptom_tokens": [
+      "sense of chocking",
+      "chest pain",
+      "haematemesis",
+      "frailty of lower extremities",
+      "frothy mucus",
+      "stomach distension",
+      "bluish discoloration",
+      "convulsion",
+      "tighten the lung muscle",
+      "excessive sweat",
+      "cough with suffocation",
+      "anxiety",
+      "cyanosis"
+    ]
+  },
+  {
+    "varma_point_id": "VP039",
+    "varma_point_name": "Ner_Varmam",
+    "symptom_text_raw": "Anxiety, feeling excessive heat, bending forward due to pain, palpitation, difficulty in breathing, watery discharge in nose, chest pain, shivering of the body, wide closure of eyes, hematemesis, convulsion, cyanotic face, Cyanosis",
+    "symptom_tokens": [
+      "anxiety",
+      "feeling excessive heat",
+      "bending forward due to pain",
+      "palpitation",
+      "difficulty in breathing",
+      "watery discharge in nose",
+      "chest pain",
+      "shivering of the body",
+      "wide closure of eyes",
+      "hematemesis",
+      "convulsion",
+      "cyanotic face",
+      "cyanosis"
+    ]
+  },
+  {
+    "varma_point_id": "VP040",
+    "varma_point_name": "Aanantha_vayu_Kalam",
+    "symptom_text_raw": "Loss of appetite, gastritis, erectile dysfunction, male and female infertility, Acute abdomen pain",
+    "symptom_tokens": [
+      "loss of appetite",
+      "gastritis",
+      "erectile dysfunction",
+      "male and female infertility",
+      "acute abdomen pain"
+    ]
+  },
+  {
+    "varma_point_id": "VP041",
+    "varma_point_name": "Panri_Varmam",
+    "symptom_text_raw": "Patient noise like grunt, deafness, gasping for breath, palpitation and giddiness., Grunting",
+    "symptom_tokens": [
+      "patient noise like grunt",
+      "deafness",
+      "gasping for breath",
+      "palpitation and giddiness",
+      "grunting"
+    ]
+  },
+  {
+    "varma_point_id": "VP042",
+    "varma_point_name": "Uthara_Kalam",
+    "symptom_text_raw": "Severe abdomen pain, burning micturition, gestataional diabetes., Gestataional diabetes.",
+    "symptom_tokens": [
+      "severe abdomen pain",
+      "burning micturition",
+      "gestataional diabetes",
+      "gestataional diabetes"
+    ]
+  },
+  {
+    "varma_point_id": "VP043",
+    "varma_point_name": "Anna_Kaalam",
+    "symptom_text_raw": "High grade fever, polydipsia, indigestion, fatigue, dizziness, Viyanan will be affected during injury, Excessive thirst",
+    "symptom_tokens": [
+      "high grade fever",
+      "polydipsia",
+      "indigestion",
+      "fatigue",
+      "dizziness",
+      "viyanan will be affected during injury",
+      "excessive thirst"
+    ]
+  },
+  {
+    "varma_point_id": "VP044",
+    "varma_point_name": "Thivalai_Varmam",
+    "symptom_text_raw": "Frothy mucus from mouth, chocking, burning sensation in throat, redness of eye, watery discharge in nose, sweating, appetite, severe sudation, severe cough, convulsion, Burning sensation in throat",
+    "symptom_tokens": [
+      "frothy mucus from mouth",
+      "chocking",
+      "burning sensation in throat",
+      "redness of eye",
+      "watery discharge in nose",
+      "sweating",
+      "appetite",
+      "severe sudation",
+      "severe cough",
+      "convulsion",
+      "burning sensation in throat"
+    ]
+  },
+  {
+    "varma_point_id": "VP045",
+    "varma_point_name": "Thoosiga_Varmam",
+    "symptom_text_raw": "Excessive body heat, haematemesis, convulsion, nervousness, difficulty in breathing, shortness of breathing, Haematemesis",
+    "symptom_tokens": [
+      "excessive body heat",
+      "haematemesis",
+      "convulsion",
+      "nervousness",
+      "difficulty in breathing",
+      "shortness of breathing",
+      "haematemesis"
+    ]
+  },
+  {
+    "varma_point_id": "VP046",
+    "varma_point_name": "Anumar_Varmam",
+    "symptom_text_raw": "Dysarthria, twitching in cheek, bending forward, shivering of extremities, difficulty in breathing, chocking, convulsion., Seizures",
+    "symptom_tokens": [
+      "dysarthria",
+      "twitching in cheek",
+      "bending forward",
+      "shivering of extremities",
+      "difficulty in breathing",
+      "chocking",
+      "convulsion",
+      "seizures"
+    ]
+  },
+  {
+    "varma_point_id": "VP047",
+    "varma_point_name": "Mundellu_Varmam",
+    "symptom_text_raw": "Shortness of breathing, chocking, drippling of urine, pyrexia, convulsion, loose stool, vomiting, anxiety, abdomen discomfort, vomiting",
+    "symptom_tokens": [
+      "shortness of breathing",
+      "chocking",
+      "drippling of urine",
+      "pyrexia",
+      "convulsion",
+      "loose stool",
+      "vomiting",
+      "anxiety",
+      "abdomen discomfort",
+      "vomiting"
+    ]
+  },
+  {
+    "varma_point_id": "VP048",
+    "varma_point_name": "Valiya_Aththi_Surukki_Varmam",
+    "symptom_text_raw": "Stooping forward, cough, pyrexia, rigidity of both extremities, hematemesis, hypogastric pain, bleeding per rectum, vision loss, difficult to walk, fearfulness with anxiety., Flattening of body with bending forward",
+    "symptom_tokens": [
+      "stooping forward",
+      "cough",
+      "pyrexia",
+      "rigidity of both extremities",
+      "hematemesis",
+      "hypogastric pain",
+      "bleeding per rectum",
+      "vision loss",
+      "difficult to walk",
+      "fearfulness with anxiety",
+      "flattening of body with bending forward"
+    ]
+  },
+  {
+    "varma_point_id": "VP049",
+    "varma_point_name": "Siriya_Aththi_Surukki Varmam",
+    "symptom_text_raw": "Stooping forward, cough, pyrexia, rigidity of both extremities, hematemesis, hypogastric pain, bleeding per rectum, vision loss, difficult to walk, fearfulness with anxiety, Shortening of body with bending forward",
+    "symptom_tokens": [
+      "stooping forward",
+      "cough",
+      "pyrexia",
+      "rigidity of both extremities",
+      "hematemesis",
+      "hypogastric pain",
+      "bleeding per rectum",
+      "vision loss",
+      "difficult to walk",
+      "fearfulness with anxiety",
+      "shortening of body with bending forward"
+    ]
+  },
+  {
+    "varma_point_id": "VP050",
+    "varma_point_name": "Mun_Saruthi_Varmam",
+    "symptom_text_raw": "Pain, delirium, fever, swelling present in all over the body, Anasarca",
+    "symptom_tokens": [
+      "pain",
+      "delirium",
+      "fever",
+      "swelling present in all over the body",
+      "anasarca"
+    ]
+  },
+  {
+    "varma_point_id": "VP051",
+    "varma_point_name": "Pallai_Varmam",
+    "symptom_text_raw": "Body pain, emaciation, gastritis, pain and strain in the paravertebral muscle, Emaciation",
+    "symptom_tokens": [
+      "body pain",
+      "emaciation",
+      "gastritis",
+      "pain and strain in the paravertebral muscle",
+      "emaciation"
+    ]
+  },
+  {
+    "varma_point_id": "VP052",
+    "varma_point_name": "Adappa_Kalam",
+    "symptom_text_raw": "Excessive Sweating, anxiety, shortness of breathing, cyanosis, bluish discoloration of eyes and teeth, rigidity of both limb, abdomen pain, disability to lie down due to pain, Bluish discoloration of eyes and teeth",
+    "symptom_tokens": [
+      "excessive sweating",
+      "anxiety",
+      "shortness of breathing",
+      "cyanosis",
+      "bluish discoloration of eyes and teeth",
+      "rigidity of both limb",
+      "abdomen pain",
+      "disability to lie down due to pain",
+      "bluish discoloration of eyes and teeth"
+    ]
+  },
+  {
+    "varma_point_id": "VP053",
+    "varma_point_name": "Vilangu_Varmam",
+    "symptom_text_raw": "Spasm of vertebral muscle, difficulty to raise upper limb, frequent spasm, Difficulty to raise upper limb",
+    "symptom_tokens": [
+      "spasm of vertebral muscle",
+      "difficulty to raise upper limb",
+      "frequent spasm",
+      "difficulty to raise upper limb"
+    ]
+  },
+  {
+    "varma_point_id": "VP054",
+    "varma_point_name": "Asthikanthari_Varmam",
+    "symptom_text_raw": "Nausea, hiccups, cough and cold, sleepiness, pain in both upper limbs, head ache, thrombus formation inside the blood vessels, weakness of sensory organs, nan",
+    "symptom_tokens": [
+      "nausea",
+      "hiccups",
+      "cough and cold",
+      "sleepiness",
+      "pain in both upper limbs",
+      "head ache",
+      "thrombus formation inside the blood vessels",
+      "weakness of sensory organs",
+      "nan"
+    ]
+  },
+  {
+    "varma_point_id": "VP055",
+    "varma_point_name": "Puja_Varmam",
+    "symptom_text_raw": "Paresthesia in the arm, swelling in the shoulder, unable to lift the arm in the erect posture, pain radiate to vertebral column, dislocation of shoulder joint, tingling sensation in the upper limbs., Unable to lift the arm in the erect posture",
+    "symptom_tokens": [
+      "paresthesia in the arm",
+      "swelling in the shoulder",
+      "unable to lift the arm in the erect posture",
+      "pain radiate to vertebral column",
+      "dislocation of shoulder joint",
+      "tingling sensation in the upper limbs",
+      "unable to lift the arm in the erect posture"
+    ]
+  },
+  {
+    "varma_point_id": "VP056",
+    "varma_point_name": "Pirathaarai_Varmam",
+    "symptom_text_raw": "Neck pain, shoulder pain, throat pain, weakness of upper limb, unconsciousness, Unable to lift the arm in the erect posture",
+    "symptom_tokens": [
+      "neck pain",
+      "shoulder pain",
+      "throat pain",
+      "weakness of upper limb",
+      "unconsciousness",
+      "unable to lift the arm in the erect posture"
+    ]
+  },
+  {
+    "varma_point_id": "VP057",
+    "varma_point_name": "Aendhi_Varmam",
+    "symptom_text_raw": "Weakness of upper limb, tremors, hearing impairment, swelling of upper limb, hiccups, delirium, Weakness of upper limb",
+    "symptom_tokens": [
+      "weakness of upper limb",
+      "tremors",
+      "hearing impairment",
+      "swelling of upper limb",
+      "hiccups",
+      "delirium",
+      "weakness of upper limb"
+    ]
+  },
+  {
+    "varma_point_id": "VP058",
+    "varma_point_name": "Kutthu_Varmam",
+    "symptom_text_raw": "Shivering of the body, nausea, nan",
+    "symptom_tokens": [
+      "shivering of the body",
+      "nausea",
+      "nan"
+    ]
+  },
+  {
+    "varma_point_id": "VP059",
+    "varma_point_name": "Asavu_Varmam",
+    "symptom_text_raw": "Tiredness, swelling, chillness, delirium., Swelling of arm",
+    "symptom_tokens": [
+      "tiredness",
+      "swelling",
+      "chillness",
+      "delirium",
+      "swelling of arm"
+    ]
+  },
+  {
+    "varma_point_id": "VP060",
+    "varma_point_name": "Koachu_Varmam",
+    "symptom_text_raw": "Paresthesia in the upper limb, weakness in the extremities, seizure, unconsciousness, chillness with fever, Swelling of arm",
+    "symptom_tokens": [
+      "paresthesia in the upper limb",
+      "weakness in the extremities",
+      "seizure",
+      "unconsciousness",
+      "chillness with fever",
+      "swelling of arm"
+    ]
+  },
+  {
+    "varma_point_id": "VP061",
+    "varma_point_name": "Kaimootu_Varmam",
+    "symptom_text_raw": "Pain and swelling in the elbow joint, fatigue, paresthesia in the limbs, tingling sensation, neuralgia, Swelling in hand",
+    "symptom_tokens": [
+      "pain and swelling in the elbow joint",
+      "fatigue",
+      "paresthesia in the limbs",
+      "tingling sensation",
+      "neuralgia",
+      "swelling in hand"
+    ]
+  },
+  {
+    "varma_point_id": "VP062",
+    "varma_point_name": "Mudakku_Varmam",
+    "symptom_text_raw": "Swelling in hand, paresthesia in the upper limb, Swelling in hand",
+    "symptom_tokens": [
+      "swelling in hand",
+      "paresthesia in the upper limb",
+      "swelling in hand"
+    ]
+  },
+  {
+    "varma_point_id": "VP063",
+    "varma_point_name": "Visha_Manibantha_Varmam",
+    "symptom_text_raw": "Pain in the forearm and elbow, headache, chest pain, Pain in the forearm",
+    "symptom_tokens": [
+      "pain in the forearm and elbow",
+      "headache",
+      "chest pain",
+      "pain in the forearm"
+    ]
+  },
+  {
+    "varma_point_id": "VP064",
+    "varma_point_name": "Manibantha_Varmam",
+    "symptom_text_raw": "Coldness of the body, sharp pain with oppressiveness, agonizing pain, unconsciousness, seizure, rigidity may occur, Wrist swelling",
+    "symptom_tokens": [
+      "coldness of the body",
+      "sharp pain with oppressiveness",
+      "agonizing pain",
+      "unconsciousness",
+      "seizure",
+      "rigidity may occur",
+      "wrist swelling"
+    ]
+  },
+  {
+    "varma_point_id": "VP065",
+    "varma_point_name": "Thuthikkai_Varmam",
+    "symptom_text_raw": "Stiffness of wrist joint, neck pain, Wrist swelling",
+    "symptom_tokens": [
+      "stiffness of wrist joint",
+      "neck pain",
+      "wrist swelling"
+    ]
+  },
+  {
+    "varma_point_id": "VP066",
+    "varma_point_name": "Ullangai_Vellai_Varmam",
+    "symptom_text_raw": "Pinching pain, sweat with uneasiness and hunger, frigidity with pyrexia, tremor, impaired vision, aching pain extended upwards, swelling in the back of the palm., swelling in the back of the palm.",
+    "symptom_tokens": [
+      "pinching pain",
+      "sweat with uneasiness and hunger",
+      "frigidity with pyrexia",
+      "tremor",
+      "impaired vision",
+      "aching pain extended upwards",
+      "swelling in the back of the palm",
+      "swelling in the back of the palm"
+    ]
+  },
+  {
+    "varma_point_id": "VP067",
+    "varma_point_name": "Aanthai_Varmam",
+    "symptom_text_raw": "Tiredness, swelling, intense pain, Swelling of palm",
+    "symptom_tokens": [
+      "tiredness",
+      "swelling",
+      "intense pain",
+      "swelling of palm"
+    ]
+  },
+  {
+    "varma_point_id": "VP068",
+    "varma_point_name": "Thatchanai_Kaalam",
+    "symptom_text_raw": "Indigestion, chillness of the body, delirium, epilepsy, Epilepsy",
+    "symptom_tokens": [
+      "indigestion",
+      "chillness of the body",
+      "delirium",
+      "epilepsy",
+      "epilepsy"
+    ]
+  },
+  {
+    "varma_point_id": "VP069",
+    "varma_point_name": "Choondothari_Varmam",
+    "symptom_text_raw": "Generalized edema, delirium, Pain in dorsum of hand",
+    "symptom_tokens": [
+      "generalized edema",
+      "delirium",
+      "pain in dorsum of hand"
+    ]
+  },
+  {
+    "varma_point_id": "VP070",
+    "varma_point_name": "Chundothari Varmam",
+    "symptom_text_raw": "Swelling, tiredness, Swelling of palm",
+    "symptom_tokens": [
+      "swelling",
+      "tiredness",
+      "swelling of palm"
+    ]
+  },
+  {
+    "varma_point_id": "VP071",
+    "varma_point_name": "Kavuli_Kaalam",
+    "symptom_text_raw": "Excruciating pain, febrile, in the later stage joint inflammation may follow, swelling and anxiety, seizure, Pain in the thumb",
+    "symptom_tokens": [
+      "excruciating pain",
+      "febrile",
+      "in the later stage joint inflammation may follow",
+      "swelling and anxiety",
+      "seizure",
+      "pain in the thumb"
+    ]
+  },
+  {
+    "varma_point_id": "VP072",
+    "varma_point_name": "Kakkattai_Kaalam",
+    "symptom_text_raw": "Retraction of tongue, hoarseness of voice, quadriplegia, convulsion, aphasia, grumbling of teeth, tremor, palpitation, stomach disturbance., Painful neck movements",
+    "symptom_tokens": [
+      "retraction of tongue",
+      "hoarseness of voice",
+      "quadriplegia",
+      "convulsion",
+      "aphasia",
+      "grumbling of teeth",
+      "tremor",
+      "palpitation",
+      "stomach disturbance",
+      "painful neck movements"
+    ]
+  },
+  {
+    "varma_point_id": "VP073",
+    "varma_point_name": "Kaisuzhukki_Varmam",
+    "symptom_text_raw": "Sprain in the middle finger, dull ache in hands, numbness, Flexion deformity of middle finger",
+    "symptom_tokens": [
+      "sprain in the middle finger",
+      "dull ache in hands",
+      "numbness",
+      "flexion deformity of middle finger"
+    ]
+  },
+  {
+    "varma_point_id": "VP074",
+    "varma_point_name": "Chippi_Varmam",
+    "symptom_text_raw": "Cough, cold, seizures, peri-arthritis shoulder, indigestion., Difficulty in abduction of upper limb",
+    "symptom_tokens": [
+      "cough",
+      "cold",
+      "seizures",
+      "peri arthritis shoulder",
+      "indigestion",
+      "difficulty in abduction of upper limb"
+    ]
+  },
+  {
+    "varma_point_id": "VP075",
+    "varma_point_name": "Sadapira_Varmam",
+    "symptom_text_raw": "Polyarthralgia, abdominal distension, unconsciousness, Opened - eye lid",
+    "symptom_tokens": [
+      "polyarthralgia",
+      "abdominal distension",
+      "unconsciousness",
+      "opened   eye lid"
+    ]
+  },
+  {
+    "varma_point_id": "VP076",
+    "varma_point_name": "Kaikatti_Kaalam",
+    "symptom_text_raw": "Shoulder pain with swelling, difficulty in movements of shoulder, numbness of hands, Difficulty in abduction of upper limb.",
+    "symptom_tokens": [
+      "shoulder pain with swelling",
+      "difficulty in movements of shoulder",
+      "numbness of hands",
+      "difficulty in abduction of upper limb"
+    ]
+  },
+  {
+    "varma_point_id": "VP077",
+    "varma_point_name": "Thumbi_Varmam",
+    "symptom_text_raw": "Cough, palpitation, nausea, constipation, kyphosis, skin diseases, Skin diseases – 18 kuttam",
+    "symptom_tokens": [
+      "cough",
+      "palpitation",
+      "nausea",
+      "constipation",
+      "kyphosis",
+      "skin diseases",
+      "skin diseases   18 kuttam"
+    ]
+  },
+  {
+    "varma_point_id": "VP078",
+    "varma_point_name": "Natellu_Varmam",
+    "symptom_text_raw": "Nasal block, kyphosis, tremor, fatigue, pain around the hip region, pain present while standing upright posture, Mid thoracic pain",
+    "symptom_tokens": [
+      "nasal block",
+      "kyphosis",
+      "tremor",
+      "fatigue",
+      "pain around the hip region",
+      "pain present while standing upright posture",
+      "mid thoracic pain"
+    ]
+  },
+  {
+    "varma_point_id": "VP079",
+    "varma_point_name": "Kachai_Varmam",
+    "symptom_text_raw": "Abdomen distension, constipation, low back pain, anuria, loss of appetite, paraplegia, Kora vatham (low back pain)",
+    "symptom_tokens": [
+      "abdomen distension",
+      "constipation",
+      "low back pain",
+      "anuria",
+      "loss of appetite",
+      "paraplegia",
+      "kora vatham  low back pain"
+    ]
+  },
+  {
+    "varma_point_id": "VP080",
+    "varma_point_name": "Poonool_Varmam",
+    "symptom_text_raw": "Fever, rigor, profuse sweating, general weakness, loss of appetite, abdominal distension, breathlessness, Malfunctioning of Thasavayu",
+    "symptom_tokens": [
+      "fever",
+      "rigor",
+      "profuse sweating",
+      "general weakness",
+      "loss of appetite",
+      "abdominal distension",
+      "breathlessness",
+      "malfunctioning of thasavayu"
+    ]
+  },
+  {
+    "varma_point_id": "VP081",
+    "varma_point_name": "Vayu_Varmam",
+    "symptom_text_raw": "Pain, inability to walk, unconsciousness, Difficulty in walking",
+    "symptom_tokens": [
+      "pain",
+      "inability to walk",
+      "unconsciousness",
+      "difficulty in walking"
+    ]
+  },
+  {
+    "varma_point_id": "VP082",
+    "varma_point_name": "Pitthukai_Varmam",
+    "symptom_text_raw": "Abdomen distension, low back pain, Low back pain",
+    "symptom_tokens": [
+      "abdomen distension",
+      "low back pain",
+      "low back pain"
+    ]
+  },
+  {
+    "varma_point_id": "VP083",
+    "varma_point_name": "Pinnal_Varmam",
+    "symptom_text_raw": "Anuria, severe constipation, Anuria",
+    "symptom_tokens": [
+      "anuria",
+      "severe constipation",
+      "anuria"
+    ]
+  },
+  {
+    "varma_point_id": "VP084",
+    "varma_point_name": "Nanganapootu",
+    "symptom_text_raw": "Dribbling of urine, loss of sensation of both lower limbs, constipation, loss of sensation of both lower limbs",
+    "symptom_tokens": [
+      "dribbling of urine",
+      "loss of sensation of both lower limbs",
+      "constipation",
+      "loss of sensation of both lower limbs"
+    ]
+  },
+  {
+    "varma_point_id": "VP085",
+    "varma_point_name": "Moothira_Kalam",
+    "symptom_text_raw": "Pain, dribbling of urine, abnormal condition of bladder, Dribbling of urine",
+    "symptom_tokens": [
+      "pain",
+      "dribbling of urine",
+      "abnormal condition of bladder",
+      "dribbling of urine"
+    ]
+  },
+  {
+    "varma_point_id": "VP086",
+    "varma_point_name": "Kallidai_Kaalam",
+    "symptom_text_raw": "Rigor, perspiration, angular salivation, retraction of testis, Excessive fatigue",
+    "symptom_tokens": [
+      "rigor",
+      "perspiration",
+      "angular salivation",
+      "retraction of testis",
+      "excessive fatigue"
+    ]
+  },
+  {
+    "varma_point_id": "VP087",
+    "varma_point_name": "Vellurumi&Vallurumi_Varmam",
+    "symptom_text_raw": "Spasmodic pain, scrotal swelling, hypogastric pain, delirium, giddiness, may behave like psychiatric person, Loss of libido",
+    "symptom_tokens": [
+      "spasmodic pain",
+      "scrotal swelling",
+      "hypogastric pain",
+      "delirium",
+      "giddiness",
+      "may behave like psychiatric person",
+      "loss of libido"
+    ]
+  },
+  {
+    "varma_point_id": "VP088",
+    "varma_point_name": "Valampuri_Kaalam",
+    "symptom_text_raw": "Weakness of both lower limb, hypogastric pain, anaemia, constipation, retention of urine and feces, Weakness of both lower limbs",
+    "symptom_tokens": [
+      "weakness of both lower limb",
+      "hypogastric pain",
+      "anaemia",
+      "constipation",
+      "retention of urine and feces",
+      "weakness of both lower limbs"
+    ]
+  },
+  {
+    "varma_point_id": "VP089",
+    "varma_point_name": "Idampuri_Kaalam",
+    "symptom_text_raw": "Pain and swelling of penis due to retention of urine, obstructed feeling during micturition, burning micturition, anal pain, abdominal distension., Anal pain",
+    "symptom_tokens": [
+      "pain and swelling of penis due to retention of urine",
+      "obstructed feeling during micturition",
+      "burning micturition",
+      "anal pain",
+      "abdominal distension",
+      "anal pain"
+    ]
+  },
+  {
+    "varma_point_id": "VP090",
+    "varma_point_name": "Thandu_Varmam",
+    "symptom_text_raw": "Anasarca, dyspnoea, rectal prolapse, Rectal prolapse",
+    "symptom_tokens": [
+      "anasarca",
+      "dyspnoea",
+      "rectal prolapse",
+      "rectal prolapse"
+    ]
+  },
+  {
+    "varma_point_id": "VP091",
+    "varma_point_name": "Ani_Varmam",
+    "symptom_text_raw": "Low back pain, weakness of both lower limbs., Rectal prolapse",
+    "symptom_tokens": [
+      "low back pain",
+      "weakness of both lower limbs",
+      "rectal prolapse"
+    ]
+  },
+  {
+    "varma_point_id": "VP092",
+    "varma_point_name": "AndaKalam",
+    "symptom_text_raw": "Body pain, bleeding piles, anuria, rectal prolapse, Painful defaecation",
+    "symptom_tokens": [
+      "body pain",
+      "bleeding piles",
+      "anuria",
+      "rectal prolapse",
+      "painful defaecation"
+    ]
+  },
+  {
+    "varma_point_id": "VP093",
+    "varma_point_name": "Urumi_Varmam",
+    "symptom_text_raw": "Difficulty to walk, severe pain and swelling in lower limb, weakness of the body., Weakness of lower limb",
+    "symptom_tokens": [
+      "difficulty to walk",
+      "severe pain and swelling in lower limb",
+      "weakness of the body",
+      "weakness of lower limb"
+    ]
+  },
+  {
+    "varma_point_id": "VP094",
+    "varma_point_name": "Aamai_Varmam",
+    "symptom_text_raw": "Unbearable pain, difficult to move the affected limb, tortuosity of veins of lower limb, increased thirst, fatigue, blurred vision, increased sweat, weakness, seizure, tremor, palpitation, dyspnoea., Difficulty to walk",
+    "symptom_tokens": [
+      "unbearable pain",
+      "difficult to move the affected limb",
+      "tortuosity of veins of lower limb",
+      "increased thirst",
+      "fatigue",
+      "blurred vision",
+      "increased sweat",
+      "weakness",
+      "seizure",
+      "tremor",
+      "palpitation",
+      "dyspnoea",
+      "difficulty to walk"
+    ]
+  },
+  {
+    "varma_point_id": "VP095",
+    "varma_point_name": "Kaalmoottu_varmam",
+    "symptom_text_raw": "Unbearable pain, extreme tiredness, seizure, increased sweat, increased thirst, pyrexia with chillness, Difficulty in walking",
+    "symptom_tokens": [
+      "unbearable pain",
+      "extreme tiredness",
+      "seizure",
+      "increased sweat",
+      "increased thirst",
+      "pyrexia with chillness",
+      "difficulty in walking"
+    ]
+  },
+  {
+    "varma_point_id": "VP096",
+    "varma_point_name": "Naaithalai_Varmam",
+    "symptom_text_raw": "Difficulty in flexion, extension and squatting of knee joint, leg sprain, swelling of knee joint, paraesthesia of legs., Swelling of knee joint",
+    "symptom_tokens": [
+      "difficulty in flexion",
+      "extension and squatting of knee joint",
+      "leg sprain",
+      "swelling of knee joint",
+      "paraesthesia of legs",
+      "swelling of knee joint"
+    ]
+  },
+  {
+    "varma_point_id": "VP097",
+    "varma_point_name": "Kuthirai_Muga_Varmam",
+    "symptom_text_raw": "Unbearable pain and perspiration, tremor, fatigue and seizure, pyrexia, uncontrollable thirst, sudden fall in the flow of Saram., Non-healing tropic ulcer",
+    "symptom_tokens": [
+      "unbearable pain and perspiration",
+      "tremor",
+      "fatigue and seizure",
+      "pyrexia",
+      "uncontrollable thirst",
+      "sudden fall in the flow of saram",
+      "non healing tropic ulcer"
+    ]
+  },
+  {
+    "varma_point_id": "VP098",
+    "varma_point_name": "Komberi_Varmam",
+    "symptom_text_raw": "Tremor in the extremities, unbearable pain, and cry loudly, increased perspiration,fatigue, convulsion, Seizures",
+    "symptom_tokens": [
+      "tremor in the extremities",
+      "unbearable pain",
+      "and cry loudly",
+      "increased perspiration",
+      "fatigue",
+      "convulsion",
+      "seizures"
+    ]
+  },
+  {
+    "varma_point_id": "VP099",
+    "varma_point_name": "Kuthi_Kaal_Varmam",
+    "symptom_text_raw": "Angular deviation, delirium, reduced anthropometric measurement, Delirium",
+    "symptom_tokens": [
+      "angular deviation",
+      "delirium",
+      "reduced anthropometric measurement",
+      "delirium"
+    ]
+  },
+  {
+    "varma_point_id": "VP100",
+    "varma_point_name": "Kaalkulatchu_Varmam",
+    "symptom_text_raw": "Fatigue with unconsciousness followed by tremor, difficulty to walk, seizure, paraesthesia., Fatigue",
+    "symptom_tokens": [
+      "fatigue with unconsciousness followed by tremor",
+      "difficulty to walk",
+      "seizure",
+      "paraesthesia",
+      "fatigue"
+    ]
+  },
+  {
+    "varma_point_id": "VP101",
+    "varma_point_name": "Uppu_Kuthi_Varmam",
+    "symptom_text_raw": "Calcaneal pain, difficulty to walk, weakness, unconsciousness, Pain in the heel",
+    "symptom_tokens": [
+      "calcaneal pain",
+      "difficulty to walk",
+      "weakness",
+      "unconsciousness",
+      "pain in the heel"
+    ]
+  },
+  {
+    "varma_point_id": "VP102",
+    "varma_point_name": "Kan_Pugaichal_Varmam",
+    "symptom_text_raw": "Excruciating pain, swelling in the dorsum of foot, debility in all limbs, unconsciousness followed by seizure, frigidity, pyrexia with fatigue, Burning sensation of eyes.",
+    "symptom_tokens": [
+      "excruciating pain",
+      "swelling in the dorsum of foot",
+      "debility in all limbs",
+      "unconsciousness followed by seizure",
+      "frigidity",
+      "pyrexia with fatigue",
+      "burning sensation of eyes"
+    ]
+  },
+  {
+    "varma_point_id": "VP103",
+    "varma_point_name": "Konasanni_Varmam",
+    "symptom_text_raw": "Angular deviation, delirium, reduced anthropometric measurement, Delirium",
+    "symptom_tokens": [
+      "angular deviation",
+      "delirium",
+      "reduced anthropometric measurement",
+      "delirium"
+    ]
+  },
+  {
+    "varma_point_id": "VP104",
+    "varma_point_name": "Pada_Varmam",
+    "symptom_text_raw": "Excruciating pain, swelling in the dorsum of foot, debility in all limbs, unconsciousness followed by seizure, non-healing ulcer, frigidity, pyrexia with fatigue, Pedal oedema",
+    "symptom_tokens": [
+      "excruciating pain",
+      "swelling in the dorsum of foot",
+      "debility in all limbs",
+      "unconsciousness followed by seizure",
+      "non healing ulcer",
+      "frigidity",
+      "pyrexia with fatigue",
+      "pedal oedema"
+    ]
+  },
+  {
+    "varma_point_id": "VP105",
+    "varma_point_name": "Choondigai_Varmam",
+    "symptom_text_raw": "Fatigue with unconsciousness, fatigue with tremor, paraesthesia, swelling in the dorsum of foot, seizure with coldness., Paraesthesia",
+    "symptom_tokens": [
+      "fatigue with unconsciousness",
+      "fatigue with tremor",
+      "paraesthesia",
+      "swelling in the dorsum of foot",
+      "seizure with coldness",
+      "paraesthesia"
+    ]
+  },
+  {
+    "varma_point_id": "VP106",
+    "varma_point_name": "Kundothari_Varmam",
+    "symptom_text_raw": "Swelling, tiredness, Excessive tiredness",
+    "symptom_tokens": [
+      "swelling",
+      "tiredness",
+      "excessive tiredness"
+    ]
+  },
+  {
+    "varma_point_id": "VP107",
+    "varma_point_name": "Viruthi_Kaalam",
+    "symptom_text_raw": "Increased warmth, seizure may occur, weakness of limbs., seizure",
+    "symptom_tokens": [
+      "increased warmth",
+      "seizure may occur",
+      "weakness of limbs",
+      "seizure"
+    ]
+  },
+  {
+    "varma_point_id": "VP108",
+    "varma_point_name": "Ullankaal_Vellai_Varmam",
+    "symptom_text_raw": "Fatigue, pain in lower limbs, dyspnoea, unconsciousness, bloating of abdomen, difficulty in micturition and defaecation, weakness of lower limb, seizure., lower limb weakness",
+    "symptom_tokens": [
+      "fatigue",
+      "pain in lower limbs",
+      "dyspnoea",
+      "unconsciousness",
+      "bloating of abdomen",
+      "difficulty in micturition and defaecation",
+      "weakness of lower limb",
+      "seizure",
+      "lower limb weakness"
+    ]
+  }
+]
