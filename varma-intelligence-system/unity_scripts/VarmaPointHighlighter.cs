@@ -23,6 +23,13 @@ public class VarmaPointHighlighter : MonoBehaviour
         }
     }
 
+    // Helper class for JSON parsing arrays
+    [System.Serializable]
+    public class PointList
+    {
+        public string[] points;
+    }
+
     // Called from React: "HighlightPoint"
     public void HighlightPoint(string pointName)
     {
@@ -34,11 +41,44 @@ public class VarmaPointHighlighter : MonoBehaviour
             {
                 r.material = highlightMaterial;
             }
-            // Optional: Move camera to look at point?
         }
         else
         {
             Debug.LogWarning("Varma Point not found: " + pointName);
+        }
+    }
+
+    // Called from React: "HighlightPointsList" - JSON payload: { "points": ["name1", "name2"] }
+    public void HighlightPointsList(string jsonList)
+    {
+        try
+        {
+            PointList list = JsonUtility.FromJson<PointList>(jsonList);
+            if (list == null || list.points == null) return;
+
+            HashSet<string> activePoints = new HashSet<string>(list.points);
+
+            foreach (var kvp in varmaPoints)
+            {
+                Renderer r = kvp.Value.GetComponent<Renderer>();
+                if (r != null)
+                {
+                    // Check if this point name is in our list (case-insensitive if needed, but dict is usually strict)
+                    // You might want to normalize names here if needed.
+                    if (activePoints.Contains(kvp.Key))
+                    {
+                        r.material = highlightMaterial;
+                    }
+                    else
+                    {
+                        r.material = defaultMaterial;
+                    }
+                }
+            }
+        }
+        catch (System.Exception e)
+        {
+            Debug.LogError("Error parsing point list: " + e.Message);
         }
     }
 
@@ -58,7 +98,7 @@ public class VarmaPointHighlighter : MonoBehaviour
     // Called from React: "SelectPoint"
     public void SelectPoint(string pointName)
     {
+        // Don't clear others, just highlight this one (or handle differently)
         HighlightPoint(pointName);
-        // Add zoom logic here if needed
     }
 }

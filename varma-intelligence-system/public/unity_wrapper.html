@@ -80,6 +80,8 @@
       const data = event.data;
       if (data.type === 'HighlightPoint') {
         myUnityInstance.SendMessage('VarmaPointHighlighter', 'HighlightPoint', data.payload);
+      } else if (data.type === 'HighlightPointsList') {
+        myUnityInstance.SendMessage('VarmaPointHighlighter', 'HighlightPointsList', data.payload);
       } else if (data.type === 'ClearAllHighlights') {
         myUnityInstance.SendMessage('VarmaPointHighlighter', 'ClearAllHighlights', '');
       } else if (data.type === 'SelectPoint') {

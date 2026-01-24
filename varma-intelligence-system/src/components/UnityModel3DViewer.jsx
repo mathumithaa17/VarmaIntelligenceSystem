@@ -33,13 +33,18 @@ const UnityModel3DViewer = ({ isExpanded, highlightedPoints = [], selectedPoint,
 
   // Handle highlighted points
   useEffect(() => {
-    if (iframeLoaded && highlightedPoints.length > 0) {
-      highlightedPoints.forEach(point => {
-        const pointName = point.unity_name || point.name;
-        sendToUnity('HighlightPoint', pointName);
-      });
-    } else if (iframeLoaded && highlightedPoints.length === 0) {
-      sendToUnity('ClearAllHighlights', '');
+    if (iframeLoaded) {
+      if (highlightedPoints.length > 0) {
+        // Prepare list of names
+        const names = highlightedPoints.map(p => p.unity_name || p.name);
+        // Create JSON payload matching C# PointList class
+        const jsonPayload = JSON.stringify({ points: names });
+
+        sendToUnity('HighlightPointsList', jsonPayload);
+      } else {
+        // If empty, clear everything (though HighlightPointsList would also clear if sent empty list, this is explicit)
+        sendToUnity('ClearAllHighlights', '');
+      }
     }
   }, [highlightedPoints, iframeLoaded]);
 
