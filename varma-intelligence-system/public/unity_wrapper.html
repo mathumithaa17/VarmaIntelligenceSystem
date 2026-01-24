@@ -79,13 +79,13 @@
 
       const data = event.data;
       if (data.type === 'HighlightPoint') {
-        myUnityInstance.SendMessage('VarmaPointHighlighter', 'HighlightPoint', data.payload);
+        myUnityInstance.SendMessage('VarmaManager', 'HighlightPoint', data.payload);
       } else if (data.type === 'HighlightPointsList') {
-        myUnityInstance.SendMessage('VarmaPointHighlighter', 'HighlightPointsList', data.payload);
+        myUnityInstance.SendMessage('VarmaManager', 'HighlightPointsList', data.payload);
       } else if (data.type === 'ClearAllHighlights') {
-        myUnityInstance.SendMessage('VarmaPointHighlighter', 'ClearAllHighlights', '');
+        myUnityInstance.SendMessage('VarmaManager', 'ClearAllHighlights', '');
       } else if (data.type === 'SelectPoint') {
-        myUnityInstance.SendMessage('VarmaPointHighlighter', 'SelectPoint', data.payload);
+        myUnityInstance.SendMessage('VarmaManager', 'SelectPoint', data.payload);
       } else if (data.type === 'ResetCamera') {
         myUnityInstance.SendMessage('CameraController', 'ResetCamera', '');
       }
