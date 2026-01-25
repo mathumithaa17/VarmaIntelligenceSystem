@@ -19,7 +19,7 @@ const LandingView = () => {
         {/* Hero Section */}
         <div className="text-center mb-12 animate-fade-in">
           <h1 className="text-5xl font-bold text-gray-900 mb-4">
-            Varma Point Intelligence System
+            Varma Point Identification and Visualization System
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Advanced hybrid retrieval system combining lexical matching, semantic understanding,
@@ -55,48 +55,6 @@ const LandingView = () => {
             isExpanded={isExpanded} 
             onExpandChange={handleExpandChange}
           />
-        </div>
-
-        {/* Feature Cards */}
-        <div className="grid md:grid-cols-3 gap-6 mt-12">
-          <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
-            <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-              <Info className="w-6 h-6 text-blue-600" />
-            </div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">
-              Lexical Matching
-            </h3>
-            <p className="text-gray-600">
-              Fast and interpretable matches using keyword extraction, fuzzy similarity,
-              and character-level matching for exact symptom terms.
-            </p>
-          </div>
-
-          <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
-            <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
-              <Info className="w-6 h-6 text-purple-600" />
-            </div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">
-              Semantic Understanding
-            </h3>
-            <p className="text-gray-600">
-              PubMedBERT-powered semantic expansion identifies related symptoms
-              even when exact wording differs, with lexical verification.
-            </p>
-          </div>
-
-          <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
-            <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
-              <Info className="w-6 h-6 text-green-600" />
-            </div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">
-              RAG-Powered Insights
-            </h3>
-            <p className="text-gray-600">
-              Get grounded, explainable answers about Varma points through
-              our advanced Retrieval-Augmented Generation pipeline.
-            </p>
-          </div>
         </div>
       </div>
     </div>

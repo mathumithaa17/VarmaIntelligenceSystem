@@ -244,29 +244,15 @@ const SymptomSearch = () => {
                           className={`
                             bg-white rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 
                             border-l-4 cursor-pointer transform hover:scale-[1.02]
-                            ${isSelected ? 'border-blue-600 ring-2 ring-blue-300' : 'border-gray-300'}
-                            ${point.match_type === 'lexical_exact' ? 'border-l-green-500' :
-                              point.match_type === 'semantic_verified' ? 'border-l-blue-500' :
-                                'border-l-yellow-500'}
+                            ${isSelected ? 'border-blue-600 ring-2 ring-blue-300' : 'border-blue-500'}
                           `}
                         >
                           {/* Header */}
                           <div className="flex justify-between items-start mb-4">
                             <div className="flex-1">
-                              <div className="flex items-center gap-2 mb-1">
-                                <h4 className="text-xl font-bold text-gray-900">
-                                  {point.name}
-                                </h4>
-                                <span className={`
-                                  px-2 py-0.5 rounded text-xs font-semibold
-                                  ${point.match_type === 'lexical_exact' ? 'bg-green-100 text-green-800' :
-                                    point.match_type === 'semantic_verified' ? 'bg-blue-100 text-blue-800' :
-                                      'bg-yellow-100 text-yellow-800'}
-                                `}>
-                                  {point.match_type.replace('_', ' ').toUpperCase()}
-                                </span>
-                              </div>
-                              <p className="text-sm text-gray-600">{point.category}</p>
+                              <h4 className="text-xl font-bold text-gray-900 mb-1">
+                                {point.name.replace(/_/g, ' ')}
+                              </h4>
                             </div>
                             <span className={`
                               px-4 py-2 rounded-full text-sm font-bold shadow-md
