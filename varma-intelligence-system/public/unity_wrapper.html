@@ -34,7 +34,7 @@
   <div id="loader">Loading 3D Model...</div>
   <canvas id="unity-canvas"></canvas>
 
-  <script src="http://localhost:3001/Web_text/Build/Web_text.loader.js"></script>
+  <script src="http://localhost:3001/Web_text/Build/buildFolder.loader.js"></script>
   <script>
     var canvas = document.querySelector("#unity-canvas");
     var loader = document.querySelector("#loader");
@@ -45,9 +45,9 @@
     var streamingUrl = "http://localhost:3001/Web_text/StreamingAssets";
 
     createUnityInstance(canvas, {
-      dataUrl: buildUrl + "/Web_text.data",
-      frameworkUrl: buildUrl + "/Web_text.framework.js",
-      codeUrl: buildUrl + "/Web_text.wasm",
+      dataUrl: buildUrl + "/buildFolder.data",
+      frameworkUrl: buildUrl + "/buildFolder.framework.js",
+      codeUrl: buildUrl + "/buildFolder.wasm",
       streamingAssetsUrl: streamingUrl,
       companyName: "DefaultCompany",
       productName: "Sample1",
@@ -78,14 +78,24 @@
       if (!myUnityInstance) return;
 
       const data = event.data;
+      // Helper to broadcast message to possible GameObject names
+      function sendToUnityObject(method, payload) {
+        // Try the requested name
+        myUnityInstance.SendMessage('VarmaManager', method, payload);
+        // Fallback to the class name (common default)
+        myUnityInstance.SendMessage('VarmaPointClickHandler', method, payload);
+        // Fallback to a generic manager name just in case
+        myUnityInstance.SendMessage('Varma', method, payload);
+      }
+
       if (data.type === 'HighlightPoint') {
-        myUnityInstance.SendMessage('VarmaManager', 'HighlightPoint', data.payload);
+        sendToUnityObject('HighlightPoint', data.payload);
       } else if (data.type === 'HighlightPointsList') {
-        myUnityInstance.SendMessage('VarmaManager', 'HighlightPointsList', data.payload);
+        sendToUnityObject('HighlightPointsList', data.payload);
       } else if (data.type === 'ClearAllHighlights') {
-        myUnityInstance.SendMessage('VarmaManager', 'ClearAllHighlights', '');
+        sendToUnityObject('ClearAllHighlights', '');
       } else if (data.type === 'SelectPoint') {
-        myUnityInstance.SendMessage('VarmaManager', 'SelectPoint', data.payload);
+        sendToUnityObject('SelectPoint', data.payload);
       } else if (data.type === 'ResetCamera') {
         myUnityInstance.SendMessage('CameraController', 'ResetCamera', '');
       }

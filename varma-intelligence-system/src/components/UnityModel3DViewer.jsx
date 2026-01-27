@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Maximize2, Minimize2, RotateCcw, Loader } from 'lucide-react';
+import { mapBackendToUnityNames } from '../utils/varmaNameMapping';
 
 const UnityModel3DViewer = ({ isExpanded, highlightedPoints = [], selectedPoint, onExpandChange }) => {
   const [iframeLoaded, setIframeLoaded] = useState(false);
@@ -37,8 +38,9 @@ const UnityModel3DViewer = ({ isExpanded, highlightedPoints = [], selectedPoint,
       if (highlightedPoints.length > 0) {
         // Prepare list of names
         const names = highlightedPoints.map(p => p.unity_name || p.name);
+        const mappedNames = mapBackendToUnityNames(names);
         // Create JSON payload matching C# PointList class
-        const jsonPayload = JSON.stringify({ points: names });
+        const jsonPayload = JSON.stringify({ points: mappedNames });
 
         sendToUnity('HighlightPointsList', jsonPayload);
       } else {

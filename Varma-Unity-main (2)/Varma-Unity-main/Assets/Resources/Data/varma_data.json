@@ -1,0 +1,760 @@
+{
+    "varmas": [
+        {
+            "varmaName": "Utchi_Varmam",
+            "signs": "Loss of head control, headache, delirium, loss of libido, tinnitus, ear pain, abdomen distension, urinary retention, lacrimation, rhinorrhea, tremors, bromhidrosis, general debility, wheezing.",
+            "pathognomicSign": "Loss of head control",
+            "indications": "Regulates hormonal imbalance,\nHeadache,\nStress management.",
+            "tamilLiterature": "நாடிப்பா ருச்சி மத்தியுன் னதனின்கீழ்  \nநலமான குழியொன்று நன்றாய் காணும்  \nநாடிபார்க் குழியின் மேல் பக்கத்தில்  \nநலமற யிலோது முச்சிவற்ம மேன்பார்"
+        },
+        {
+            "varmaName": "Kondai_Kolli",
+            "signs": "Dyspnoea, tongue retraction, sexual frigidity, convulsion, trismus, ejaculation of sperm, giddiness, red eye, epiphora, amnesia, unconsciousness.",
+            "pathognomicSign": "Torticollis",
+            "indications": "Insomnia, Stress management, Psycho-somatic disorders, Endocrinal disorders.",
+            "tamilLiterature": "“உச்சி நடுவில் கொண்டைக்கொல்லி  \nஓட்டை யதற்குக்கீழ் சிறுங்கொல்லி”  \nமீதானஉச்சியின் பின்கீழிறை தானொன்றில்  \nமேன்மைப்பெரும் கொண்டைக்கொல்லி வற்மமாகும்"
+        },
+        {
+            "varmaName": "Seerungkolli",
+            "signs": "Blepharospasm, trismus, ptyalism, myokymia, lip fasciculation, emesis, cephalalgia, rapid pulsation, mydriasis, ophthalmalgia, otalgia, tongue retraction, kyphosis, hiccups.",
+            "pathognomicSign": "Hiccups",
+            "indications": "Sleep disorders, Improves memory, Improves attention span.",
+            "tamilLiterature": "“ஆமென்ற சிரநடு கொண்டைக்கொல்லி  \nஅதகொன்று ஓட்டையின்கீழ் சிறுங்கொல்லி  \n“தானான தலைநடுவில் கொண்டைக்கொல்லி  \nசாண்ஓட்டை அதற்குக்கீழ் சிறுங்கொல்லி"
+        },
+        {
+            "varmaName": "Pidari_Varmam",
+            "signs": "Unexpected stabbing pain which disappear rapidly, neck pain, cephalalgia, emesis, otalgia, limb weakness, tongue protrusion, tachypnea, visual impairment.",
+            "pathognomicSign": "Tongue protrusion",
+            "indications": "Stimulates Idakalai naadi, Improves breathing and speech, Vision impairment, Vata diseases.",
+            "tamilLiterature": "“தாமப்பா தலைமுடிந்த தலத்தில்தானே  \nசார்வான குழிவதிலே பிடரிக்காலம்”  \n“கொள்ளவே பிடரியதின் குழியில்தானே  \nகுணமான முடிமுகில் தலத்திலப்பா  \nவிள்ளவே அதில்பிடரி வற்மம்”"
+        },
+        {
+            "varmaName": "Suruthi_Varmam",
+            "signs": "Paraesthesia, ophthalmalgia, prostration, vomiting, diminished vision, tinnitus, deafness, trismus, hyperhidrosis, blindness, delirium.",
+            "pathognomicSign": "Rigor",
+            "indications": "Ear & eye disorders",
+            "tamilLiterature": "“நாளப்பா விரல் நாலின்கீழ் பிடரிக்காலம்  \nநாலிறை பக்கம் மேல்முன் சறுதி வற்மம்”"
+        },
+        {
+            "varmaName": "Porchai_Varmam",
+            "signs": "Red eye, cloudy with low vision, opthalmalgia, otalgia, blepharospasm, trismus, ejaculation of semen, mydriasis, fixed pupil, hyper emesis, blindness, unconsciousness.",
+            "pathognomicSign": "Supra orbital neuralgia",
+            "indications": "Seizures Vertigo Tiredness",
+            "tamilLiterature": "தானான உச்சியிலிருந்து எட்டுவிரல்கீழே  \nசாதிவற்மம் மெனவுஞ் சொல்வார்  \nவானான இதற்குஇரு விரலின்கீழே  \nமகிமையுள்ள பொற்சை காலமாமே”"
+        },
+        {
+            "varmaName": "Suzhiyadi_varmam",
+            "signs": "Unable to move upper and lower limb, angular salivation, giddiness, psychiatric illness, erectile dysfunction.",
+            "pathognomicSign": "Lunacy",
+            "indications": "Mental depression, Vertigo",
+            "tamilLiterature": "“தானான பிடரிமுடிமுடிந்த குழியில்  \nதயவான சுழியாடி வற்மமாகும்”  \n“அறியவே பிடரியின்கீழ் ஆகமாம் பெருநரம்பில்  \nபொறியிலே நடுபக்கத்தில் போற் சுழியாடிவற்மம்”"
+        },
+        {
+            "varmaName": "Kutri_Varmam",
+            "signs": "Giddiness, trismus, fatigue, loss of hearing, hyperemesis, cephalalgia, mydriasis on the affected side, epistaxis, otalgia, unconsciousness followed by seizure, tachypnea.",
+            "pathognomicSign": "Lunacy",
+            "indications": "Seizures,Headache, Tremors",
+            "tamilLiterature": "“மகிமையுள்ள பொர்சையென்ற காலமாமே  \nகாலமாம் அதற்குதொகு இறைக்கீழே  \nகனமான குற்றியென்ற காலமாகும்”  \n“பாரப்பா இரண்டிறைக்கீழ் பொற்சைக்காலம்  \nபகந்த ஓரிறைபற்றி குற்றிக்காலம்”."
+        },
+        {
+            "varmaName": "Sevikuttri_Kaalam",
+            "signs": "Headache, hearing impairment, otalgia, tinnitus, mouth deviation to one side, occipital neuralgia, tongue retracted, rhinorrhea, status epilepticus, akathisia, bluish discoloration of the skin.",
+            "pathognomicSign": "Epistaxis, haematemesis",
+            "indications": "Stimulates Singuvai naadi, Headache, Hearing impairment",
+            "tamilLiterature": "“மூலமாம் காதில்சிறு தண்டருகில்தானே  \nமுறையான செவிகுத்தி காலமென்பர்  \nசெற்குமென்ற செவிகுற்றிக் செவியடியில்  \nசிதம்பரனார் குயையடியில் பற்றிநிற்கும்”"
+        },
+        {
+            "varmaName": "Poigai_Kaalam",
+            "signs": "Drooling of saliva, dizziness with otalgia, hyperhidrosis, mydriasis, low vision, rapid or irregular heartbeat, cervicalgia, emesis, epilepsy",
+            "pathognomicSign": "Impairment of five senses",
+            "indications": "Headache, Hearing impairment",
+            "tamilLiterature": "“காமென்ற செவிகுத்திக்காலம் இருவரின்மேல்\nகண்டிடுவாய் பொய்கையென்ற காலமாமே”\n“முறையான செவிகுத்திக் காலமென்பர்\nசூலமாம் இதிரண்டு இறைக்கு மேலே\nகுணமான பொய்கை என்ற காலமாகும்.”"
+        },
+        {
+            "varmaName": "Chenni_Varmam",
+            "signs": "Blepharospasm, emesis, trismus, frothy sputum, oral breathing, extreme exhaustion, loss of hearing, absent pulse, confused mental state, muscle spasm",
+            "pathognomicSign": "Lock jaw",
+            "indications": "Facial palsy, TMJ disorder",
+            "tamilLiterature": "“நிற்குமென்ற நாடிதுடியங்கே காணும்\nநிலையான நெற்றியதின் குளவுமாகும்\nவிற்குமென்ற சென்னிய தான்”\n“பாரப்பா மேல்காத வின்றுவிழு முன்னே\nபண்பான சென்னி வற்மம் அதற்குப்பேறு”"
+        },
+        {
+            "varmaName": "Aasan_Kalam",
+            "signs": "Tinnitus, epiphora, unconsciousness followed by seizure, fever, bleeding from the sense organs (except skin), loss of hearing, hypothermia followed by tremor, red eye, cephalalgia, deviation of mouth.",
+            "pathognomicSign": "Facial palsy",
+            "indications": "Improves vision, Reduce temple headache, Aching jaw",
+            "tamilLiterature": "“செப்புவார் குருந்தின் முன்வளைந்த சார்பில்\nசெந்தெல் போல்தூய கையதில் ஆசான்காலம்”\n“போகுமப்பா குருந்தின் மேல்வளைந்த சார்பில்\nபேர் சொன்ன அடங்கலப்பா ஆசான்காலம்”"
+        },
+        {
+            "varmaName": "Annan_Kalam",
+            "signs": "Hyperhidrosis, tremors, nausea, palpitation",
+            "pathognomicSign": "Tremor",
+            "indications": "Tension headache, Migraine headache",
+            "tamilLiterature": "“கடைக்கண்ணுக் கிடைநதுவே அண்ணான்\nகருவிழி நிலையாய் நிற்கும்காலம்”"
+        },
+        {
+            "varmaName": "Peruchal_Varmam",
+            "signs": "Heaviness of head, clogged ears, giddiness",
+            "pathognomicSign": "Clogged ears",
+            "indications": "Migraine headache, Weakness of all limbs, Relieves stress and tension, Improves memory and concentration.",
+            "tamilLiterature": "“வண்டான தலமொன்று சொல்லக்கேளு\nவாசையுடன் பொரிச்சென்று வந்தந்தானே”\nதானென்க காதில்நால் விரலுக்குமேல்\nதளமான பொரிச்சல்வற்றம் குணத்தைக்கேளு"
+        },
+        {
+            "varmaName": "Thilardha_Varmam",
+            "signs": "Open-mouthed, singultus, ophthalmalgia, otalgia, seizure followed by broncho spasm, mydriasis, ejaculation of semen.",
+            "pathognomicSign": "Mouth remains opened and look upwards",
+            "indications": "Stimulate Suzhumunai naadi, Improves attention span in ASD, ADHD, Psycho-somatic disorders.",
+            "tamilLiterature": "“நேர்ப்பா நெற்றண்டு புருவம்தன்னில்\nநேராக நெல்விடைக்கு தாழ்வாக\nபாரப்பா நிலத்தகாலம் அதற்குப்பேறு.”\n“உடனேஅந்த கண்ணாடி காலத்திற்கும்\nஒருவிரல்மேல் நிலத்தவாமம் கண்டுகொள்”"
+        },
+        {
+            "varmaName": "Patchi_Varmam",
+            "signs": "Bronchiectasis, bruxism, mydriasis, seizure, hyperhidrosis, epistaxis, akathisia, hyperthermia, trismus",
+            "pathognomicSign": "Lock jaw",
+            "indications": "Reduce stress,\nImprove concentration.",
+            "tamilLiterature": "“பாரப்பா உச்சிந்து நேரவாரம்\nபகருமரை இறைதீப பச்சிவாரம்.”\n“தடமேபார் நிலந்த வார்மற் திருவிரல்மேல்\nதப்பாமல் பட்டிவறும் மென்றுநாமம்”"
+        },
+        {
+            "varmaName": "Naema_Varmam",
+            "signs": "Dyspnoea, nodding of head, increased kabam, delirium",
+            "pathognomicSign": "Nasal blockage",
+            "indications": "Relieves constipation, Sinusitis, Reduce stress",
+            "tamilLiterature": "“அந்தமாய் உச்சிந்து நேமவற்பம்\nபகரும் அரையிறைதீழ் பச்சிவற்றம்”\nகருதுநெற்றி நடுவாகும் நேமவற்பம்\nபூணைய அரையிறைதீழ் பச்சிவற்றம்"
+        },
+        {
+            "varmaName": "Kannadi_Kaalam",
+            "signs": "Nasal congestion, epistaxis, occasionally vomiting, reduced vision, dyspnoea, unconsciousness, hyperhidrosis, hypothermia, mouth deviation",
+            "pathognomicSign": "Giddiness",
+            "indications": "Improves memory, vision and hearing, Reduces vata diseases",
+            "tamilLiterature": "“சுந்தரமாய் நாசிமதி கண்ணாடிகாலம்"
+        },
+        {
+            "varmaName": "Paala_Varmam",
+            "signs": "Emesis, epistaxis, blindness, mydriasis, akathisia, unconsciousness, rapid and irregular heartbeat, hyperthermia, stuttering",
+            "pathognomicSign": "Swollen tongue",
+            "indications": "Improves memory, Reduce fear, wrist pain,Constipation.",
+            "tamilLiterature": "“சுந்தரமாய் நாசிமதி கண்ணாடிகாலம்\nபுரிநாசியி நடியில் கண்ணாடிகாலம்”"
+        },
+        {
+            "varmaName": "Chundigai_Varmam",
+            "signs": "Paraesthesia in face and nose, hyperhidrosis, formication, subconjunctival haemorrhage, titubation, epiphora, rhinorrhoea.",
+            "pathognomicSign": "Fainting",
+            "indications": "Improves concentration,\nReduce anger, palpitation",
+            "tamilLiterature": "“ஓர்மையாம் பாலவறுமம் இறையருகில் கூண்டுகைத்தான்”\n“துல்லியமாய்க் கண்டதொரு பாலவறுமம்\nசுத்திரமா விதனருகில் கூண்டுகைவருமாம்.”"
+        },
+        {
+            "varmaName": "Minvetti_Varmam",
+            "signs": "Ophthalmalgia, open- mouthed, hearing impairment, cephalalgia, photophobia, hyperhidrosis, confused mental state, akathisia, unconsciousness, cyanosis.",
+            "pathognomicSign": "Hearing impairment",
+            "indications": "Increase attention and concentration, Improves smell sensation and vision.",
+            "tamilLiterature": "\"நிலந்தகாலமென்று அறையிறைத்தீழ் மின்வெட்டிவர்மம்\"\n\".............. நிலந்த காலந்தானே\nஇன்னமாம் அறையிறைத்தீழ் மின்வெட்டி வர்மம்\""
+        },
+        {
+            "varmaName": "Manthira_Kaalam",
+            "signs": "Yawning, dyspepsia, hypersomnia, tremor, hyperhidrosis, red eye, abdomen distension, unconsciousness, cephalalgia, otalgia, bruxism",
+            "pathognomicSign": "Yawning",
+            "indications": "Reduce headache, Regulates sleep cycle,  Improves vision, Reduce pain in the tip of fingers",
+            "tamilLiterature": "“இசைந்த கருவிழியருகில் மந்திரக்காலம்\nமந்திரமாம் காலத்தோடாக வரும்\nவளுவாக இருபுமுகமெனவே சொல்வார்.”\nஆகுமிந்த கண்ணுடத்தில் நாசியென்றும்\nபொறுத்திருக்கும் பக்கமாய் தானே\nநாசுமிந்த மந்திரக் காலம்"
+        },
+        {
+            "varmaName": "Puruva_Varmam",
+            "signs": "Discoloration of tooth, cephalalgia, supraorbital neuralgia, tenesmus, akathisia, hyperhidrosis, unconsciousness followed by seizure, mydriasis",
+            "pathognomicSign": "Discoloration of tooth",
+            "indications": "Regulates sleep cycle,Reduce intraocular pressure, Reduce supra orbital pain",
+            "tamilLiterature": "“பாரப்பா புருவநடு மத்தியத்தில்\nபண்பான புருவவறுமம் அதற்குக்குப்பேரு”\n“பொருத்தமந்த புருவநடு மையத்தின்‌ல்\nபோரிபான புருவவறுமம் அதற்குக்குப்பேரு”"
+        },
+        {
+            "varmaName": "NatchathiraP_Varmam",
+            "signs": "Eye floaters, diplophobia, yellow eyes, blepharospasm, emesis followed by hyper hydrosis, hypothermia present in the lateral side of the trunk, discharge of semen and faeces, cephalalgia muscles spasm in the lateral side of the trunk",
+            "pathognomicSign": "Yellowish discoloration of eyes",
+            "indications": "Stimulates Pinkalai naadi, Reduce body heat, Improve digestion, Corrects refractive errors of eye.",
+            "tamilLiterature": "“காலமாம் கடைக்கணீழ் நட்சத்திரக்காலம்”\n“காலமாம் கடைக்கண்ணில் இறைத்துதான்\nகலங்குகின்ற தீப்நட்சத்திரக்காலம் என்னே"
+        },
+        {
+            "varmaName": "Kaamboodhari_Kaalam",
+            "signs": "Paraesthesia, grunting, hyperhidrosis, mydriasis, otalgia, mouth deviation, trismus, rapid or irregular heartbeat, rhinorrhoea, frothy sputum, increased temperature, visual disturbances.",
+            "pathognomicSign": "Weakness of five sensory organs",
+            "indications": "Facial palsy, Enhance vision",
+            "tamilLiterature": "“காலமாம் கடைக்கண்ணில் இறைத்துதான்\nகலங்குகின்ற தீப்நட்சத்திரக்காலம் என்னே\nஎன்னவே இரண்டிறைக்கும் கீழே\nஇதமான கம்போதி காலமுக்கும்.\n“காலமாம் கடைக்கணீழ் நட்சத்திரநாளம்\nகாலம்கீழ் இரண்டிறையில் காம்பேரதிகாலம்”"
+        },
+        {
+            "varmaName": "Valamoorthi_Varmam",
+            "signs": "Sinus headache, mydriasis, unconsciousness, hyperemesis, tongue chewing, dyspnoea, turning of eyeball toward lateral side, bronchospasm",
+            "pathognomicSign": "Rhinorrhoea",
+            "indications": "Sinusitis, Watering of eyes",
+            "tamilLiterature": "காலமாம் கடைக்கணீழ் நட்சத்திரக்காலம்\nகாலம்கீழ் இரண்டிறையில் காம்பேரதிக்காலம்\nகாலமதில் இறையூன்றில் மூர்த்திகாலம்\nஇதமான காம்பேரதிகாலமாயும்\nநின்னவே இதற்குமேல் இறையூன்றில்\nதிருக்கான வளமூர்த்தி காலமென்பார்"
+        },
+        {
+            "varmaName": "Konasanni_Varmam",
+            "signs": "Excessive thirst, tiredness, sweating of face",
+            "pathognomicSign": "Angular deviation of mouth",
+            "indications": "Facial palsy. Stimulate salivary secretion",
+            "tamilLiterature": "“கூறப்பா கோணவற்றமம் செவியின்கீழே\nகூறலாம் அங்குலம்நாலு உதரக்காலம்.”\n“கேளப்பா கீழ்நாடி முடிந்த மூட்டில்\nகெணிதமுடன் அலவாறு கோணச் சன்னி”"
+        },
+        {
+            "varmaName": "Urakka_Kaalam",
+            "signs": "Giddiness, drowsiness, lock jaw",
+            "pathognomicSign": "Sleep with snoring",
+            "indications": "Insomnia,  Angular salivation, Snoring, Jaw pain.",
+            "tamilLiterature": "“ஆரப்பா கீழ்நாடி ஒட்டுவற்றமம்\nஅதனருகில் உறக்கமென்ற காலமாமே.”\n“பாரென்ற நாடியருகு உறக்கக்காலம்”"
+        },
+        {
+            "varmaName": "Udhira_Kaalam",
+            "signs": "Asphyxia, gasping, severe prostration, cephalalgia, seizure, tinnitus, dryness of tongue, reduced pulse",
+            "pathognomicSign": "Aphasia",
+            "indications": "Goiter, Reduce neck stiffness, Palpitation.",
+            "tamilLiterature": "“கூறப்பா கொண்ட வற்றமம் செவியின்கீழே\nகூறலாம் அங்குலம் நால் உதிரக்காலம்.”\nகூறப்பா கோண வற்றமம் செவியின் கீழ்\nநாலங்கு லத்தில் உதிரக் காலம்"
+        },
+        {
+            "varmaName": "Ottu_Varmam",
+            "signs": "Pain in the lower jaw, giddiness, rhinorrhoea",
+            "pathognomicSign": "Lock jaw",
+            "indications": "Reduce anger Dysarthria",
+            "tamilLiterature": "“ஆரப்பா கீழ்நாடி ஒட்டுவற்றமம்.”\n“நெறியான கீழ்நாடி ஒட்டுவற்றமம்.”\nதானாய விரல் நாளில் உதிரக்காலம்\nநலமானகீழ் நாட்டிமுனை ஒட்டுவற்றமம் பாரே”"
+        },
+        {
+            "varmaName": "Sanguthiri_Varmam",
+            "signs": "Extreme tiredness, asphyxia, epiphora, protusion and retrusion of tongue, unconsciousness, singultus, mydriasis, dyspneoa, palpitation, heaviness of abdomen, increased body heat.",
+            "pathognomicSign": "Neck stiffness",
+            "indications": "Wheezing, Dysarthria, Throat pain.",
+            "tamilLiterature": "“ஆமப்பா குரல்வளையில் சங்குதிரி காலம்\nஅதன்கீழ் நாலங்குலத்தில் சுவை வந்திருந்தான்.”\n“அறிவான குரல்வளையில் சங்குதிரி காலம்\nஅதற்குக்கீழ் அங்குலம் நாளில் சுவைவந்திருந்தான்.”"
+        },
+        {
+            "varmaName": "Sumai_Varmam",
+            "signs": "Dysphonia, akathisia, exophthalmos, productive cough, tremor, palpitation, asphyxia, hyperpigmentation of body, running nose, frothing of mouth",
+            "pathognomicSign": "productive cough",
+            "indications": "Wheezing, Dysarthria, Throat pain.",
+            "tamilLiterature": "“ஆமப்பா குரல்வளையில் சங்குதிரி காலம்\nஅதன்கீழ் நாலங்குலத்தில் சுவை வந்திருந்தான்.”\n“அறிவான குரல்வளையில் சங்குதிரி காலம்\nஅதற்குக்கீழ் அங்குலம் நாளில் சுவைவந்திருந்தான்.”"
+        },
+        {
+            "varmaName": "Thummi_Kalam",
+            "signs": "Hyperventilation, frequent sneezing, angular salivation",
+            "pathognomicSign": "Fainting",
+            "indications": "Stops sneezing",
+            "tamilLiterature": "“துலையான சிமைவற்றம் ஒருவிரல்மேல்  \nதும்பியென்ற காலமதின் தானப்பா”  \n“தொட்டுக்குறியாக இன்னமொன்று சொல்கிறேன்  \nதும்பியென்ற காலம் தன்னை  \nவிட்டப்ப தொண்டை தீற்குமியப்பா”"
+        },
+        {
+            "varmaName": "Kathir_varmam",
+            "signs": "Exophthalmos, hiccup, giddiness, rigor.",
+            "pathognomicSign": "Loss of head control",
+            "indications": "Neck pain,\nFrozen shoulder",
+            "tamilLiterature": "“நகையான கமுத்தில் நால்விரலின் கதிர்வற்மம்\nநலமான ரண்டிரைத்தீழ் கதிர்காமவற்மம்.”\n“தொண்டையின் கீழ் இருவரலில் கதிர்வற்மம்”"
+        },
+        {
+            "varmaName": "Kathirkaama_varmam",
+            "signs": "Shivering with chillness, painful breathing, shortness of breath, sudation, chest pain, fatigue, hyperhidrosis, hypoxic breath, loss of bladder control, tremor and discomfort.",
+            "pathognomicSign": "Shivering with chillness",
+            "indications": "Neck pain, Palpitation, Dyspnea.",
+            "tamilLiterature": "“கதிரான காலத்துக் கிரையோ ரெண்டில்\nகதிர்காம வற்றமொன்றும் சொல்வார் பாரில்.”\n“கதிரிலிருவிரல் தீழ்கதிர்காம வற்றம்தானே.”"
+        },
+        {
+            "varmaName": "Buththi_varmam",
+            "signs": "Tremor, anxiety, bending the body anteriorly due to asphyxiation and pain, fatigue followed by drowsy, haematemesis, haematuria, bleeding per rectum,  Hypoxia, shortness of breathing, seizure",
+            "pathognomicSign": "Haematemesis, haematuria, bleeding per rectum",
+            "indications": "Regulates breathing, Reduce anxiety and palpitation",
+            "tamilLiterature": "\"நகையானியிலும் கமுத்தின்கீழ் கதிர்வற்றமம்\nநலமான ரண்டிரைத்தீழ் கதிர்காமவற்றமம்\nபகையான தோரிரைத்தீழ் புத்திவற்றமம்\n“அதினும்ரண்டிரைத்துக்கும் தீழ்கதிர்காம வற்றமம்\nஅடுத்தோர் இறைக்கும் கீழ் புத்திவற்றமம்”"
+        },
+        {
+            "varmaName": "Sakthi_varmam",
+            "signs": "Fatigue, delirium, dyspnoea, fever, unconsciousness",
+            "pathognomicSign": "Excessive fatigue",
+            "indications": "Regulates heartrate, pulse rate Reduce chest pain",
+            "tamilLiterature": "நகையானியும் கமுத்தின்கீழ் கதிர்வற்றமம்\nநலமான ரண்டிரைத்தீழ் கதிர்காமவற்றமம்\nபகையான தோரிரைத்தீழ் புத்திவற்றமம்\nபசந்த தோரிரைத்தீழ் சத்திய்வற்றமம்\"\n“அதினும்ரண்டிரைத்துக்கும் தீழ்கதிர்காம வற்றமம்\nஅடுத்தோர் இறைக்கும் கீழ் புத்திவற்றமம்\nஅதுபோல ஒரிறைக்கும் கீழ் சத்திய்வற்றமம்”"
+        },
+        {
+            "varmaName": "Koombu_varmam",
+            "signs": "Sense of chocking, chest pain, haematemesis, frailty of lower extremities, frothy mucus, stomach distension, bluish discoloration, convulsion, tighten the lung muscle, excessive sweat, cough with suffocation, anxiety",
+            "pathognomicSign": "Cyanosis",
+            "indications": "Chestpain, epigastric pain, Palpitation, Profuse sweating",
+            "tamilLiterature": "“இலக்மாய் சொன்னதாறு கூம்புவர்மம்\nஇருந்தீராகு விரல்மேலே சுமைவற்றமந்தான்”\n“நிறுதியென்ற நெஞ்சில் நடுஇடவசமாய்\nநீண்டிருக்கும் கூம்புயென்ற வற்றமம்”"
+        },
+        {
+            "varmaName": "Ner_Varmam",
+            "signs": "Anxiety, feeling excessive heat, bending forward due to pain, palpitation, difficulty in breathing, watery discharge in nose, chest pain, shivering of the body, wide closure of eyes, hematemesis, convulsion, cyanotic face",
+            "pathognomicSign": "Cyanosis",
+            "indications": "Headache, Anxiety and fear, Stimulate Asani naadi.",
+            "tamilLiterature": "“திருமப்பா நெஞ்சில் கூனெலும்புரண்டு விரல்தாளே\nதிறமான நேர்வற்றமம் அதற்குப்பேரே.”\n\"கூம்பின் இருவிரலின் தாழே\nசிறந்தபடி நேர்வற்றமம்”"
+        },
+        {
+            "varmaName": "Aanantha_vayu_Kalam",
+            "signs": "Loss of appetite, gastritis, erectile dysfunction, male and female infertility",
+            "pathognomicSign": "Acute abdomen pain",
+            "indications": "Stimulate Purudan and Kanthari naadi, Fertility disorders, Gastritis.",
+            "tamilLiterature": "அறைகிறேன் நேர்வற்றமம் ஒரிறைவலத்தே\nஅப்பவே ஆனந்த வாயின் காலம்"
+        },
+        {
+            "varmaName": "Panri_Varmam",
+            "signs": "Patient noise like grunt, deafness, gasping for breath, palpitation and giddiness.",
+            "pathognomicSign": "Grunting",
+            "indications": "Stimulates Karu naadi",
+            "tamilLiterature": "\"நலிந்தொப்புள் நாள்விரல்மேல் பன்றிதானே\nநடக்கவே கொப்புளிலே நாளுவிரலுக்கு மேலே\nநன்றாக உறுமிக்கால மதுவேயாகும்\""
+        },
+        {
+            "varmaName": "Uthara_Kalam",
+            "signs": "Severe abdomen pain, burning micturition, gestataional diabetes.",
+            "pathognomicSign": "Gestataional diabetes.",
+            "indications": "Stimulates udhana vayu, Gastritis, Abdominal distension",
+            "tamilLiterature": "நிசமான தொப்புளின் ஒரிறைமேலே\nநிச்சயமாய் உதிர காலம்"
+        },
+        {
+            "varmaName": "Anna_Kaalam",
+            "signs": "High grade fever, polydipsia, indigestion, fatigue, dizziness, Viyanan will be affected during injury",
+            "pathognomicSign": "Excessive thirst",
+            "indications": "Stimulates samana vayu, Gastritis, Regulates speech, Abdominal distension.",
+            "tamilLiterature": "\"ஆனதொரு தொப்புள்குழி அன்னக்காலம்\"\n\"கூட்டெல்லுவிட்டு தொப்புள்குழியிலே அன்னக்காலம்\"\n\"அலையவே தொப்புளின் குழியருகில்\nஇலங்குகின்ற அன்னத்தின் காலமாகும்\""
+        },
+        {
+            "varmaName": "Thivalai_Varmam",
+            "signs": "Frothy mucus from mouth, chocking, burning sensation in throat, redness of eye, watery discharge in nose, sweating, appetite, severe sudation, severe cough, convulsion",
+            "pathognomicSign": "Burning sensation in throat",
+            "indications": "Regulates heart rate,  Reduce palpitation, Relieves headache.",
+            "tamilLiterature": "“சக்கியெனக் காராண்டு விரலின்கீழ் நிலையக்காலம்\nசாற்றுகிறேன் ஒறிறை வளர்ந்தே தெறித்திக்காலம்.”\n\"நன்றான மார்பில் முளைக்கண்ணன்று\nமேல்நோற்க நாவுவிறல் தன்னிலிருந்தே\nஒன்றான நிலையில் குழிவிடத்தில்\nஉயர்வான வருகின்ற தெளைக்காலம்\""
+        },
+        {
+            "varmaName": "Thoosiga_Varmam",
+            "signs": "Excessive body heat, haematemesis, convulsion, nervousness, difficulty in breathing, shortness of breathing",
+            "pathognomicSign": "Haematemesis",
+            "indications": "Neck pain, Improves lateral movement of neck.",
+            "tamilLiterature": "முறையான மலைகண்ணில் தூசிகந்தான்  \nமுடுகு இருவர்சுற்றி வந்தமெட்டாம்  \nமுறையாக இதுகளின்பேர் தூசிகமென்றும்"
+        },
+        {
+            "varmaName": "Anumar_Varmam",
+            "signs": "Dysarthria, twitching in cheek, bending forward, shivering of extremities, difficulty in breathing, chocking, convulsion.",
+            "pathognomicSign": "Seizures",
+            "indications": "Regulates heart rate,  Reduce palpitation",
+            "tamilLiterature": "தூசிகசுற்றுக்குள்ளே சொன்னோம் அனுமார்வற்றம்  \n\"ஆறுமலைக் கண்டதூசிக நிறைக்கீழ் அனுமார்வற்றம்."
+        },
+        {
+            "varmaName": "Mundellu_Varmam",
+            "signs": "Shortness of breathing, chocking, drippling of urine, pyrexia, convulsion, loose stool, vomiting, anxiety, abdomen discomfort",
+            "pathognomicSign": "vomiting",
+            "indications": "Improves dysarthria",
+            "tamilLiterature": "“வேமிந்த முன்டெல்வில் முன்டெல்வற்றமம்  \n“போகுமே இருமுலைக்கும் ஒன்பதுவரல்கீழ்  \nபதிவான முன்டெல் இருவரின்தாழே  \nஆகுமேவலிய அத்த்திச்சருக்கிக்காலம்”"
+        },
+        {
+            "varmaName": "Valiya_Aththi_Surukki_Varmam",
+            "signs": "Stooping forward, cough, pyrexia, rigidity of both extremities, hematemesis, hypogastric pain, bleeding per rectum, vision loss, difficult to walk, fearfulness with anxiety.",
+            "pathognomicSign": "Flattening of body with bending forward",
+            "indications": "Stimulates Pasali naadi Improves Genito-urinary functions",
+            "tamilLiterature": "“போகவே விலாவின் முன் டெல்லின்கீழே  \nஇதனமாக இருவரில் கீழேதானே  \nபோகவே வலிய அத்திச்சருக்கிக்காலம்.”\n\n“தேறு முன்டெல்வற்றமம் கீழிருவரில்  \nநிறமான வலிய அத்திச்சருக்கிக்காலம்”"
+        },
+        {
+            "varmaName": "Siriya_Aththi_Surukki Varmam",
+            "signs": "Stooping forward, cough, pyrexia, rigidity of both extremities, hematemesis, hypogastric pain, bleeding per rectum, vision loss, difficult to walk, fearfulness with anxiety",
+            "pathognomicSign": "Shortening of body with bending forward",
+            "indications": "Stimulates Visulodharan naadi Improves Genito-urinary functions",
+            "tamilLiterature": "“இறந்துபோம் முன்டெளம்பின் இறையோர்மூன்றில்  \nஇசைவான சிறிய அத்திச்சருக்கிக்காலம்.”\n\n“முன்டெளம்பின் தாழ்வாக இதமான  \nஇருவரில் சருக்கி வரும்”\n\n“காலொன்று முன்டெளம்பின் இறையோர்மூன்றில்  \nகடினமடா சிறிய அத்திச்சருக்கிக்காலம்”"
+        },
+        {
+            "varmaName": "Mun_Saruthi_Varmam",
+            "signs": "Pain, delirium, fever, swelling present in all over the body",
+            "pathognomicSign": "Anasarca",
+            "indications": "Relieves ribcage pain,  Gastritis",
+            "tamilLiterature": "“அத்திச்சருக்கிதான் இதன்பக்கச் சார்வில்தானே  \nசார்வில் விரல்நாவது பின்சருவுற்றமம்.”\n\n“கொள்ளவே சிறிய அத்திச்சருக்கியின் பக்கசரிவில்  \nமெள்ளவே விரல்நாங்கள் மொழிந்தமுன் சருவிற்றமம்”"
+        },
+        {
+            "varmaName": "Pallai_Varmam",
+            "signs": "Body pain, emaciation, gastritis, pain and strain in the paravertebral muscle",
+            "pathognomicSign": "Emaciation",
+            "indications": "Stops Nausea, Relieves Peptic ulcer, Relieves constipation.",
+            "tamilLiterature": "“வீர்த்திபெற்ற அடட்பவற்றமம் தன்னிலிருந்து  \nகணிதமுடன் இருமொன்று விளுக்குணே  \nவீர்த்திபெற்ற பண்ணை வன்மதந்துப்பேறு.\"\n\n“வீறிய பண்ணையதில் பண்ணைவற்றமம்.”"
+        },
+        {
+            "varmaName": "Adappa_Kalam",
+            "signs": "Excessive Sweating, anxiety, shortness of breathing, cyanosis, bluish discoloration of eyes and teeth, rigidity of both limb, abdomen pain, disability to lie down due to pain",
+            "pathognomicSign": "Bluish discoloration of eyes and teeth",
+            "indications": "Relieves lowerlimb pain,\nImproves shortness of breath,\nReduce stress and anxiety.",
+            "tamilLiterature": "“கொல்லவே கூம்புதனில் ஒட்டையதனில்\nகொடியான அடப்பன் என்றகாலமாரம்”\n“முண்டெல் மேல்அங்குலம் நாள்அடப்பக்காலம்”"
+        },
+        {
+            "varmaName": "Vilangu_Varmam",
+            "signs": "Spasm of vertebral muscle, difficulty to raise upper limb, frequent spasm",
+            "pathognomicSign": "Difficulty to raise upper limb",
+            "indications": "Relieves Peri-arthritis shoulder stiffness, Stimulates viyanan vayu, Improves respiration.",
+            "tamilLiterature": "“தலமதுதான் சாறாலும்பின் மத்தியத்தில்\nதயவான அதினுள்ளில் விலங்குவர்மம்.”\n“கண்டமென்று பூனெல் மேல்   கழுத்தடிகள்\nகழுத்துறையினி சுருந்தரம்பொன்று கண்டாய்த்\nதண்டனையசெய் விலங்குவர்மம் மென்று சொல்வார்”"
+        },
+        {
+            "varmaName": "Asthikanthari_Varmam",
+            "signs": "Nausea, hiccups, cough and cold, sleepiness, pain in both upper limbs, head ache, thrombus formation inside the blood vessels, weakness of sensory organs",
+            "pathognomicSign": "",
+            "indications": "Reduce pain over vertex of head, Stop hiccups, seizure, Arrests bleeding per mouth and ears.",
+            "tamilLiterature": "“ஆமென்ற கைகுழி நडுப்பகுதியில்\nஅத்தியென்ற காந்தாரி நடுப்பகுதியில்”\n\n“என்றுபடி கைகுழியோர் ஒன்பான்தானம்\nஇனிறை கீழத்திக் காந்தாரிவன்மம்”"
+        },
+        {
+            "varmaName": "Puja_Varmam",
+            "signs": "Paresthesia in the arm, swelling in the shoulder, unable to lift the arm in the erect posture, pain radiate to vertebral column, dislocation of shoulder joint, tingling sensation in the upper limbs.",
+            "pathognomicSign": "Unable to lift the arm in the erect posture",
+            "indications": "Peri-arthritis shoulder joint, Cephalalgia, Pain in the shoulder joint.",
+            "tamilLiterature": "“நேரதான் புசத்தியடி புசவன்மம்ப்தான்”\n“தீருமடா காராயத்தின் முனையில்தானே\nதிறமான புயவன்மம் அதற்குக்கூறு”"
+        },
+        {
+            "varmaName": "Pirathaarai_Varmam",
+            "signs": "Neck pain, shoulder pain, throat pain, weakness of upper limb, unconsciousness",
+            "pathognomicSign": "Unable to lift the arm in the erect posture",
+            "indications": "Neck pain, numbness in the upper limb, neck stiffness, upper limb weakness",
+            "tamilLiterature": "“சூரியதோர் கிழ்கமுக்கூட்டின் மீது\nகொடிய பிறதாரை கிழுத்துவன்மம்.”"
+        },
+        {
+            "varmaName": "Aendhi_Varmam",
+            "signs": "Weakness of upper limb, tremors, hearing impairment, swelling of upper limb, hiccups, delirium",
+            "pathognomicSign": "Weakness of upper limb",
+            "indications": "Reduce neck pain, Improve mobility of shoulder joint.",
+            "tamilLiterature": "“அப்போன திவளை வண்பம்பாரு\nசதிரான விலவிலொரு இறையில்தானே\nசாமுவல் எந்தி பிறழுமுழுமன்பர்.”\n“தொகுப்பான பேர்திவர்ந்த தலக்கைக்கே\nதொல்லையையும் திணையை தன்னிலிருந்து\nடுபோனா பிறைஞுண்டன் கீழ்தாக\nஎந்தியென்ற வண்பதல மதிலேப்பா”"
+        },
+        {
+            "varmaName": "Kutthu_Varmam",
+            "signs": "Shivering of the body, nausea",
+            "pathognomicSign": "",
+            "indications": "Reduce blood pressure, Reduce Pitha diseases.",
+            "tamilLiterature": "“பிறமான கிழைக்கூட்டின் மீது\nபிறதாரை பின்கீழ் குத்துவன்மம்.”\n“சூரியதோர் கிழமுக்கூட்டின் மீது\nகொடிய பிறதாரை கிழுத்துவன்மம்."
+        },
+        {
+            "varmaName": "Asavu_Varmam",
+            "signs": "Tiredness, swelling, chillness, delirium.",
+            "pathognomicSign": "Swelling of arm",
+            "indications": "Reduce pain in upper limb",
+            "tamilLiterature": "“ஏகுமே புசத்தடியில் அசைவு வன்மம்”\n“தீர்க்கவே அசைவுவன்மம் தோள்புசத்தில்”"
+        },
+        {
+            "varmaName": "Koachu_Varmam",
+            "signs": "Paresthesia in the upper limb, weakness in the extremities, seizure, unconsciousness, chillness with fever",
+            "pathognomicSign": "Swelling of arm",
+            "indications": "Stiffness of elbow joint",
+            "tamilLiterature": "“கண்ணினடுத்துக் கோசநரம்பில் கோசசு வன்மம்”\n“கைமுட்டின் உள்ளகண்ணின் மேலேறு\nபற்றி கோசசு வன்மம்”"
+        },
+        {
+            "varmaName": "Kaimootu_Varmam",
+            "signs": "Pain and swelling in the elbow joint, fatigue, paresthesia in the limbs, tingling sensation, neuralgia",
+            "pathognomicSign": "Swelling in hand",
+            "indications": "Cervical pain, shoulder pain, Weakness in the upper limb, muscle wasting in upper limb",
+            "tamilLiterature": "“டடவிப்பார் மணிபந்தவன்பும் காணும்\nவிழுவவைத்து அநந்தநிவாய அதிலிருந்து\nவிரளேட்டின்மேல் மூட்வேன்மம் தானயா”\n“தானன கைமுட்டில் மூட்வேன்மம்”\n“வேணவே மூட்குழி மடங்கிதானே\nவிதமான மூட்வேன்மம் சொல்”"
+        },
+        {
+            "varmaName": "Mudakku_Varmam",
+            "signs": "Swelling in hand, paresthesia in the upper limb",
+            "pathognomicSign": "Swelling in hand",
+            "indications": "Pain in elbow joint",
+            "tamilLiterature": "“எகுமே மூட்டுக்குழி மடக்கில் முடக்கு வர்மம்”\n\nஒழுங்கு ஆயுஜே டயவுாேர்புா\n“வீழுந்த முழங்கையில் மயியம்பற்றி\nவிசமான மணிபந்த வர்மமாஅம்”"
+        },
+        {
+            "varmaName": "Visha_Manibantha_Varmam",
+            "signs": "Pain in the forearm and elbow, headache, chest pain",
+            "pathognomicSign": "Pain in the forearm",
+            "indications": "Medial and lateral epicondylitis",
+            "tamilLiterature": ""
+        },
+        {
+            "varmaName": "Manibantha_Varmam",
+            "signs": "Coldness of the body, sharp pain with oppressiveness, agonizing pain, unconsciousness, seizure, rigidity may occur",
+            "pathognomicSign": "Wrist swelling",
+            "indications": "Wrist pain, Carpel tunnel syndrome Cervical pain, shoulder pain",
+            "tamilLiterature": "“விரியாத மணிக்கட்டில் மணிபந்தம்\n“வீரானவிறல் நாளின்மேல் அந்நதைவற்பம்”\n“பிரியாத மணிக்கட்டில் மணிபந்தவர்மம்”"
+        },
+        {
+            "varmaName": "Thuthikkai_Varmam",
+            "signs": "Stiffness of wrist joint, neck pain",
+            "pathognomicSign": "Wrist swelling",
+            "indications": "Wrist pain, Carpel tunnel syndrome, Cervical pain, shoulder pain",
+            "tamilLiterature": "“விசமந்த வர்மதுக்கும் ஆரவிரல்முன்னே\nமணிக்கட்டில் வளைபாய்த் துதிக்கைவர்மம்”\n“மணியென்ற வெல்லையில் அருகுபற்றி\nமத்திப்பதில் வளைவதில் துதிக்கைவர்மம்”\n\"பகருமேன் மணிக்கட்டின் சதம்\nவெள்ளைப் பொங்கையில் துதிக்கைவர்மம்\""
+        },
+        {
+            "varmaName": "Ullangai_Vellai_Varmam",
+            "signs": "Pinching pain, sweat with uneasiness and hunger, frigidity with pyrexia, tremor, impaired vision, aching pain extended upwards, swelling in the back of the palm.",
+            "pathognomicSign": "swelling in the back of the palm.",
+            "indications": "Improves memory, Reduce anxiety neurosis",
+            "tamilLiterature": "“தீர்முழும் நடுகை அகமே வெள்ளை வர்மம்”\n“வேகமாம் வெள்ளையில் கைவெள்ளை வர்மம் என்று”\n“போரோன உள்ளங்கைில் வெள்ளை வர்மம்”"
+        },
+        {
+            "varmaName": "Aanthai_Varmam",
+            "signs": "Tiredness, swelling, intense pain",
+            "pathognomicSign": "Swelling of palm",
+            "indications": "Swelling in the hand, forearm and wrist pain, constipation, numbness in the hand",
+            "tamilLiterature": "“மோது மணிபந்தத்தின் நால்விரல் மேல் ஆனதை”\n“விரியாத மணிக்கட்டில் மணிபந்தம்\nவீரானவிறல் நாளின்மேல் ஆனதைவர்மம்”"
+        },
+        {
+            "varmaName": "Thatchanai_Kaalam",
+            "signs": "Indigestion, chillness of the body, delirium, epilepsy",
+            "pathognomicSign": "Epilepsy",
+            "indications": "Palpitation, eye irritation, finger pain, seizure",
+            "tamilLiterature": "”வாரமறு கரமதிலே புங்களத்தில்\nமொழிபிறங்கன் டட்சணையின் காலமென்பர்”\n“பாரமறும் பவுத்திரத்தின் அடியிடையில்\nபரிவான டட்சணையின் காலமாகும்”"
+        },
+        {
+            "varmaName": "Choondothari_Varmam",
+            "signs": "Generalized edema, delirium",
+            "pathognomicSign": "Pain in dorsum of hand",
+            "indications": "Weakness of hand, hand pain, neck pain",
+            "tamilLiterature": "“.................. டட்சணையின் காலமென்பர்\nமீதினிலோரிறை சூண்டோதரியாம் வர்மம்”\n“பதிவான டட்சணையின் காலமாகும்\nபாரமறும் ஒரிறைமேலே சூண்டோதிவர்மம்”"
+        },
+        {
+            "varmaName": "Chundothari Varmam",
+            "signs": "Swelling, tiredness",
+            "pathognomicSign": "Swelling of palm",
+            "indications": "Depression, Cephalalgia, Insomnia Vertigo, Palpitation.",
+            "tamilLiterature": "“குநித்த பெருவிரலுக்கிடையில் சண்டாதரியென்பர்”\n“வரும்பெரு விரலினிடையில் சண்டோதரியாம்”"
+        },
+        {
+            "varmaName": "Kavuli_Kaalam",
+            "signs": "Excruciating pain, febrile, in the later stage joint inflammation may follow, swelling and anxiety, seizure",
+            "pathognomicSign": "Pain in the thumb",
+            "indications": "Seizure, eye disorders, hypertension, cephalalgia, unconsciousness",
+            "tamilLiterature": "“விட்டகையினிடையில் கவுளி மூன்றுங்காணே”\n“புதழான கவளிகளில் கவுளி வருகின்றம்”"
+        },
+        {
+            "varmaName": "Kakkattai_Kaalam",
+            "signs": "Retraction of tongue, hoarseness of voice, quadriplegia, convulsion, aphasia, grumbling of teeth, tremor, palpitation, stomach disturbance.",
+            "pathognomicSign": "Painful neck movements",
+            "indications": "Neck pain, Neck stiffness",
+            "tamilLiterature": "“வலுவில்லா தோளிலிரு விரலுகளில்\nவன்மையுள்ள காக்கட்டை காலம்.”\n“மன்றாண தோளில்லுந்தங்கலுமே நீங்கி\nமருவுகின்ற தலமதிலே காக்கட்டைகாலம்.”\n“மன்றாண தோளில் ரண்டங்கலுமே நீங்கி\nமருவுகின்ற தலமதிலே காக்கட்டைவற்றுமம்”"
+        },
+        {
+            "varmaName": "Kaisuzhukki_Varmam",
+            "signs": "Sprain in the middle finger, dull ache in hands, numbness",
+            "pathognomicSign": "Flexion deformity of middle finger",
+            "indications": "Neck pain ,Interscapular pain",
+            "tamilLiterature": "“நாமப்பா கைப்பட்டு எல்லிலுநடுவில் தானே சேர்ந்தொரு சுணக்குவற்றமம் என்றுசொல்வார்”"
+        },
+        {
+            "varmaName": "Chippi_Varmam",
+            "signs": "Cough, cold, seizures, peri-arthritis shoulder, indigestion.",
+            "pathognomicSign": "Difficulty in abduction of upper limb",
+            "indications": "Improves mobility of all joints, Reduce shoulder pain",
+            "tamilLiterature": "“கொள்ளவேசிப்பி வற்றமம் தலைம்தகேளு\nகொள்முதுகு கசிப்பிதனில் சிப்பிவற்றமம்”"
+        },
+        {
+            "varmaName": "Sadapira_Varmam",
+            "signs": "Polyarthralgia, abdominal distension, unconsciousness",
+            "pathognomicSign": "Opened - eye lid",
+            "indications": "Improves respiration, Interscapular pain, Strengthen eye lids.",
+            "tamilLiterature": "“கைக்கொட்டிக்காலம் மேலிறைந்தில் சட்டப்பிறக்\nகாலமிதுக்கிறையின் மேல்கிழிப்பிறையாம் வற்றமம்”\n“கைக்கொட்டிக்காலம் மேலிறை சட்டப்பிறக்\nகாலமிதுக்கிறையின் மேல்கிழிப்பிறையாம் வற்றமம்”"
+        },
+        {
+            "varmaName": "Kaikatti_Kaalam",
+            "signs": "Shoulder pain with swelling, difficulty in movements of shoulder, numbness of hands",
+            "pathognomicSign": "Difficulty in abduction of upper limb.",
+            "indications": "Intrascapular pain",
+            "tamilLiterature": "“கருதியே தும்பியின் மேல் நாளிறக்குள்\nகைக்கொட்டிக்காலம் மேலிறண்டில் சடப்பிறக்கலாம்.”\n“நேர்வன்மத்தின் சீறுபக்கம் நேர்த்தும்பிக்காலம்\nநின்றதினால் இறைக்குள் கைக்கொட்டிக்காலம்.”"
+        },
+        {
+            "varmaName": "Thumbi_Varmam",
+            "signs": "Cough, palpitation, nausea, constipation, kyphosis, skin diseases",
+            "pathognomicSign": "Skin diseases – 18 kuttam",
+            "indications": "Kyphosis",
+            "tamilLiterature": "நேர்வன்மத்தின் சீழ்பக்கம் நேர்த்தும்பிக்காலம்  \nநின்றதிந்நாறு இறைகள்க் கைகெட்டிக்காலம்.”  \nஉடலிலே நேருவாரம் சீழ்பக்கத்தில்  \nதுடலிலே தும்பிக்காலம்"
+        },
+        {
+            "varmaName": "Natellu_Varmam",
+            "signs": "Nasal block, kyphosis, tremor, fatigue, pain around the hip region, pain present while standing upright posture",
+            "pathognomicSign": "Mid thoracic pain",
+            "indications": "Vata diseases of spine, Gait abnormalities, Headache",
+            "tamilLiterature": "“சொல்லுவார் முன்னந்தண்டில் நட்டில்லவு வழங்கம்  \nதுச்சமதுக்கு தீழ் சச்சைக்காலம்”  \n“நெறியிலே மூலத்தண்டில் நெட்டிடை நட்டில்வற்றம்"
+        },
+        {
+            "varmaName": "Kachai_Varmam",
+            "signs": "Abdomen distension, constipation, low back pain, anuria, loss of appetite, paraplegia",
+            "pathognomicSign": "Kora vatham (low back pain)",
+            "indications": "Low back pain,\nImproves digestion",
+            "tamilLiterature": "“நட்டில்வற்றம்திறக்கும் நல்லதின்ஆழ் சச்சைவற்றம்”  \nநாணுமாறு மூலத்தண்டில் நட்டில்வற்றம்  \nநணுகிறதன் தீழ் சச்சை காலம்”"
+        },
+        {
+            "varmaName": "Poonool_Varmam",
+            "signs": "Fever, rigor, profuse sweating, general weakness, loss of appetite, abdominal distension, breathlessness",
+            "pathognomicSign": "Malfunctioning of Thasavayu",
+            "indications": "Nausea, General weakness, Reduce stiffness of joints.",
+            "tamilLiterature": "“நட்டில்வற்றம்திறக்கும் நல்லதின்ஆழ் சச்சைவற்றம்”  \nநாணுமாறு மூலத்தண்டில் நட்டில்வற்றம்  \nநணுகிறதன் தீழ் சச்சை காலம்”"
+        },
+        {
+            "varmaName": "Vayu_Varmam",
+            "signs": "Pain, inability to walk, unconsciousness",
+            "pathognomicSign": "Difficulty in walking",
+            "indications": "All vata diseases",
+            "tamilLiterature": "“தீர்வே வாயுக்காலம் தலைத்தைக் கேளு  \nதெள்ளிய முதுகண்டு மத்தியாகும்.”  \n“செய்யவென்றால் எட்டெல்லின் முனையில்தானே  \nசெய்யலான வாயுவின்காலம் சொன்னேன்.”"
+        },
+        {
+            "varmaName": "Pitthukai_Varmam",
+            "signs": "Abdomen distension, low back pain",
+            "pathognomicSign": "Low back pain",
+            "indications": "Improves kidney function",
+            "tamilLiterature": "“நில்லென்ற புவரியில் கூம்பெல்லின் தீழ்  \nநேர்த்தியயிறு புரமும் கிடக்கும் பாரு  \nவில்லென்ற வில்வட்டின் பக்கம்பற்றி  \nவேந்தனே பித்துக்காயென்று சொல்வர்”  \n“கிடத்தும் நேர்வன்மத்தின் பின்னக்கத்தில்  \nகிறற்றொறுகொல் சார்வோம் பித்துக்காயம்”"
+        },
+        {
+            "varmaName": "Pinnal_Varmam",
+            "signs": "Anuria, severe constipation",
+            "pathognomicSign": "Anuria",
+            "indications": "Constipation, Abdomen distension, Enhance digestion.",
+            "tamilLiterature": "“நானான நாபியின் பின்னேதானே\nநலமான பின்னெல்லின் வற்றமாகும்”\n“வாதவிடாம்நாபி கூறந்தின் பின்\nமருவி நிற்கும் பின்னெல்ல்வற்றமம்”"
+        },
+        {
+            "varmaName": "Nanganapootu",
+            "signs": "Dribbling of urine, loss of sensation of both lower limbs, constipation",
+            "pathognomicSign": "loss of sensation of both lower limbs",
+            "indications": "Reduce low back pain, knee pain, Strengthens legs",
+            "tamilLiterature": "“எல்லான பட்டியனும் நாங்கனத்தின்\nஏற்புடைய தலைமையின் சுழியதில்\nவெல்லான தமர் மூன்றுக்கப்பாலே\nவில்லான விசையரம்பு சேர்ந்தனின்று\nவல்லான பிரிபோல ஆடிநிற்கும்”"
+        },
+        {
+            "varmaName": "Moothira_Kalam",
+            "signs": "Pain, dribbling of urine, abnormal condition of bladder",
+            "pathognomicSign": "Dribbling of urine",
+            "indications": "Genitourinary conditions",
+            "tamilLiterature": "“தகைநாபி நால்விறவின்கீழ் மூத்திரக்காலம்”\n“உதரவே கொப்புளின் நால்விறவின்கீழ்\nஉத்தமனே மூத்திரத்தின் காலமாறு\nஉண்டான உந்துவிறவின்கீழ் நால்விறவில்\nஉறுதியாய் நெருவிறியில் மூத்திரக்காலம்”"
+        },
+        {
+            "varmaName": "Kallidai_Kaalam",
+            "signs": "Rigor, perspiration, angular salivation, retraction of testis",
+            "pathognomicSign": "Excessive fatigue",
+            "indications": "Useful in stress management, Wheezing, Benign prostate hypertrophy.",
+            "tamilLiterature": "“வேமிந்த வித்திரண்டும் பதிந்தசார்பில்\nவிதமான கல்விடையின் காலமாகும்”\n‘மாணென்று வாசியது பிறந்ததாணம்\nமகத்தான விருல்ஆறின் தாழ்வாக\nகோசொன்ற கல்விடையின் காலமாகும்’"
+        },
+        {
+            "varmaName": "Vellurumi&Vallurumi_Varmam",
+            "signs": "Spasmodic pain, scrotal swelling, hypogastric pain, delirium, giddiness, may behave like psychiatric person",
+            "pathognomicSign": "Loss of libido",
+            "indications": "Fertility disorders",
+            "tamilLiterature": "“மண்ணிடை தண்டொருமடக்கின் பக்கம்\nவலம்புரிஇடம்பரி இரண்டும் பக்கந்தான்\nவெல்லுறுமி வல்லுறுமி இரண்டதாலும்\nவிசம்படிக்க தலைமடுத்து நங்குன்றி”"
+        },
+        {
+            "varmaName": "Valampuri_Kaalam",
+            "signs": "Weakness of both lower limb, hypogastric pain, anaemia, constipation, retention of urine and feces",
+            "pathognomicSign": "Weakness of both lower limbs",
+            "indications": "Erectile dysfunction, Loss of libido, Urinary disturbances.",
+            "tamilLiterature": "“போமிந்த தண்டின்வலமோர் இறைச்சுள்\nபுனிதமாம் வலம்புரியின் காலமாச்சே”\n“சாரந்துபார் தண்டதற்குவொரிறைக்கு மேலை\nதயவான வலம்புரியாமென்ற வற்றமம்”"
+        },
+        {
+            "varmaName": "Idampuri_Kaalam",
+            "signs": "Pain and swelling of penis due to retention of urine, obstructed feeling during micturition, burning micturition, anal pain, abdominal distension.",
+            "pathognomicSign": "Anal pain",
+            "indications": "Nocturnal enuresis, Urinary incontinence.",
+            "tamilLiterature": "புனிதமாம் வலம்புரியின் காலமாச்சே\nஆமிந்த இதனருகே இடம்புரிக்காலம்.”\n“தேனென்ர தண்டின்வலம் வலம்புரியாங்காலம்\nதெளிந்துடமாம் இடம்புரி யெனவாகும்.”"
+        },
+        {
+            "varmaName": "Thandu_Varmam",
+            "signs": "Anasarca, dyspnoea, rectal prolapse",
+            "pathognomicSign": "Rectal prolapse",
+            "indications": "Erectile dysfunction",
+            "tamilLiterature": "“கோபப்பா லிங்கத்தின் மூடுநிலையில்\nகீர்த்தியின் தண்டுவென்மம் இதற்குப்பெரும்\nகள்ளமில்லா சொன்ன தண்டுவென்மத்தின் மேல்\nகணக்கான விரவுவும் ஆமில்தானே\nதுள்ளியிடம் மூத்திரத்தின் காலமாகும்”"
+        },
+        {
+            "varmaName": "Ani_Varmam",
+            "signs": "Low back pain, weakness of both lower limbs.",
+            "pathognomicSign": "Rectal prolapse",
+            "indications": "Relieves back pain, General debility",
+            "tamilLiterature": "“வாச்சதே வில்லுறுமிநாங்கு குற்றி\nவகையான காலமதில் விருநாளின்மேல்\nகாச்சதே அணிவரம்பம் ஆகும்பாறு.\nநாங்குற்றி அதற்குமிறை நாளின்மேலே\nதலமதில் அணி வற்றமம்.”"
+        },
+        {
+            "varmaName": "AndaKalam",
+            "signs": "Body pain, bleeding piles, anuria, rectal prolapse",
+            "pathognomicSign": "Painful defaecation",
+            "indications": "Stimulate mooladharam,Reduce stress and anxiety.",
+            "tamilLiterature": "“செய்யவென்றால் வித்துறண்டும் பதிந்தசார்பில்\nசெய்யான அதன்துணிவில் அண்டகாலம்”\n“தயவான அண்டவன்மதலைத்தைக் கேளு\nகோப்பா வித்துறண்டும் பதிந்தசார்பில்\nகெனிதமுடன் இதன்மையும் வன்மம்”."
+        },
+        {
+            "varmaName": "Urumi_Varmam",
+            "signs": "Difficulty to walk, severe pain and swelling in lower limb, weakness of the body.",
+            "pathognomicSign": "Weakness of lower limb",
+            "indications": "Strengthens knee joint and lower limb",
+            "tamilLiterature": "“மூட்டுவன்மம் துடையினடி உறுமிக்காலம்”\n“ஆனதொரு தொகைநடுவில் உறுமிவன்மம்”"
+        },
+        {
+            "varmaName": "Aamai_Varmam",
+            "signs": "Unbearable pain, difficult to move the affected limb, tortuosity of veins of lower limb, increased thirst, fatigue, blurred vision, increased sweat, weakness, seizure, tremor, palpitation, dyspnoea.",
+            "pathognomicSign": "Difficulty to walk",
+            "indications": "Gives strength to lower limbs, Nocturnal enuresis, Stimulates Karu naadi.",
+            "tamilLiterature": "“எழுமடா தொடைமுதுகில் அமைவன்மம்”"
+        },
+        {
+            "varmaName": "Kaalmoottu_varmam",
+            "signs": "Unbearable pain, extreme tiredness, seizure, increased sweat, increased thirst, pyrexia with chillness",
+            "pathognomicSign": "Difficulty in walking",
+            "indications": "Reduce knee pain, Aids movement of knee joint",
+            "tamilLiterature": "“தானதிலே மூட்டிசைவில் மூட்டுவன்மம்”\n“ஆடேனிமுட்டு பொருத்ததனில் மூட்டுவன்மம்\nஅப்போதே இந்தலந்தான் அசைவுதிறிகண்ணுமாகும்”"
+        },
+        {
+            "varmaName": "Naaithalai_Varmam",
+            "signs": "Difficulty in flexion, extension and squatting of knee joint, leg sprain, swelling of knee joint, paraesthesia of legs.",
+            "pathognomicSign": "Swelling of knee joint",
+            "indications": "Knee pain, Knee swelling",
+            "tamilLiterature": "“ஆனந்தமான அகமூட்டின் முன்சார்பில்\nஅழகான முகுளத்தில் நாய்தலையர்மம்”\n“உண்டப்பா மூட்டின்முன்பக்க சார்வோரம்\nநாய் தலையின் வர்மம்”"
+        },
+        {
+            "varmaName": "Kuthirai_Muga_Varmam",
+            "signs": "Unbearable pain and perspiration, tremor, fatigue and seizure, pyrexia, uncontrollable thirst, sudden fall in the flow of Saram.",
+            "pathognomicSign": "Non-healing tropic ulcer",
+            "indications": "Strengthens knee joint, Reduce paraesthesia of legs.",
+            "tamilLiterature": "“துள்ளவே முழங்காலின் மத்திபத்தில்\nவிசமநெடும் குதிரை முகம்”\n“தீருமா முழங்காலின் வற்பம்கேடு\nநிறமான மையமதில் குதிரைமுகவன்மம்”"
+        },
+        {
+            "varmaName": "Komberi_Varmam",
+            "signs": "Tremor in the extremities, unbearable pain, and cry loudly, increased perspiration,fatigue, convulsion",
+            "pathognomicSign": "Seizures",
+            "indications": "Low back pain,\nStrengthens lower limb,\nSeizures",
+            "tamilLiterature": "“நன்றனவே முழங்காலில் குதிரைமுகம்\nநாடியதர் கங்குலுமே நாளின்கீழே\nமன்றனவே கொம்பேறி வற்பமென்றும்”\n“கண்டாயோ குதிரைமுகம் அங்குலந்தான்\nநாளின்கீழே கடந்திட்டால் கொம்பேறிவன்மம்”"
+        },
+        {
+            "varmaName": "Kuthi_Kaal_Varmam",
+            "signs": "Angular deviation, delirium, reduced anthropometric measurement",
+            "pathognomicSign": "Delirium",
+            "indications": "Low back pain, Strengthens lower limb, Seizures",
+            "tamilLiterature": "“வாரப்பாகுதிகால் நரம்புதிலே குதிகால்வன்மம்”\n“வேகு குதிநரம்புதுவே குதிகால்வன்மம்”"
+        },
+        {
+            "varmaName": "Kaalkulatchu_Varmam",
+            "signs": "Fatigue with unconsciousness followed by tremor, difficulty to walk, seizure, paraesthesia.",
+            "pathognomicSign": "Fatigue",
+            "indications": "Low back pain, Heel pain, Menstrual disorders.",
+            "tamilLiterature": "“போடவே கால்குளாச்சிலே குளாச்சிவன்மம்\nபுததாக இத்தலத்தில் துண்டமாக\nநாடவே எட்டெலலும் பொருந்துகின்றும்”\n“செய்யவே காலசையும் குளாச்சுகூனே\nசெய்யரிய படமுடிந்த யிடத்தில்வாரு\nஉய்யவே விசித்திரவன்மம் அதற்க்குபேறு”"
+        },
+        {
+            "varmaName": "Uppu_Kuthi_Varmam",
+            "signs": "Calcaneal pain, difficulty to walk, weakness, unconsciousness",
+            "pathognomicSign": "Pain in the heel",
+            "indications": "Reduce heel pain",
+            "tamilLiterature": "“உள்ளபடி குதிகாலு வற்பமாகும்\nஉண்டப்பா அதுக்கு நாள்விறிகீழ்\nஇளஞ்சுவேன் உப்புக்குற்றிக் காலமாகும்”\n“புகழ் உப்புகுத்தியது குதிகாலமாகும்”"
+        },
+        {
+            "varmaName": "Kan_Pugaichal_Varmam",
+            "signs": "Excruciating pain, swelling in the dorsum of foot, debility in all limbs, unconsciousness followed by seizure, frigidity, pyrexia with fatigue",
+            "pathognomicSign": "Burning sensation of eyes.",
+            "indications": "Improves vision and hearing",
+            "tamilLiterature": "மன்றான படமதிலே படவன்றதான்\nமாறவே கண்ணு புகைக்காலம்\n“பாமென்ற சுண்டேரி வந்தம்மிதி\nபடவந்தம் கண்ணுபுகைக் காலமெண்ணே”"
+        },
+        {
+            "varmaName": "Konasanni_Varmam",
+            "signs": "Angular deviation, delirium, reduced anthropometric measurement",
+            "pathognomicSign": "Delirium",
+            "indications": "Low back pain, Strengthens lower limb, Seizures",
+            "tamilLiterature": "“ஒன்றனவே முன்னரம்பில் முடிச்சிமையும்\nஉற்றொறு கோணாச்சனி வந்தந்தானே”"
+        },
+        {
+            "varmaName": "Pada_Varmam",
+            "signs": "Excruciating pain, swelling in the dorsum of foot, debility in all limbs, unconsciousness followed by seizure, non-healing ulcer, frigidity, pyrexia with fatigue",
+            "pathognomicSign": "Pedal oedema",
+            "indications": "Reduce redness of eyes Reduce swelling of foot Improves vision",
+            "tamilLiterature": "“மன்றான படமதிலே படவன்றதான்”"
+        },
+        {
+            "varmaName": "Choondigai_Varmam",
+            "signs": "Fatigue with unconsciousness, fatigue with tremor, paraesthesia, swelling in the dorsum of foot, seizure with coldness.",
+            "pathognomicSign": "Paraesthesia",
+            "indications": "Interphalangeal joint stiffness",
+            "tamilLiterature": "“பண்பான காலடட்சனைக் குண்டோதரி”\n“நவிறுகின்ற பெருவிரைவிற்கு மேலாம்\nஒன்றான விருத்திலென்ற காலமாசும்\nஉரையதன்மேல் ரண்டிறைக்குள் சுண்டோதர"
+        },
+        {
+            "varmaName": "Kundothari_Varmam",
+            "signs": "Swelling, tiredness",
+            "pathognomicSign": "Excessive tiredness",
+            "indications": "Reduce stiffness in small joints of foot.",
+            "tamilLiterature": "“நன்றான கால்விரலின்மொழி சுண்டிகைக்காலம்\n‘பெருவிரல் மொழிக்குள் சுண்டிகைக் காலமென்’\nஒன்றான விருத்தி என்ற காலமாகும்\nஉரையதன்மேல் ரண்டிறைக்குள் சுண்டோதரின்பா”"
+        },
+        {
+            "varmaName": "Viruthi_Kaalam",
+            "signs": "Increased warmth, seizure may occur, weakness of limbs.",
+            "pathognomicSign": "seizure",
+            "indications": "Low back pain, Strengthens lower limb, Seizures.",
+            "tamilLiterature": "“நவிலுகின்ற பெருவிரலிறைக்கு மேலாம்\nஒன்றான விருத்தி என்ற காலமாகும்\nஉரையதன்மேல் ரண்டிறைக்குள் சுண்டோதரின்பா”"
+        },
+        {
+            "varmaName": "Ullankaal_Vellai_Varmam",
+            "signs": "Fatigue, pain in lower limbs, dyspnoea, unconsciousness, bloating of abdomen, difficulty in micturition and defaecation, weakness of lower limb, seizure.",
+            "pathognomicSign": "lower limb weakness",
+            "indications": "Low back pain, Wheezing, Strengthens lower limb, Seizures.",
+            "tamilLiterature": "“கீர்த்தியாம் பாதமதில் வெள்ளை வரும்”\n“சூட்சமடா வெள்ளையதில் அடங்கல்வறும்\nஅகமான உள்ளமாகால் வெள்ளைவரும்”"
+        }
+    ]
+}
