@@ -29,3 +29,4 @@ sentence-transformers>=2.2.0
 
 # System utilities
 tqdm>=4.66.0
+faiss-cpu>=1.7.4

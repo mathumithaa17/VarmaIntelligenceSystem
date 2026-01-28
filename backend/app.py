@@ -30,6 +30,10 @@ try:
         symptom_to_varma_path=SYMPTOM_TO_VARMA_JSON
     )
     print("\n✓ Retriever initialized successfully!")
+except FileNotFoundError as fnf_error:
+    print(f"\n✗ CRITICAL: Missing data file! {fnf_error}")
+    print(f"Ensure that '{VARMA_SYMPTOMS_JSON}' and '{SYMPTOM_TO_VARMA_JSON}' exist.")
+    retriever = None
 except Exception as e:
     print(f"\n✗ Failed to initialize retriever: {e}")
     retriever = None

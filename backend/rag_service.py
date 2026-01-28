@@ -21,6 +21,16 @@ from src.retriever import VarmaRetriever
 from src.llm.prompt import build_prompt
 from src.llm.generator import generate
 
+# Check for FAISS (common missing dependency on new envs)
+try:
+    import faiss
+except ImportError:
+    print("\n" + "!"*80)
+    print("[CRITICAL ERROR] 'faiss' module not found.")
+    print("Please run: pip install faiss-cpu")
+    print("!"*80 + "\n")
+
+
 app = Flask(__name__)
 CORS(app)
 

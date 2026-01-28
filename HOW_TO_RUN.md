@@ -10,7 +10,7 @@ This guide explains how to set up and run the complete system, which consists of
 
 ## 1. Prerequisites (Install First)
 *   **Node.js**: [Download Here](https://nodejs.org/) (Version 16+ recommended).
-*   **Python**: [Download Here](https://www.python.org/) (Version 3.8+).
+*   **Python**: [Download Here](https://www.python.org/) (Version 3.8 - 3.11).
 *   **Ollama**: [Download Here](https://ollama.com/download) (Required for the Chatbot).
 
 ---
@@ -19,14 +19,23 @@ This guide explains how to set up and run the complete system, which consists of
 
 ### Step A: Setup Backend
 1.  Open a terminal in the root folder (`FYP-26`).
-2.  Create a virtual environment (optional but recommended):
+2.  **Check Python Version**:
+    *   Ensure you are using Python 3.8 to 3.11.
+    *   On Mac/Linux, you might need to use `python3` instead of `python`.
+
+3.  Create a virtual environment (optional but recommended):
     ```bash
+    # Windows
     python -m venv venv
+    
+    # Mac/Linux
+    python3 -m venv venv
     ```
-3.  Activate it:
-    *   Windows: `venv\Scripts\activate`
-    *   Mac/Linux: `source venv/bin/activate`
-4.  Install dependencies:
+4.  Activate it:
+    *   **Windows**: `venv\Scripts\activate`
+    *   **Mac/Linux**: `source venv/bin/activate`
+
+5.  Install dependencies:
     ```bash
     pip install -r backend/requirements.txt
     ```
@@ -43,11 +52,15 @@ This guide explains how to set up and run the complete system, which consists of
 
 ### Step C: Setup AI Model
 1.  Open any terminal.
-2.  Run the verification script provided:
+2.  **Windows Users**:
+    Run the verification script provided:
     ```bash
     check_ollama.bat
     ```
-3.  Or manually Install the model:
+3.  **Mac/Linux Users** (or if script fails):
+    *   Install Ollama from [ollama.com](https://ollama.com).
+    *   Open your terminal/shell.
+    *   Pull the required model manually:
     ```bash
     ollama pull llama3
     ```
@@ -94,6 +107,8 @@ npm start
 *   **Ask Question tab**: Uses RAG Service (5004) + Ollama.
 
 ## Troubleshooting
-*   **"Local LLM not installed"**: Ensure you installed Ollama and restarted your terminals. Run `check_ollama.bat`.
+*   **"Local LLM not installed"**: Ensure you installed Ollama and restarted your terminals. 
+    *   **Windows**: Run `check_ollama.bat`
+    *   **Mac/Linux**: Run `ollama list` to verify `llama3` is present.
 *   **500 Error**: Check the terminal output of the respective backend service.
 *   **3D Model not loading**: Ensure Terminal 3 is running and serving port 3001.
