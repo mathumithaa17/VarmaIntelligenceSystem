@@ -205,4 +205,8 @@ cython_debug/
 # Marimo
 marimo/_static/
 marimo/_lsp/
+marimo/_lsp/
 __marimo__/
+
+# Allow Unity Build folder in public
+!varma-intelligence-system/public/Web_text/Build/
