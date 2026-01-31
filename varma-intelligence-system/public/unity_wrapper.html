@@ -26,80 +26,176 @@
       transform: translate(-50%, -50%);
       color: white;
       font-family: sans-serif;
+      text-align: center;
+    }
+
+    #loader-spinner {
+      width: 40px;
+      height: 40px;
+      margin: 20px auto;
+      border: 4px solid rgba(255, 255, 255, 0.3);
+      border-top: 4px solid white;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
     }
   </style>
 </head>
 
 <body>
-  <div id="loader">Loading 3D Model...</div>
+  <div id="loader">
+    <div id="loader-spinner"></div>
+    <p>Loading 3D Model...</p>
+    <p id="loader-status" style="font-size: 12px; color: #999;"></p>
+  </div>
   <canvas id="unity-canvas"></canvas>
 
-  <script src="http://localhost:3001/Web_text/Build/buildFolder.loader.js"></script>
   <script>
+    // Global variables
+    var myUnityInstance = null;
     var canvas = document.querySelector("#unity-canvas");
     var loader = document.querySelector("#loader");
-    var myUnityInstance = null;
+    var statusEl = document.getElementById('loader-status');
 
-    // Use the dedicated 3001 server for assets to avoid Webpack issues
+    // Configuration
     var buildUrl = "http://localhost:3001/Web_text/Build";
     var streamingUrl = "http://localhost:3001/Web_text/StreamingAssets";
 
-    createUnityInstance(canvas, {
-      dataUrl: buildUrl + "/buildFolder.data",
-      frameworkUrl: buildUrl + "/buildFolder.framework.js",
-      codeUrl: buildUrl + "/buildFolder.wasm",
-      streamingAssetsUrl: streamingUrl,
-      companyName: "DefaultCompany",
-      productName: "Sample1",
-      productVersion: "0.1.0",
-      captureAllKeyboardInput: false // Ensure this is false
-    }).then((unityInstance) => {
-      myUnityInstance = unityInstance;
-      loader.style.display = "none";
+    // Load the buildFolder.loader.js with retries
+    function loadLoaderScript() {
+      const loaderUrl = buildUrl + "/buildFolder.loader.js";
+      const maxRetries = 10;
+      let retries = 0;
 
-      // Double check input capture
-      try {
-        if (unityInstance.Module) {
-          unityInstance.Module.captureAllKeyboardInput = false;
+      function attemptLoad() {
+        const script = document.createElement('script');
+        script.src = loaderUrl;
+        script.onerror = function() {
+          retries++;
+          if (retries < maxRetries) {
+            statusEl.textContent = `Connecting to asset server... (${retries}/${maxRetries})`;
+            console.log("Retrying to load buildFolder.loader.js...");
+            setTimeout(attemptLoad, 1000);
+          } else {
+            statusEl.textContent = "Failed to load 3D model. Make sure Terminal 3 (asset server) is running.";
+            console.error("Failed to load buildFolder.loader.js after " + maxRetries + " retries");
+          }
+        };
+        script.onload = function() {
+          console.log("buildFolder.loader.js loaded successfully");
+          initializeUnityInstance();
+        };
+        document.body.appendChild(script);
+      }
+
+      // Start loading
+      attemptLoad();
+    }
+
+    // Initialize Unity after loader script is loaded
+    function initializeUnityInstance() {
+      if (typeof createUnityInstance === 'undefined') {
+        console.error("createUnityInstance is not defined. The loader script may not have loaded properly.");
+        statusEl.textContent = "Error: Unity loader not ready. Please refresh the page.";
+        setTimeout(() => {
+          loadLoaderScript();
+        }, 2000);
+        return;
+      }
+
+      statusEl.textContent = "Initializing 3D model...";
+
+      createUnityInstance(canvas, {
+        dataUrl: buildUrl + "/buildFolder.data",
+        frameworkUrl: buildUrl + "/buildFolder.framework.js",
+        codeUrl: buildUrl + "/buildFolder.wasm",
+        streamingAssetsUrl: streamingUrl,
+        companyName: "DefaultCompany",
+        productName: "Sample1",
+        productVersion: "0.1.0",
+        captureAllKeyboardInput: false
+      }).then((unityInstance) => {
+        myUnityInstance = unityInstance;
+        loader.style.display = "none";
+        console.log("Unity instance created successfully");
+
+        // Double check input capture
+        try {
+          if (unityInstance.Module) {
+            unityInstance.Module.captureAllKeyboardInput = false;
+          }
+        } catch (e) { 
+          console.warn("Could not set captureAllKeyboardInput:", e);
         }
-      } catch (e) { }
 
-      // Notify parent we are ready
-      window.parent.postMessage({ type: 'UNITY_LOADED' }, '*');
+        // Notify parent we are ready
+        window.parent.postMessage({ type: 'UNITY_LOADED' }, '*');
 
-    }).catch((message) => {
-      alert(message);
-    });
+      }).catch((message) => {
+        console.error("Unity initialization failed:", message);
+        statusEl.textContent = "Failed to initialize Unity: " + message;
+        alert("Failed to initialize Unity: " + message);
+      });
+    }
 
     // Listen for messages from React
     window.addEventListener('message', function (event) {
-      // Validation: verify origin if needed, but for localhost same-origin is fine or '*'
-
       if (!myUnityInstance) return;
 
       const data = event.data;
-      // Helper to broadcast message to possible GameObject names
+
+      // Helper to send messages to Unity
       function sendToUnityObject(method, payload) {
-        // Try the requested name
-        myUnityInstance.SendMessage('VarmaManager', method, payload);
-        // Fallback to the class name (common default)
-        myUnityInstance.SendMessage('VarmaPointClickHandler', method, payload);
-        // Fallback to a generic manager name just in case
-        myUnityInstance.SendMessage('Varma', method, payload);
+        try {
+          myUnityInstance.SendMessage('VarmaManager', method, payload);
+        } catch (e) { 
+          console.warn("Could not send message to VarmaManager:", e);
+        }
+        try {
+          myUnityInstance.SendMessage('VarmaPointClickHandler', method, payload);
+        } catch (e) { 
+          console.warn("Could not send message to VarmaPointClickHandler:", e);
+        }
+        try {
+          myUnityInstance.SendMessage('Varma', method, payload);
+        } catch (e) { 
+          console.warn("Could not send message to Varma:", e);
+        }
       }
 
-      if (data.type === 'HighlightPoint') {
-        sendToUnityObject('HighlightPoint', data.payload);
-      } else if (data.type === 'HighlightPointsList') {
-        sendToUnityObject('HighlightPointsList', data.payload);
-      } else if (data.type === 'ClearAllHighlights') {
-        sendToUnityObject('ClearAllHighlights', '');
-      } else if (data.type === 'SelectPoint') {
-        sendToUnityObject('SelectPoint', data.payload);
-      } else if (data.type === 'ResetCamera') {
-        myUnityInstance.SendMessage('CameraController', 'ResetCamera', '');
+      switch (data.type) {
+        case 'HighlightPoint':
+          sendToUnityObject('HighlightPoint', data.payload);
+          break;
+        case 'HighlightPointsList':
+          sendToUnityObject('HighlightPointsList', data.payload);
+          break;
+        case 'ClearAllHighlights':
+          sendToUnityObject('ClearAllHighlights', '');
+          break;
+        case 'SelectPoint':
+          sendToUnityObject('SelectPoint', data.payload);
+          break;
+        case 'ResetCamera':
+          try {
+            myUnityInstance.SendMessage('CameraController', 'ResetCamera', '');
+          } catch (e) {
+            console.warn("Could not send ResetCamera message:", e);
+          }
+          break;
       }
     });
+
+    // Start the loading process when DOM is ready
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', loadLoaderScript);
+    } else {
+      loadLoaderScript();
+    }
   </script>
 </body>
 
