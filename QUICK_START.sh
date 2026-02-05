@@ -1,0 +1,31 @@
+#!/bin/bash
+
+# Varma Intelligence System - Quick Startup Guide
+# Run this script to see terminal commands for all 4 services
+
+echo "=================================="
+echo "Varma Intelligence System Setup"
+echo "=================================="
+echo ""
+echo "You need to open 4 SEPARATE terminals and run these commands:"
+echo ""
+echo "TERMINAL 1 - Backend (Search Engine):"
+echo "cd /Users/mathumithamathiyalagan/Desktop/fyp2/VarmaIntelligenceSystem"
+echo "python backend/app.py"
+echo ""
+echo "TERMINAL 2 - RAG Service (Chatbot):"
+echo "cd /Users/mathumithamathiyalagan/Desktop/fyp2/VarmaIntelligenceSystem"
+echo "python backend/rag_service.py"
+echo ""
+echo "TERMINAL 3 - Asset Server (⭐ START THIS BEFORE TERMINAL 4):"
+echo "cd /Users/mathumithamathiyalagan/Desktop/fyp2/VarmaIntelligenceSystem/varma-intelligence-system"
+echo "npx serve -s public -p 3001 --cors"
+echo ""
+echo "TERMINAL 4 - Frontend Application:"
+echo "cd /Users/mathumithamathiyalagan/Desktop/fyp2/VarmaIntelligenceSystem/varma-intelligence-system"
+echo "npm start"
+echo ""
+echo "=================================="
+echo "Application will open at:"
+echo "http://localhost:3000"
+echo "=================================="
