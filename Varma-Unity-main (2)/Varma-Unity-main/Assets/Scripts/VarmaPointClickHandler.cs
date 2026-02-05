@@ -25,6 +25,7 @@ public class VarmaPointClickHandler : MonoBehaviour
     private bool isDisplaying;
     private Vector2 mouseDownPosition;
     private int varmaLayerMask;
+    private bool isSearchActive = false;
 
     private static List<VarmaPointVisual> activeGlow = new List<VarmaPointVisual>();
 
@@ -109,7 +110,11 @@ public class VarmaPointClickHandler : MonoBehaviour
 
         if (bestTransform != null)
         {
-            HandleGlow(bestTransform.name);
+        if (bestTransform != null)
+        {
+            if (!isSearchActive) HandleGlow(bestTransform.name);
+            DisplayPointName(bestTransform.name, bestTransform);
+        }
             DisplayPointName(bestTransform.name, bestTransform);
         }
     }
@@ -179,11 +184,16 @@ public class VarmaPointClickHandler : MonoBehaviour
                 }
             }
             Debug.Log($"[VarmaManager] Highlighted {count} points.");
+            if (count > 0) isSearchActive = true;
         }
         catch (System.Exception e) { Debug.LogError($"[VarmaManager] Error: {e.Message}"); }
     }
 
-    public void ClearAllHighlights(string ignore) => ClearGlow();
+    public void ClearAllHighlights(string ignore) 
+    {
+        ClearGlow();
+        isSearchActive = false;
+    }
 
     void HandleGlow(string name)
     {
@@ -196,6 +206,18 @@ public class VarmaPointClickHandler : MonoBehaviour
     {
         foreach (var v in activeGlow) if (v) v.SetGlow(false);
         activeGlow.Clear();
+        // Do NOT reset isSearchActive here blindly, because HandleGlow calls this too.
+        // But HandleGlow is for single click (which IS normal mode), or Search calls it?
+        // Wait, HandleGlow sets single point. 
+        // If HandleGlow is called, it means we are in Normal Mode (checked by caller).
+        // Or if we call HandleGlow programmatically?
+        // Let's stick to resetting it in ClearAllHighlights primarily.
+        // However, if HandleGlow calls ClearGlow, the state remains whatever it was. 
+        // If we are in Search Mode, we DON'T call HandleGlow.
+        // If we are in Normal Mode, we CALL HandleGlow -> ClearGlow.
+        // Ideally ClearGlow represents 'clearing' state.
+        // Let's rely on ClearAllHighlights (explicit clear) to reset to Normal Mode.
+        // And also, if manual single-click happens (Normal Mode), we are fine.
     }
 
     string NormalizeName(string raw)

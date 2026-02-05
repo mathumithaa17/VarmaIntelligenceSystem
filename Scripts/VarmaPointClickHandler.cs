@@ -23,6 +23,7 @@ public class VarmaPointClickHandler : MonoBehaviour
     private bool isDisplaying;
     private Vector2 mouseDownPosition;
     private int varmaLayerMask;
+    private bool isSearchActive = false; // New flag to track search mode
 
     // 🔹 already-existing glow support
     private static List<VarmaPointVisual> activeGlow = new();
@@ -115,7 +116,14 @@ public class VarmaPointClickHandler : MonoBehaviour
 
         if (bestTransform != null)
         {
-            HandleGlow(bestTransform.name);
+        if (bestTransform != null)
+        {
+            if (!isSearchActive)
+            {
+                HandleGlow(bestTransform.name);
+            }
+            DisplayPointName(bestTransform.name, bestTransform);
+        }
             DisplayPointName(bestTransform.name, bestTransform);
         }
     }
@@ -150,6 +158,15 @@ public class VarmaPointClickHandler : MonoBehaviour
 
         isDisplaying = true;
         hideTimer = displayDuration;
+    }
+
+        hideTimer = displayDuration;
+    }
+
+    // Bridge method called by Web
+    public void ClearAllHighlights(string ignore)
+    {
+        ClearGlow();
     }
 
     void HidePanel()
@@ -193,6 +210,7 @@ public class VarmaPointClickHandler : MonoBehaviour
                 v.SetGlow(false);
 
         activeGlow.Clear();
+        isSearchActive = false; // Reset whenever we clear explicitly or via HandleGlow
     }
 
     string GetBaseName(string name)
@@ -283,6 +301,10 @@ public class VarmaPointClickHandler : MonoBehaviour
                         activeGlow.Add(visual);
                     }
                 }
+            }
+            if (count > 0)
+            {
+                isSearchActive = true; // Set flag ONLY if we actually highlighted search results
             }
         }
         catch (System.Exception e)
