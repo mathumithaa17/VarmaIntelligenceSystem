@@ -1,6 +1,9 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 import sys
+import os
+import json # Fixed: Added missing import
+import sys
 import time
 from pathlib import Path
 
@@ -15,14 +18,17 @@ app = Flask(__name__)
 CORS(app)
 
 # Initialize retriever once at startup
-PROJECT_ROOT = Path(__file__).resolve().parent
-DATA_DIR = PROJECT_ROOT / "data" / "processed" / "intermediate_outputs"
+# Initialize retriever once at startup
+# PROJECT_ROOT should be the repository root (FYP-26)
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+DATA_DIR = PROJECT_ROOT / "backend" / "data" / "processed" / "intermediate_outputs"
 VARMA_SYMPTOMS_JSON = DATA_DIR / "02_varma_to_symptom.json"
 SYMPTOM_TO_VARMA_JSON = DATA_DIR / "02_symptom_to_varma.json"
 
 print("\n" + "="*80)
 print("INITIALIZING VARMA RETRIEVAL SYSTEM")
 print("="*80)
+print(f"DEBUG: PROJECT_ROOT = {PROJECT_ROOT}")
 
 try:
     retriever = VarmaRetriever(
@@ -97,6 +103,73 @@ def symptom_search():
 
 # RAG Service has been moved to rag_service.py (Port 5004)
 
+# Load Metadata for Poems and Details
+VARMA_METADATA = {}
+EXCEL_PATH = PROJECT_ROOT / "backend" / "data" / "raw" / "Varma_Points.xlsx"
+print(f"DEBUG: EXCEL_PATH = {EXCEL_PATH}")
+
+try:
+    if EXCEL_PATH.exists():
+        import pandas as pd
+        df = pd.read_excel(EXCEL_PATH)
+        # Assuming columns: 'VARMAM_POINTS' for name, and 'TAMIL_LITERATURE' (or similar) for poem.
+        # Based on file inspection, column 1 is VARMAM_POINTS.
+        # We need to find the poem column. Let's try standard names or look for Tamil content.
+        
+        # Normalize column names for robust matching
+        # User specified: VARMAM_POINTS, S.NO, TAMIL_LITERATURE
+        df.columns = [str(c).strip().upper() for c in df.columns]
+        print(f"DEBUG: Excel Columns Found: {df.columns.tolist()}")
+        
+        # Identity columns
+        name_col = "VARMAM_POINTS"
+        poem_col = "TAMIL_LITERATURE"
+        
+        # Check existence
+        if name_col not in df.columns:
+            # Try fuzzy match
+            name_col = next((c for c in df.columns if 'NAME' in c or 'POINT' in c), None)
+            
+        if poem_col not in df.columns:
+            # Try fuzzy match
+            poem_col = next((c for c in df.columns if 'LITERATURE' in c or 'POEM' in c), None)
+
+        print(f"DEBUG: Using Name Col: '{name_col}', Poem Col: '{poem_col}'")
+
+        if name_col and poem_col:
+            count_loaded = 0
+            for _, row in df.iterrows():
+                if pd.isna(row[name_col]): continue
+                
+                varma_name = str(row[name_col]).strip()
+                norm_name = _normalize_text(varma_name)
+                
+                poem_text = ""
+                val = row[poem_col]
+                if not pd.isna(val):
+                    poem_text = str(val).strip()
+                
+                VARMA_METADATA[norm_name] = {
+                    "varmaName": varma_name,
+                    "tamilLiterature": poem_text,
+                }
+                count_loaded += 1
+                
+            print(f"✓ Loaded metadata for {len(VARMA_METADATA)} Varma points from Excel")
+            print(f"DEBUG: First 3 Loaded Entries:")
+            for i, k in enumerate(list(VARMA_METADATA.keys())[:3]):
+                 print(f"  [{k}] -> Poem Length: {len(VARMA_METADATA[k]['tamilLiterature'])}")
+        else:
+             print("CRITICAL: Could not identify Name or Poem columns in Excel.")
+
+            
+        print(f"✓ Loaded metadata for {len(VARMA_METADATA)} Varma points from Excel")
+        # DEBUG: Print first 5 keys to verify normalization
+        print(f"DEBUG: First 5 keys in metadata: {list(VARMA_METADATA.keys())[:5]}")
+    else:
+        print(f"⚠ Metadata Excel file not found at: {EXCEL_PATH}")
+except Exception as e:
+    print(f"⚠ Failed to load metadata from Excel: {e}")
 
 def format_for_ui(result, query, processing_time):
     """
@@ -109,6 +182,7 @@ def format_for_ui(result, query, processing_time):
     formatted_points = []
     
     for idx, vp in enumerate(varma_points):
+        # ... (scoring logic) ...
         # Calculate confidence score
         weighted_score = vp.get("weighted_score", 0.0)
         confidence_score = compute_confidence(
@@ -129,20 +203,32 @@ def format_for_ui(result, query, processing_time):
         
         # Get ALL symptoms for this Varma point from dataset
         all_syms = vp.get("all_symptoms", [])
+
+        # Metadata Lookup
+        varma_name = vp.get("varma_name", "Unknown")
+        norm_key = _normalize_text(varma_name)
+        meta = VARMA_METADATA.get(norm_key, {})
         
+        # DEBUG LOOKUP
+        if not meta:
+            print(f"DEBUG: Lookup FAILED for '{varma_name}' (norm: '{norm_key}'). Metadata has {len(VARMA_METADATA)} entries.")
+        else:
+            print(f"DEBUG: Lookup SUCCESS for '{varma_name}'. Poem length: {len(str(meta.get('tamilLiterature', '')))}")
+
         formatted_point = {
             "id": vp.get("varma_id", f"vp_{idx+1:03d}"),
-            "name": vp.get("varma_name", "Unknown"),
+            "name": varma_name,
             "confidence_score": round(confidence_score, 4),
             "match_type": primary_match_type,
-            "location": get_location_for_varma(vp.get("varma_name", "")),
+            "location": meta.get("surfaceAnatomy") or get_location_for_varma(varma_name),
             "matched_symptoms": matched_syms,  # ALL matched symptoms (no limit)
             "all_symptoms": all_syms,  # ALL symptoms from dataset (no limit)
-            "coordinates": get_coordinates_for_varma(vp.get("varma_name", "")),
-            "description": get_description_for_varma_with_data(vp.get("varma_name", ""), all_syms),
-            "category": categorize_varma(vp.get("varma_name", "")),
-            "treatment_methods": get_treatment_methods(vp.get("varma_name", "")),
-            "contraindications": get_contraindications(vp.get("varma_name", "")),
+            "coordinates": get_coordinates_for_varma(varma_name),
+            "description": get_description_for_varma_with_data(varma_name, all_syms),
+            "category": categorize_varma(varma_name),
+            "treatment_methods": get_treatment_methods(varma_name),
+            "contraindications": get_contraindications(varma_name),
+            "tamil_literature": meta.get("tamilLiterature", ""), # NEW: Poem Field
             
             # Additional metadata
             "matched_symptom_count": vp.get("matched_symptom_count", 0),
@@ -199,7 +285,7 @@ def get_description_for_varma_with_data(varma_name, all_symptoms):
     return f"Traditional Varma point '{varma_name}' with therapeutic significance in Siddha medicine."
 
 def get_location_for_varma(varma_name):
-    """Map Varma point names to body locations"""
+    """Map Varma point names to body locations (Fallback)"""
     location_map = {
         "adhipathi": "Crown of the head",
         "shankha": "Temple region (both sides)",

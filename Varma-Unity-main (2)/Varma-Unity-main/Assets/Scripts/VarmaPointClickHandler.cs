@@ -110,11 +110,7 @@ public class VarmaPointClickHandler : MonoBehaviour
 
         if (bestTransform != null)
         {
-        if (bestTransform != null)
-        {
             if (!isSearchActive) HandleGlow(bestTransform.name);
-            DisplayPointName(bestTransform.name, bestTransform);
-        }
             DisplayPointName(bestTransform.name, bestTransform);
         }
     }
@@ -159,19 +155,13 @@ public class VarmaPointClickHandler : MonoBehaviour
                 string objNorm = NormalizeName(obj.name);
 
                 bool match = false;
-                if (targets.Contains(objNorm)) match = true;
-                else
+                if (targets.Contains(objNorm)) 
                 {
-                    foreach (string t in targets)
-                    {
-                        if (objNorm.Contains(t) || t.Contains(objNorm)) 
-                        {
-                            match = true;
-                            if (t.Length < 3 || objNorm.Length < 3) match = false; 
-                            break;
-                        }
-                    }
+                    match = true;
                 }
+                
+                // 🛑 REMOVED Substring logic to prevent overlaps (e.g. VishaManibantha vs Manibantha)
+                // With the new robust normalization, Exact Match is sufficient and safer.
 
                 if (match)
                 {
@@ -197,24 +187,87 @@ public class VarmaPointClickHandler : MonoBehaviour
 
     void HandleGlow(string name)
     {
+        // 1. Reset everything first
         ClearGlow();
-        string json = "{\"points\":[\"" + name + "\"]}";
-        HighlightPointsList(json);
+        isSearchActive = false;
+
+        // 2. Find and Highlight just this one point
+        Debug.Log($"[VarmaManager] HandleGlow: Highlighting single point '{name}'");
+        
+        GameObject target = GameObject.Find(name);
+        if (target != null)
+        {
+            VarmaPointVisual visual = target.GetComponent<VarmaPointVisual>();
+            if (visual == null) visual = target.AddComponent<VarmaPointVisual>();
+
+            visual.SetGlow(true);
+            activeGlow.Add(visual);
+        }
+        else
+        {
+            Debug.LogWarning($"[VarmaManager] Could not find object with name '{name}' to highlight.");
+        }
+
+        // 3. Explicitly ensure Search Mode is OFF
+        isSearchActive = false;
+    }
+
+    private void ClearAllHighlights_Internal()
+    {
+        ClearGlow();
+        isSearchActive = false;
+    }
+
+    // Called from React via UnityModel3DViewer
+    public void SelectPoint(string name)
+    {
+        Debug.Log($"[VarmaManager] SelectPoint called for: {name}");
+        // Treat this as a manual selection? Or part of search?
+        // If it comes from React "Symptom Search", it shouldn't clear search results.
+        // But if we want to Highlight just this one...
+        
+        // Actually, React sends 'SelectPoint' when a card is clicked.
+        // If we want to maintain search results, we should NOT call ClearAllHighlights_Internal here if search is active.
+        
+        // Let's defer to HandleGlow but WITHOUT forced reset if search is active?
+        // Wait, HandleGlow forces reset.
+        
+        // BETTER LOGIC:
+        if (isSearchActive)
+        {
+            // Just show the name, maybe pulse it? Don't clear others.
+            // Find the transform and show name.
+            Transform t = null;
+            foreach(var g in activeGlow) 
+            {
+                if (NormalizeName(g.name) == NormalizeName(name)) 
+                {
+                    t = g.transform;
+                    break;
+                }
+            }
+            
+            if (t == null)
+            {
+                 // Try to find it even if not highlighted
+                 GameObject obj = GameObject.Find(name);
+                 if (obj) t = obj.transform;
+            }
+
+            if (t) DisplayPointName(t.name, t);
+        }
+        else
+        {
+            // Manual selection behavior
+            HandleGlow(name);
+        }
     }
 
     public void ClearGlow()
     {
+        Debug.Log($"[VarmaManager] ClearGlow called. Active glows count: {activeGlow.Count}");
         foreach (var v in activeGlow) if (v) v.SetGlow(false);
         activeGlow.Clear();
-        // Do NOT reset isSearchActive here blindly, because HandleGlow calls this too.
-        // But HandleGlow is for single click (which IS normal mode), or Search calls it?
-        // Wait, HandleGlow sets single point. 
-        // If HandleGlow is called, it means we are in Normal Mode (checked by caller).
-        // Or if we call HandleGlow programmatically?
-        // Let's stick to resetting it in ClearAllHighlights primarily.
-        // However, if HandleGlow calls ClearGlow, the state remains whatever it was. 
-        // If we are in Search Mode, we DON'T call HandleGlow.
-        // If we are in Normal Mode, we CALL HandleGlow -> ClearGlow.
         // Ideally ClearGlow represents 'clearing' state.
         // Let's rely on ClearAllHighlights (explicit clear) to reset to Normal Mode.
         // And also, if manual single-click happens (Normal Mode), we are fine.
@@ -223,8 +276,27 @@ public class VarmaPointClickHandler : MonoBehaviour
     string NormalizeName(string raw)
     {
         if (string.IsNullOrEmpty(raw)) return "";
-        string s = raw.ToLower();
-        s = s.Replace("_l", "").Replace("_r", "");
+        string s = raw.ToLower().Trim();
+        s = s.Replace(" ", ""); // Pre-strip spaces
+
+        // 0. MANUAL FIXES (The "Alias Map")
+        // Mapping: [Search Name] -> [Unity Name Base]
+        // This solves "Sevikuttri" (DB) vs "Sevikutri" (Unity)
+        if (s.Contains("sevikuttri")) s = s.Replace("sevikuttri", "sevikutri");
+        if (s.Contains("pitthukai")) s = s.Replace("pitthukai", "pithukai"); // Variation check
+        if (s.Contains("kachai")) s = s.Replace("kachai", "kachai"); // Ensure consistency
+        
+        // 1. Remove standard suffixes/synonyms
+        s = s.Replace("kaalam", "");
+        s = s.Replace("kalam", "");
+        s = s.Replace("varmam", "");
+        s = s.Replace("varmum", "");
+
+        // 2. Remove directional tags
+        s = s.Replace("_l", "");
+        s = s.Replace("_r", "");
+        
+        // 3. Remove numbers (e.g. "12_") and special chars
         return new string(s.Where(char.IsLetter).ToArray());
     }
 

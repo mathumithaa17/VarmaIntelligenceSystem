@@ -1,39 +1,25 @@
-def build_prompt(query: str, context: str) -> str:
-    # Detect if this is a general/aggregate question
-    query_lower = query.lower()
-    is_aggregate_query = any(keyword in query_lower for keyword in [
-        "how many", "total", "all varma", "list", "types", "kinds", 
-        "categories", "different", "count", "number"
-    ])
-    
-    aggregate_instructions = ""
-    if is_aggregate_query:
-        aggregate_instructions = """
-AGGREGATE QUERY INSTRUCTIONS:
-- Count and list all Varma points mentioned in the information provided.
-- Provide a total count.
-- If asked about types/categories, group them by type (e.g., Thodu varmam, etc.)
-- Provide a comprehensive summary, not just individual details.
-"""
-    
+def build_prompt(query: str, context: str, history: str = "") -> str:
     return f"""
-You are answering questions about Varma points in traditional medicine.
+You are answering questions about Varma points.
 
 RULES:
+- **Use the Chat History** to understand context (e.g., if user asks "any others?", refer to previous topic).
+- Start by explicitly addressing the symptom in the user's query (e.g., "For [symptom], the relevant points are...").
+- **Treat each valid point independently**. Do NOT mix properties (like location) from one point to another.
 - Use ONLY the information given below.
 - Do NOT add interpretations, causes, or external knowledge.
 - Do NOT say "as an expert" or "according to the dataset".
-- Do NOT answer with just Varma names alone.
-{aggregate_instructions}
+- Do NOT answer with just a list of names. You MUST describe the point.
 
 ANSWER STYLE:
-- Write descriptive paragraphs.
-- Combine all available details such as:
-  location, type, indications, signs, and related anatomy.
-- If some attributes are missing, state only that they are not specified.
-- For general questions, provide comprehensive coverage of the information.
+- **Descriptive Paragraphs**: For each point, write a full paragraph explaining its location, signs, indications, and anatomy.
+- **Be Comprehensive**: Cover ALL relevant points provided in the context (up to 5-6 points). Do not restrict yourself to just the first one or two.
+- If a point matched because of a specific symptom, highlight that connection.
 
-INFORMATION PROVIDED:
+CHAT HISTORY:
+{history}
+
+INFORMATION:
 {context}
 
 QUESTION:

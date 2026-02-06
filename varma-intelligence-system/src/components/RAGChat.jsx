@@ -42,7 +42,13 @@ const RAGChat = () => {
     setError(null);
 
     try {
-      const response = await varmaService.askQuestion(inputMessage);
+      // Prepare history: map current messages to {role, content}
+      // Exclude messages that are errors or hidden
+      const history = messages
+        .filter(m => !m.isError)
+        .map(m => ({ role: m.role, content: m.content }));
+
+      const response = await varmaService.askQuestion(inputMessage, history);
 
       const assistantMessage = {
         role: 'assistant',

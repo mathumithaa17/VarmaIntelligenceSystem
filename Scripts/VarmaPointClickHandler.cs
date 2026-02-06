@@ -25,7 +25,7 @@ public class VarmaPointClickHandler : MonoBehaviour
     private int varmaLayerMask;
     private bool isSearchActive = false; // New flag to track search mode
 
-    // 🔹 already-existing glow support
+    // 🔹 Already-existing glow support
     private static List<VarmaPointVisual> activeGlow = new();
 
     void Start()
@@ -249,44 +249,37 @@ public class VarmaPointClickHandler : MonoBehaviour
             PointList list = JsonUtility.FromJson<PointList>(jsonList);
             if (list == null || list.points == null) return;
 
-            // 3. Prepare set for fast lookup (normalize input names if needed, assume they match base names)
-            HashSet<string> targetNames = new HashSet<string>();
+            // 3. Prepare normalized set
+            HashSet<string> targetKeys = new HashSet<string>();
             foreach (string p in list.points)
             {
-                // Ensure we compare apples to apples. 
-                // The frontend likely sends "Thilartha Kalam", "Uchi Varma".
-                // Our Unity objects might be "Varma_Thilartha Kalam_L".
-                // GetBaseName handles the suffix, but we might need to handle the prefix too if GetBaseName doesn't.
-                // Looking at GetBaseName implementation: it only removes _L and _R.
-                // Looking at CleanVarmaName: it removes prefix before first _.
-                // Let's rely on flexible matching or just direct contains.
-                // For now, let's assume the input IS the base name or close to it.
-                targetNames.Add(p.ToLower().Trim()); 
+                targetKeys.Add(NormalizeForMatch(p));
             }
 
             // 4. Iterate all points
+            int count = 0;
             foreach (GameObject obj in GameObject.FindGameObjectsWithTag("VarmaPoint"))
             {
-                // We need to extract the "meaningful" name from the object name
-                // e.g. "01_Thilartha Kalam_L" -> "thilartha kalam"
-                string objName = obj.name;
+                // Unpack the Unity name: "12_AasanKaalam" -> "aasan"
+                string objKey = NormalizeForMatch(obj.name);
                 
-                // Use CleanVarmaName logic to get the pure name for comparison
-                string cleanName = CleanVarmaName(objName).ToLower().Trim();
-                
-                // Check if this clean name is in our target list
-                // OR checks if the target list has a name that is contained in the object name
+                // Check match
                 bool match = false;
-                if (targetNames.Contains(cleanName)) match = true;
                 
-                // Fallback: check if any target is a substring of obj name
+                // Direct match
+                if (targetKeys.Contains(objKey)) match = true;
+
+                // Substring fallback (for safety)
                 if (!match)
                 {
-                    foreach(string t in targetNames)
+                    foreach (string t in targetKeys)
                     {
-                        if (cleanName.Contains(t) || t.Contains(cleanName))
+                        // Logic: if "kaikatti" is target, and obj is "kaikattikalam", it matches
+                        // But since we stripped kalam, both should be "kaikatti".
+                        // This fallback is for weird edge cases.
+                        if (objKey.Contains(t) || t.Contains(objKey))
                         {
-                            match = true; 
+                            match = true;
                             break;
                         }
                     }
@@ -299,17 +292,48 @@ public class VarmaPointClickHandler : MonoBehaviour
                     {
                         visual.SetGlow(true);
                         activeGlow.Add(visual);
+                        count++;
                     }
                 }
             }
+
             if (count > 0)
             {
-                isSearchActive = true; // Set flag ONLY if we actually highlighted search results
+                isSearchActive = true; 
             }
         }
         catch (System.Exception e)
         {
             Debug.LogError("Error in HighlightPointsList: " + e.Message);
         }
+    }
+
+    // 🔹 NORMALIZATION HELPER (The Secret Sauce)
+    // Converts "12_AasanKaalam" -> "aasan"
+    // Converts "Aasan Kalam" -> "aasan"
+    string NormalizeForMatch(string raw)
+    {
+        if (string.IsNullOrEmpty(raw)) return "";
+
+        string s = raw.ToLower();
+
+        // 1. Remove standard suffixes/synonyms FIRST to avoid "Kalam" being treated as letters
+        s = s.Replace("kaalam", "");
+        s = s.Replace("kalam", "");
+        s = s.Replace("varmam", "");
+        s = s.Replace("varmum", "");
+
+        // 2. Remove directional tags
+        s = s.Replace("_l", "");
+        s = s.Replace("_r", "");
+        
+        // 3. Keep ONLY LETTERS (so "12_" is gone)
+        string letters = "";
+        foreach(char c in s)
+        {
+            if (char.IsLetter(c)) letters += c;
+        }
+
+        return letters;
     }
 }

@@ -49,12 +49,13 @@ export const searchSymptoms = async (symptomQuery) => {
   }
 };
 
-export const queryRAG = async (question) => {
+export const queryRAG = async (question, history = []) => {
   try {
     // For RAG, we use the full URL from constants, bypassing the default base URL (5003)
     // Note: We use raw axios here because apiClient has port 5003 baked in.
     const response = await axios.post(API_ENDPOINTS.RAG_QUERY, {
       question: question,
+      history: history
     });
     return response.data;
   } catch (error) {

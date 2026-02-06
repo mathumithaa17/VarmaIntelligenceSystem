@@ -86,16 +86,24 @@ def rag_query():
         if not question:
             return jsonify({"error": "Empty question"}), 400
         
+        # 1-B. Process History
+        history = data.get('history', [])
+        # Provide last 5 turns to keep context window manageable
+        history_text = ""
+        if history:
+            relevant_history = history[-6:] # Last 3 exchanges
+            history_text = "\n".join([f"{msg['role'].upper()}: {msg['content']}" for msg in relevant_history])
+
         print(f"\nRAG Question: {question}")
         
         # 1. Retrieve relevant documents (returns list of dicts with 'text' key)
-        docs = retriever.retrieve(question)
+        docs = retriever.retrieve(question, top_k=20) # Increased to 20 per user request
         
         # 2. Build Context
-        context = "\n\n".join([d.get("text", "") for d in docs])
+        context = "\n\n--- DOCUMENT SEPARATOR ---\n\n".join([d.get("text", "") for d in docs])
         
         # 3. Build Prompt
-        prompt = build_prompt(question, context)
+        prompt = build_prompt(question, context, history_text)
         
         print("Generating answer with LLM...")
         

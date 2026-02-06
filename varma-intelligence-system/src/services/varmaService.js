@@ -7,7 +7,7 @@ class VarmaService {
 
   async searchBySymptom(symptom) {
     const cacheKey = `symptom_${symptom.toLowerCase()}`;
-    
+
     if (this.cache.has(cacheKey)) {
       return this.cache.get(cacheKey);
     }
@@ -22,9 +22,9 @@ class VarmaService {
     }
   }
 
-  async askQuestion(question) {
+  async askQuestion(question, history = []) {
     try {
-      const result = await queryRAG(question);
+      const result = await queryRAG(question, history);
       return result;
     } catch (error) {
       console.error('Error in askQuestion:', error);
@@ -34,7 +34,7 @@ class VarmaService {
 
   async getAllVarmaPoints() {
     const cacheKey = 'all_varma_points';
-    
+
     if (this.cache.has(cacheKey)) {
       return this.cache.get(cacheKey);
     }

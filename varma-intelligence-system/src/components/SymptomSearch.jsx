@@ -267,6 +267,18 @@ const SymptomSearch = () => {
                             {point.description}
                           </p>
 
+                          {/* Tamil Literature Poem */}
+                          {point.tamil_literature && (
+                            <div className="mb-4 bg-purple-50 p-4 rounded-lg border border-purple-100">
+                              <p className="text-xs font-bold text-purple-700 uppercase tracking-wider mb-2">
+                                Siddha Literature (Tamil)
+                              </p>
+                              <p className="text-sm text-gray-800 font-medium whitespace-pre-line leading-loose italic">
+                                {point.tamil_literature}
+                              </p>
+                            </div>
+                          )}
+
                           {/* Matched Symptoms */}
                           {point.matched_symptoms && point.matched_symptoms.length > 0 && (
                             <div className="mb-4">

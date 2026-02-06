@@ -1,0 +1,961 @@
+{
+  "Utchi_Varmam": [
+    "bromhidrosis",
+    "wheezing",
+    "abdomen distension",
+    "loss of libido",
+    "loss of head control",
+    "rhinorrhea",
+    "headache",
+    "delirium",
+    "ear pain",
+    "lacrimation",
+    "general debility",
+    "tremors",
+    "urinary retention",
+    "tinnitus"
+  ],
+  "Kondai_Kolli": [
+    "epiphora",
+    "red eye",
+    "amnesia",
+    "sexual frigidity",
+    "convulsion",
+    "tongue retraction",
+    "unconsciousness",
+    "ejaculation of sperm",
+    "torticollis",
+    "giddiness",
+    "dyspnoea",
+    "trismus"
+  ],
+  "Seerungkolli": [
+    "myokymia",
+    "rapid pulsation",
+    "lip fasciculation",
+    "ophthalmalgia",
+    "ptyalism",
+    "hiccups",
+    "blepharospasm",
+    "tongue retraction",
+    "kyphosis",
+    "cephalalgia",
+    "mydriasis",
+    "trismus",
+    "otalgia",
+    "emesis"
+  ],
+  "Pidari_Varmam": [
+    "tachypnea",
+    "neck pain",
+    "tongue protrusion",
+    "visual impairment",
+    "unexpected stabbing pain which disappear rapidly",
+    "cephalalgia",
+    "otalgia",
+    "emesis",
+    "limb weakness"
+  ],
+  "Suruthi_Varmam": [
+    "vomiting",
+    "paraesthesia",
+    "ophthalmalgia",
+    "deafness",
+    "prostration",
+    "hyperhidrosis",
+    "blindness",
+    "delirium",
+    "rigor",
+    "trismus",
+    "diminished vision",
+    "tinnitus"
+  ],
+  "Porchai_Varmam": [
+    "red eye",
+    "cloudy with low vision",
+    "trismus",
+    "hyper emesis",
+    "opthalmalgia",
+    "blepharospasm",
+    "unconsciousness",
+    "ejaculation of semen",
+    "fixed pupil",
+    "mydriasis",
+    "otalgia",
+    "blindness",
+    "supra orbital neuralgia"
+  ],
+  "Suzhiyadi_varmam": [
+    "unable to move upper and lower limb",
+    "angular salivation",
+    "psychiatric illness",
+    "giddiness",
+    "lunacy",
+    "erectile dysfunction"
+  ],
+  "Kutri_Varmam": [
+    "unconsciousness followed by seizure",
+    "tachypnea",
+    "loss of hearing",
+    "hyperemesis",
+    "fatigue",
+    "epistaxis",
+    "giddiness",
+    "cephalalgia",
+    "trismus",
+    "mydriasis on the affected side",
+    "otalgia",
+    "lunacy"
+  ],
+  "Sevikuttri_Kaalam": [
+    "tongue retracted",
+    "akathisia",
+    "bluish discoloration of the skin",
+    "status epilepticus",
+    "hearing impairment",
+    "rhinorrhea",
+    "epistaxis",
+    "haematemesis",
+    "headache",
+    "occipital neuralgia",
+    "mouth deviation to one side",
+    "otalgia",
+    "tinnitus"
+  ],
+  "Poigai_Kaalam": [
+    "rapid or irregular heartbeat",
+    "impairment of five senses",
+    "epilepsy",
+    "cervicalgia",
+    "hyperhidrosis",
+    "low vision",
+    "mydriasis",
+    "dizziness with otalgia",
+    "emesis",
+    "drooling of saliva"
+  ],
+  "Chenni_Varmam": [
+    "frothy sputum",
+    "muscle spasm",
+    "loss of hearing",
+    "blepharospasm",
+    "confused mental state",
+    "trismus",
+    "lock jaw",
+    "extreme exhaustion",
+    "emesis",
+    "oral breathing",
+    "absent pulse"
+  ],
+  "Aasan_Kalam": [
+    "hypothermia followed by tremor",
+    "bleeding from the sense organs  except skin",
+    "red eye",
+    "loss of hearing",
+    "deviation of mouth",
+    "facial palsy",
+    "fever",
+    "cephalalgia",
+    "epiphora",
+    "unconsciousness followed by seizure",
+    "tinnitus"
+  ],
+  "Annan_Kalam": [
+    "nausea",
+    "palpitation",
+    "hyperhidrosis",
+    "tremor",
+    "tremors"
+  ],
+  "Peruchal_Varmam": [
+    "clogged ears",
+    "heaviness of head",
+    "giddiness"
+  ],
+  "Thilardha_Varmam": [
+    "ophthalmalgia",
+    "singultus",
+    "seizure followed by broncho spasm",
+    "mouth remains opened and look upwards",
+    "open mouthed",
+    "ejaculation of semen",
+    "mydriasis",
+    "otalgia"
+  ],
+  "Patchi_Varmam": [
+    "bruxism",
+    "akathisia",
+    "bronchiectasis",
+    "epistaxis",
+    "hyperhidrosis",
+    "hyperthermia",
+    "mydriasis",
+    "trismus",
+    "lock jaw",
+    "seizure"
+  ],
+  "Naema_Varmam": [
+    "increased kabam",
+    "nasal blockage",
+    "nodding of head",
+    "delirium",
+    "dyspnoea"
+  ],
+  "Kannadi_Kaalam": [
+    "nasal congestion",
+    "mouth deviation",
+    "epistaxis",
+    "unconsciousness",
+    "hyperhidrosis",
+    "hypothermia",
+    "dyspnoea",
+    "giddiness",
+    "occasionally vomiting",
+    "reduced vision"
+  ],
+  "Paala_Varmam": [
+    "rapid and irregular heartbeat",
+    "epistaxis",
+    "unconsciousness",
+    "stuttering",
+    "hyperthermia",
+    "blindness",
+    "mydriasis",
+    "emesis",
+    "swollen tongue",
+    "akathisia"
+  ],
+  "Chundigai_Varmam": [
+    "paraesthesia in face and nose",
+    "formication",
+    "titubation",
+    "subconjunctival haemorrhage",
+    "hyperhidrosis",
+    "rhinorrhoea",
+    "epiphora",
+    "fainting"
+  ],
+  "Minvetti_Varmam": [
+    "photophobia",
+    "ophthalmalgia",
+    "hearing impairment",
+    "unconsciousness",
+    "confused mental state",
+    "hyperhidrosis",
+    "cephalalgia",
+    "cyanosis",
+    "open  mouthed",
+    "akathisia"
+  ],
+  "Manthira_Kaalam": [
+    "hypersomnia",
+    "bruxism",
+    "red eye",
+    "abdomen distension",
+    "yawning",
+    "unconsciousness",
+    "tremor",
+    "hyperhidrosis",
+    "cephalalgia",
+    "otalgia",
+    "dyspepsia"
+  ],
+  "Puruva_Varmam": [
+    "discoloration of tooth",
+    "tenesmus",
+    "supraorbital neuralgia",
+    "hyperhidrosis",
+    "cephalalgia",
+    "mydriasis",
+    "unconsciousness followed by seizure",
+    "akathisia"
+  ],
+  "NatchathiraP_Varmam": [
+    "diplophobia",
+    "emesis followed by hyper hydrosis",
+    "hypothermia present in the lateral side of the trunk",
+    "yellow eyes",
+    "cephalalgia muscles spasm in the lateral side of the trunk",
+    "blepharospasm",
+    "yellowish discoloration of eyes",
+    "discharge of semen and faeces",
+    "eye floaters"
+  ],
+  "Kaamboodhari_Kaalam": [
+    "frothy sputum",
+    "paraesthesia",
+    "mouth deviation",
+    "trismus",
+    "rapid or irregular heartbeat",
+    "hyperhidrosis",
+    "rhinorrhoea",
+    "mydriasis",
+    "otalgia",
+    "weakness of five sensory organs",
+    "visual disturbances",
+    "increased temperature",
+    "grunting"
+  ],
+  "Valamoorthi_Varmam": [
+    "tongue chewing",
+    "sinus headache",
+    "hyperemesis",
+    "unconsciousness",
+    "bronchospasm",
+    "rhinorrhoea",
+    "mydriasis",
+    "dyspnoea",
+    "turning of eyeball toward lateral side"
+  ],
+  "Konasanni_Varmam": [
+    "angular deviation of mouth",
+    "angular deviation",
+    "tiredness",
+    "excessive thirst",
+    "delirium",
+    "reduced anthropometric measurement",
+    "sweating of face"
+  ],
+  "Urakka_Kaalam": [
+    "lock jaw",
+    "drowsiness",
+    "giddiness",
+    "sleep with snoring"
+  ],
+  "Udhira_Kaalam": [
+    "asphyxia",
+    "severe prostration",
+    "tinnitus",
+    "reduced pulse",
+    "dryness of tongue",
+    "aphasia",
+    "gasping",
+    "cephalalgia",
+    "seizure"
+  ],
+  "Ottu_Varmam": [
+    "lock jaw",
+    "rhinorrhoea",
+    "giddiness",
+    "pain in the lower jaw"
+  ],
+  "Sanguthiri_Varmam": [
+    "asphyxia",
+    "palpitation",
+    "dyspneoa",
+    "singultus",
+    "unconsciousness",
+    "protusion and retrusion of tongue",
+    "extreme tiredness",
+    "neck stiffness",
+    "increased body heat",
+    "mydriasis",
+    "epiphora",
+    "heaviness of abdomen"
+  ],
+  "Sumai_Varmam": [
+    "exophthalmos",
+    "asphyxia",
+    "palpitation",
+    "running nose",
+    "hyperpigmentation of body",
+    "tremor",
+    "productive cough",
+    "frothing of mouth",
+    "dysphonia",
+    "akathisia"
+  ],
+  "Thummi_Kalam": [
+    "hyperventilation",
+    "angular salivation",
+    "frequent sneezing",
+    "fainting"
+  ],
+  "Kathir_varmam": [
+    "exophthalmos",
+    "loss of head control",
+    "hiccup",
+    "giddiness",
+    "rigor"
+  ],
+  "Kathirkaama_varmam": [
+    "shortness of breath",
+    "painful breathing",
+    "loss of bladder control",
+    "fatigue",
+    "sudation",
+    "hyperhidrosis",
+    "hypoxic breath",
+    "shivering with chillness",
+    "chest pain",
+    "tremor and discomfort"
+  ],
+  "Buththi_varmam": [
+    "fatigue followed by drowsy",
+    "bending the body anteriorly due to asphyxiation and pain",
+    "haematuria",
+    "bleeding per rectum",
+    "haematemesis",
+    "tremor",
+    "anxiety",
+    "shortness of breathing",
+    "hypoxia",
+    "seizure"
+  ],
+  "Sakthi_varmam": [
+    "excessive fatigue",
+    "unconsciousness",
+    "fatigue",
+    "fever",
+    "delirium",
+    "dyspnoea"
+  ],
+  "Koombu_varmam": [
+    "cyanosis",
+    "tighten the lung muscle",
+    "stomach distension",
+    "excessive sweat",
+    "haematemesis",
+    "convulsion",
+    "frothy mucus",
+    "bluish discoloration",
+    "frailty of lower extremities",
+    "anxiety",
+    "chest pain",
+    "cough with suffocation",
+    "sense of chocking"
+  ],
+  "Ner_Varmam": [
+    "cyanotic face",
+    "cyanosis",
+    "palpitation",
+    "feeling excessive heat",
+    "watery discharge in nose",
+    "wide closure of eyes",
+    "convulsion",
+    "difficulty in breathing",
+    "hematemesis",
+    "anxiety",
+    "chest pain",
+    "shivering of the body",
+    "bending forward due to pain"
+  ],
+  "Aanantha_vayu_Kalam": [
+    "gastritis",
+    "male and female infertility",
+    "loss of appetite",
+    "acute abdomen pain",
+    "erectile dysfunction"
+  ],
+  "Panri_Varmam": [
+    "palpitation and giddiness",
+    "deafness",
+    "patient noise like grunt",
+    "gasping for breath",
+    "grunting"
+  ],
+  "Uthara_Kalam": [
+    "gestataional diabetes",
+    "severe abdomen pain",
+    "burning micturition"
+  ],
+  "Anna_Kaalam": [
+    "viyanan will be affected during injury",
+    "polydipsia",
+    "indigestion",
+    "dizziness",
+    "high grade fever",
+    "fatigue",
+    "excessive thirst"
+  ],
+  "Thivalai_Varmam": [
+    "appetite",
+    "sweating",
+    "severe cough",
+    "watery discharge in nose",
+    "severe sudation",
+    "redness of eye",
+    "convulsion",
+    "burning sensation in throat",
+    "frothy mucus from mouth",
+    "chocking"
+  ],
+  "Thoosiga_Varmam": [
+    "excessive body heat",
+    "convulsion",
+    "haematemesis",
+    "difficulty in breathing",
+    "nervousness",
+    "shortness of breathing"
+  ],
+  "Anumar_Varmam": [
+    "shivering of extremities",
+    "difficulty in breathing",
+    "convulsion",
+    "dysarthria",
+    "chocking",
+    "twitching in cheek",
+    "bending forward",
+    "seizures"
+  ],
+  "Mundellu_Varmam": [
+    "vomiting",
+    "drippling of urine",
+    "loose stool",
+    "convulsion",
+    "abdomen discomfort",
+    "pyrexia",
+    "chocking",
+    "anxiety",
+    "shortness of breathing"
+  ],
+  "Valiya_Aththi_Surukki_Varmam": [
+    "difficult to walk",
+    "fearfulness with anxiety",
+    "vision loss",
+    "hypogastric pain",
+    "bleeding per rectum",
+    "cough",
+    "hematemesis",
+    "pyrexia",
+    "flattening of body with bending forward",
+    "stooping forward",
+    "rigidity of both extremities"
+  ],
+  "Siriya_Aththi_Surukki Varmam": [
+    "difficult to walk",
+    "fearfulness with anxiety",
+    "shortening of body with bending forward",
+    "vision loss",
+    "hypogastric pain",
+    "bleeding per rectum",
+    "cough",
+    "hematemesis",
+    "pyrexia",
+    "stooping forward",
+    "rigidity of both extremities"
+  ],
+  "Mun_Saruthi_Varmam": [
+    "swelling present in all over the body",
+    "fever",
+    "delirium",
+    "anasarca",
+    "pain"
+  ],
+  "Pallai_Varmam": [
+    "body pain",
+    "pain and strain in the paravertebral muscle",
+    "emaciation",
+    "gastritis"
+  ],
+  "Adappa_Kalam": [
+    "excessive sweating",
+    "disability to lie down due to pain",
+    "bluish discoloration of eyes and teeth",
+    "rigidity of both limb",
+    "abdomen pain",
+    "anxiety",
+    "cyanosis",
+    "shortness of breathing"
+  ],
+  "Vilangu_Varmam": [
+    "spasm of vertebral muscle",
+    "frequent spasm",
+    "difficulty to raise upper limb"
+  ],
+  "Asthikanthari_Varmam": [
+    "nausea",
+    "head ache",
+    "cough and cold",
+    "hiccups",
+    "pain in both upper limbs",
+    "nan",
+    "sleepiness",
+    "thrombus formation inside the blood vessels",
+    "weakness of sensory organs"
+  ],
+  "Puja_Varmam": [
+    "dislocation of shoulder joint",
+    "tingling sensation in the upper limbs",
+    "paresthesia in the arm",
+    "unable to lift the arm in the erect posture",
+    "swelling in the shoulder",
+    "pain radiate to vertebral column"
+  ],
+  "Pirathaarai_Varmam": [
+    "shoulder pain",
+    "neck pain",
+    "unconsciousness",
+    "weakness of upper limb",
+    "unable to lift the arm in the erect posture",
+    "throat pain"
+  ],
+  "Aendhi_Varmam": [
+    "hearing impairment",
+    "hiccups",
+    "swelling of upper limb",
+    "weakness of upper limb",
+    "delirium",
+    "tremors"
+  ],
+  "Kutthu_Varmam": [
+    "nan",
+    "shivering of the body",
+    "nausea"
+  ],
+  "Asavu_Varmam": [
+    "chillness",
+    "swelling of arm",
+    "tiredness",
+    "delirium",
+    "swelling"
+  ],
+  "Koachu_Varmam": [
+    "chillness with fever",
+    "swelling of arm",
+    "unconsciousness",
+    "weakness in the extremities",
+    "paresthesia in the upper limb",
+    "seizure"
+  ],
+  "Kaimootu_Varmam": [
+    "pain and swelling in the elbow joint",
+    "neuralgia",
+    "tingling sensation",
+    "paresthesia in the limbs",
+    "fatigue",
+    "swelling in hand"
+  ],
+  "Mudakku_Varmam": [
+    "swelling in hand",
+    "paresthesia in the upper limb"
+  ],
+  "Visha_Manibantha_Varmam": [
+    "pain in the forearm",
+    "chest pain",
+    "pain in the forearm and elbow",
+    "headache"
+  ],
+  "Manibantha_Varmam": [
+    "agonizing pain",
+    "rigidity may occur",
+    "unconsciousness",
+    "sharp pain with oppressiveness",
+    "wrist swelling",
+    "coldness of the body",
+    "seizure"
+  ],
+  "Thuthikkai_Varmam": [
+    "wrist swelling",
+    "stiffness of wrist joint",
+    "neck pain"
+  ],
+  "Ullangai_Vellai_Varmam": [
+    "aching pain extended upwards",
+    "swelling in the back of the palm",
+    "tremor",
+    "pinching pain",
+    "impaired vision",
+    "sweat with uneasiness and hunger",
+    "frigidity with pyrexia"
+  ],
+  "Aanthai_Varmam": [
+    "swelling of palm",
+    "intense pain",
+    "tiredness",
+    "swelling"
+  ],
+  "Thatchanai_Kaalam": [
+    "delirium",
+    "epilepsy",
+    "chillness of the body",
+    "indigestion"
+  ],
+  "Choondothari_Varmam": [
+    "pain in dorsum of hand",
+    "generalized edema",
+    "delirium"
+  ],
+  "Chundothari Varmam": [
+    "swelling of palm",
+    "tiredness",
+    "swelling"
+  ],
+  "Kavuli_Kaalam": [
+    "febrile",
+    "swelling and anxiety",
+    "excruciating pain",
+    "in the later stage joint inflammation may follow",
+    "pain in the thumb",
+    "seizure"
+  ],
+  "Kakkattai_Kaalam": [
+    "painful neck movements",
+    "palpitation",
+    "hoarseness of voice",
+    "grumbling of teeth",
+    "convulsion",
+    "quadriplegia",
+    "tremor",
+    "aphasia",
+    "stomach disturbance",
+    "retraction of tongue"
+  ],
+  "Kaisuzhukki_Varmam": [
+    "flexion deformity of middle finger",
+    "dull ache in hands",
+    "sprain in the middle finger",
+    "numbness"
+  ],
+  "Chippi_Varmam": [
+    "indigestion",
+    "cough",
+    "cold",
+    "peri arthritis shoulder",
+    "seizures",
+    "difficulty in abduction of upper limb"
+  ],
+  "Sadapira_Varmam": [
+    "opened   eye lid",
+    "polyarthralgia",
+    "abdominal distension",
+    "unconsciousness"
+  ],
+  "Kaikatti_Kaalam": [
+    "difficulty in abduction of upper limb",
+    "difficulty in movements of shoulder",
+    "numbness of hands",
+    "shoulder pain with swelling"
+  ],
+  "Thumbi_Varmam": [
+    "skin diseases",
+    "nausea",
+    "constipation",
+    "palpitation",
+    "skin diseases   18 kuttam",
+    "cough",
+    "kyphosis"
+  ],
+  "Natellu_Varmam": [
+    "mid thoracic pain",
+    "fatigue",
+    "pain present while standing upright posture",
+    "pain around the hip region",
+    "tremor",
+    "nasal block",
+    "kyphosis"
+  ],
+  "Kachai_Varmam": [
+    "constipation",
+    "abdomen distension",
+    "paraplegia",
+    "kora vatham  low back pain",
+    "anuria",
+    "low back pain",
+    "loss of appetite"
+  ],
+  "Poonool_Varmam": [
+    "malfunctioning of thasavayu",
+    "general weakness",
+    "profuse sweating",
+    "fever",
+    "abdominal distension",
+    "rigor",
+    "breathlessness",
+    "loss of appetite"
+  ],
+  "Vayu_Varmam": [
+    "inability to walk",
+    "difficulty in walking",
+    "pain",
+    "unconsciousness"
+  ],
+  "Pitthukai_Varmam": [
+    "abdomen distension",
+    "low back pain"
+  ],
+  "Pinnal_Varmam": [
+    "severe constipation",
+    "anuria"
+  ],
+  "Nanganapootu": [
+    "dribbling of urine",
+    "constipation",
+    "loss of sensation of both lower limbs"
+  ],
+  "Moothira_Kalam": [
+    "dribbling of urine",
+    "abnormal condition of bladder",
+    "pain"
+  ],
+  "Kallidai_Kaalam": [
+    "excessive fatigue",
+    "angular salivation",
+    "retraction of testis",
+    "rigor",
+    "perspiration"
+  ],
+  "Vellurumi&Vallurumi_Varmam": [
+    "loss of libido",
+    "scrotal swelling",
+    "hypogastric pain",
+    "spasmodic pain",
+    "may behave like psychiatric person",
+    "delirium",
+    "giddiness"
+  ],
+  "Valampuri_Kaalam": [
+    "weakness of both lower limb",
+    "retention of urine and feces",
+    "constipation",
+    "hypogastric pain",
+    "anaemia",
+    "weakness of both lower limbs"
+  ],
+  "Idampuri_Kaalam": [
+    "obstructed feeling during micturition",
+    "pain and swelling of penis due to retention of urine",
+    "abdominal distension",
+    "burning micturition",
+    "anal pain"
+  ],
+  "Thandu_Varmam": [
+    "anasarca",
+    "rectal prolapse",
+    "dyspnoea"
+  ],
+  "Ani_Varmam": [
+    "weakness of both lower limbs",
+    "rectal prolapse",
+    "low back pain"
+  ],
+  "AndaKalam": [
+    "rectal prolapse",
+    "bleeding piles",
+    "body pain",
+    "painful defaecation",
+    "anuria"
+  ],
+  "Urumi_Varmam": [
+    "weakness of the body",
+    "difficulty to walk",
+    "weakness of lower limb",
+    "severe pain and swelling in lower limb"
+  ],
+  "Aamai_Varmam": [
+    "difficult to move the affected limb",
+    "weakness",
+    "blurred vision",
+    "palpitation",
+    "increased thirst",
+    "fatigue",
+    "tremor",
+    "tortuosity of veins of lower limb",
+    "dyspnoea",
+    "unbearable pain",
+    "difficulty to walk",
+    "increased sweat",
+    "seizure"
+  ],
+  "Kaalmoottu_varmam": [
+    "difficulty in walking",
+    "increased thirst",
+    "extreme tiredness",
+    "unbearable pain",
+    "pyrexia with chillness",
+    "increased sweat",
+    "seizure"
+  ],
+  "Naaithalai_Varmam": [
+    "difficulty in flexion",
+    "leg sprain",
+    "paraesthesia of legs",
+    "extension and squatting of knee joint",
+    "swelling of knee joint"
+  ],
+  "Kuthirai_Muga_Varmam": [
+    "unbearable pain and perspiration",
+    "sudden fall in the flow of saram",
+    "fatigue and seizure",
+    "non healing tropic ulcer",
+    "tremor",
+    "pyrexia",
+    "uncontrollable thirst"
+  ],
+  "Komberi_Varmam": [
+    "increased perspiration",
+    "and cry loudly",
+    "tremor in the extremities",
+    "fatigue",
+    "convulsion",
+    "unbearable pain",
+    "seizures"
+  ],
+  "Kuthi_Kaal_Varmam": [
+    "delirium",
+    "reduced anthropometric measurement",
+    "angular deviation"
+  ],
+  "Kaalkulatchu_Varmam": [
+    "paraesthesia",
+    "fatigue",
+    "fatigue with unconsciousness followed by tremor",
+    "difficulty to walk",
+    "seizure"
+  ],
+  "Uppu_Kuthi_Varmam": [
+    "weakness",
+    "unconsciousness",
+    "pain in the heel",
+    "difficulty to walk",
+    "calcaneal pain"
+  ],
+  "Kan_Pugaichal_Varmam": [
+    "unconsciousness followed by seizure",
+    "pyrexia with fatigue",
+    "swelling in the dorsum of foot",
+    "burning sensation of eyes",
+    "debility in all limbs",
+    "excruciating pain",
+    "frigidity"
+  ],
+  "Pada_Varmam": [
+    "unconsciousness followed by seizure",
+    "pyrexia with fatigue",
+    "pedal oedema",
+    "non healing ulcer",
+    "swelling in the dorsum of foot",
+    "debility in all limbs",
+    "excruciating pain",
+    "frigidity"
+  ],
+  "Choondigai_Varmam": [
+    "fatigue with tremor",
+    "paraesthesia",
+    "seizure with coldness",
+    "swelling in the dorsum of foot",
+    "fatigue with unconsciousness"
+  ],
+  "Kundothari_Varmam": [
+    "excessive tiredness",
+    "tiredness",
+    "swelling"
+  ],
+  "Viruthi_Kaalam": [
+    "weakness of limbs",
+    "increased warmth",
+    "seizure may occur",
+    "seizure"
+  ],
+  "Ullankaal_Vellai_Varmam": [
+    "difficulty in micturition and defaecation",
+    "pain in lower limbs",
+    "lower limb weakness",
+    "unconsciousness",
+    "fatigue",
+    "weakness of lower limb",
+    "bloating of abdomen",
+    "dyspnoea",
+    "seizure"
+  ]
+}
