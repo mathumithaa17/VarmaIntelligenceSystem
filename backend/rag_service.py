@@ -139,9 +139,20 @@ def rag_query():
 
             
         elif intent in ["SYMPTOM", "VARMA_POINT"] and search_term:
-            # Strict Fetch
-            results = retriever.fetch_data(search_term, intent)
-            print(f"Retrieved {len(results)} records for term '{search_term}'")
+            # Handle List of Terms (Comparisons)
+            results = []
+            if isinstance(search_term, list):
+                print(f"Comparison Query: Fetching data for {len(search_term)} terms: {search_term}")
+                for term in search_term:
+                    # Fetch and verify each term
+                    term_results = retriever.fetch_data(str(term), intent)
+                    if term_results:
+                        results.extend(term_results)
+            else:
+                # Single Term
+                results = retriever.fetch_data(str(search_term), intent)
+
+            print(f"Retrieved {len(results)} total records")
             
             if not results:
                 # STRICT MODE: Do not generate if no data found.
