@@ -835,7 +835,7 @@
         },
         {
             "varmaName": "Mun_Saruthi_Varmam",
-            "signs": "Pain, delirium, fever, swelling present in all over the body",
+            "signs": "delirium, fever, swelling present in all over the body",
             "pathognomicSign": "Anasarca",
             "indications": "Relieves ribcage pain, Gastritis",
             "tamilLiterature": "“அத்திச்சருக்கிதான் இதன்பக்கச் சார்வில்தானே சார்வில் விரல்நாவது பின்சருவுற்றமம்.” “கொள்ளவே சிறிய அத்திச்சருக்கியின் பக்கசரிவில் மெள்ளவே விரல்நாங்கள் மொழிந்தமுன் சருவிற்றமம்”",
@@ -1362,7 +1362,7 @@
         },
         {
             "varmaName": "Vayu_Varmam",
-            "signs": "Pain, inability to walk, unconsciousness",
+            "signs": "inability to walk, unconsciousness",
             "pathognomicSign": "Difficulty in walking",
             "indications": "All vata diseases",
             "tamilLiterature": "“தீர்வே வாயுக்காலம் தலைத்தைக் கேளு தெள்ளிய முதுகண்டு மத்தியாகும்.” “செய்யவென்றால் எட்டெல்லின் முனையில்தானே செய்யலான வாயுவின்காலம் சொன்னேன்.”",
@@ -1430,7 +1430,7 @@
         },
         {
             "varmaName": "Moothira_Kalam",
-            "signs": "Pain, dribbling of urine, abnormal condition of bladder",
+            "signs": "dribbling of urine, abnormal condition of bladder",
             "pathognomicSign": "Dribbling of urine",
             "indications": "Genitourinary conditions",
             "tamilLiterature": "“தகைநாபி நால்விறவின்கீழ் மூத்திரக்காலம்” “உதரவே கொப்புளின் நால்விறவின்கீழ் உத்தமனே மூத்திரத்தின் காலமாறு உண்டான உந்துவிறவின்கீழ் நால்விறவில் உறுதியாய் நெருவிறியில் மூத்திரக்காலம்”",

@@ -796,7 +796,7 @@
   {
     "varma_point_id": "VP050",
     "varma_point_name": "Mun_Saruthi_Varmam",
-    "symptom_text_raw": "Pain, delirium, fever, swelling present in all over the body, Anasarca",
+    "symptom_text_raw": "delirium, fever, swelling present in all over the body, Anasarca",
     "symptom_tokens": [
       "pain",
       "delirium",
@@ -1188,7 +1188,7 @@
   {
     "varma_point_id": "VP081",
     "varma_point_name": "Vayu_Varmam",
-    "symptom_text_raw": "Pain, inability to walk, unconsciousness, Difficulty in walking",
+    "symptom_text_raw": "inability to walk, unconsciousness, Difficulty in walking",
     "symptom_tokens": [
       "pain",
       "inability to walk",
@@ -1230,7 +1230,7 @@
   {
     "varma_point_id": "VP085",
     "varma_point_name": "Moothira_Kalam",
-    "symptom_text_raw": "Pain, dribbling of urine, abnormal condition of bladder, Dribbling of urine",
+    "symptom_text_raw": "dribbling of urine, abnormal condition of bladder, Dribbling of urine",
     "symptom_tokens": [
       "pain",
       "dribbling of urine",
