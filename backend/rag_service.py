@@ -17,18 +17,16 @@ if str(RAG_ROOT) not in sys.path:
     sys.path.insert(0, str(RAG_ROOT))
 
 # Now we can import from the preferred RAG implementation
-from src.retriever import VarmaRetriever
+from src.retriever import RuleBasedRetriever
 from src.llm.prompt import build_prompt
 from src.llm.generator import generate
+from src.llm.router_prompt import ROUTER_PROMPT_TEMPLATE
 
-# Check for FAISS (common missing dependency on new envs)
+# Check for FAISS (Optional, largely unused now but kept for legacy compat if needed)
 try:
     import faiss
 except ImportError:
-    print("\n" + "!"*80)
-    print("[CRITICAL ERROR] 'faiss' module not found.")
-    print("Please run: pip install faiss-cpu")
-    print("!"*80 + "\n")
+    pass 
 
 
 app = Flask(__name__)
@@ -42,23 +40,12 @@ print("INITIALIZING RAG SERVICE (PORT 5004)")
 print("="*80)
 
 retriever = None
+# Initialize Retriever (Loads JSONs into memory)
+print("Initializing Rule-Based Retriever...")
 try:
-    # VarmaRetriever defaults to loading 'varma_index.pkl'.
-    # We must provide the full path since we are running from backend/
-    index_path = RAG_ROOT / "varma_index.pkl"
-    print(f"Loading retriever index from: {index_path}")
-    
-    if not index_path.exists():
-        print(f"✗ Error: Index file not found at {index_path}")
-    else:
-        retriever = VarmaRetriever(index_path=str(index_path))
-        print("\n✓ RAG Retriever initialized successfully!")
-
+    retriever = RuleBasedRetriever()
 except Exception as e:
-    print(f"\n✗ Failed to initialize retriever: {e}")
-
-
-# ==============================================================================
+    print(f"Failed to initialize retriever: {e}")
 # API ROUTES
 # ==============================================================================
 @app.route('/api/health', methods=['GET'])
@@ -71,70 +58,143 @@ def health_check():
 
 @app.route('/api/rag/query', methods=['POST'])
 def rag_query():
-    """RAG question answering endpoint"""
+    data = request.json
+    question = data.get("query") or data.get("question", "")
+    history = data.get("history", [])
+    
+    # 1. Construct chat history string
+    history_text = ""
+    for h in history[-5:]: # Increased history context
+        role = h.get("role", "user")
+        content = h.get("content", "")
+        history_text += f"{role.upper()}: {content}\n"
+
+    print(f"\n--- Processing Query: '{question}' ---")
+    print(f"Request Payload: {data}")
+    sys.stdout.flush()
+
+
     try:
-        if retriever is None:
-            return jsonify({"error": "Retriever not initialized"}), 500
+        # ------------------------------------------------------------------
+        # STEP 1: ROUTER & EXTRACTION (LLM DECISION)
+        # ------------------------------------------------------------------
+        router_prompt = ROUTER_PROMPT_TEMPLATE.format(
+            history=history_text, 
+            query=question
+        )
+        
+        print("Invoking Router Step...")
+        sys.stdout.flush()
 
-        data = request.get_json()
-        
-        if not data or 'question' not in data:
-            return jsonify({"error": "No question provided"}), 400
-        
-        question = data['question'].strip()
-        
-        if not question:
-            return jsonify({"error": "Empty question"}), 400
-        
-        # 1-B. Process History
-        history = data.get('history', [])
-        # Provide last 5 turns to keep context window manageable
-        history_text = ""
-        if history:
-            relevant_history = history[-6:] # Last 3 exchanges
-            history_text = "\n".join([f"{msg['role'].upper()}: {msg['content']}" for msg in relevant_history])
+        router_response_raw = generate(router_prompt)
 
-        print(f"\nRAG Question: {question}")
+
+
+
         
-        # 1. Retrieve relevant documents (returns list of dicts with 'text' key)
-        docs = retriever.retrieve(question, top_k=20) # Increased to 20 per user request
+        # Parse JSON output from LLM
+        import json
+        router_result = {}
+        try:
+            # Robust JSON extraction: Find first '{' and last '}'
+            start_idx = router_response_raw.find('{')
+            end_idx = router_response_raw.rfind('}')
+            
+            if start_idx != -1 and end_idx != -1 and start_idx < end_idx:
+                json_str = router_response_raw[start_idx : end_idx + 1]
+                router_result = json.loads(json_str)
+            else:
+                raise ValueError("No JSON object found in response")
+
+        except Exception as e:
+            print(f"Router parsing failed: {e}. Raw: {router_response_raw}")
+            # Fallback: Assume symptom if simple failure, or just fail safe
+            router_result = {"intent": "SYMPTOM", "search_term": question}
+
+        intent = router_result.get("intent") or "SYMPTOM" # Default to SYMPTOM if None or missing
+        search_term = router_result.get("search_term")
         
-        # 2. Build Context
-        context = "\n\n--- DOCUMENT SEPARATOR ---\n\n".join([d.get("text", "") for d in docs])
+        print(f"Router Decision: Intent={intent}, Term='{search_term}'")
+        sys.stdout.flush()
+
+
+
         
-        # 3. Build Prompt
+        # ------------------------------------------------------------------
+        # STEP 2: RETRIEVAL (STRICT)
+        # ------------------------------------------------------------------
+        context = ""
+        sources = []
+        
+        if intent == "OUT_OF_CONTEXT":
+            # Early rejection
+            return jsonify({
+                "answer": "I am designed to answer questions only about Varma points and their related symptoms based on the traditional medical data. Please ask about a specific Varma point or symptom.",
+                "sources": [],
+                "confidence": 1.0, # High confidence that we shouldn't answer
+                "debug_intent": intent,
+                "debug_term": search_term,
+                "debug_query_received": question
+            }), 200
+
+            
+        elif intent in ["SYMPTOM", "VARMA_POINT"] and search_term:
+            # Strict Fetch
+            results = retriever.fetch_data(search_term, intent)
+            print(f"Retrieved {len(results)} records for term '{search_term}'")
+            
+            if not results:
+                # STRICT MODE: Do not generate if no data found.
+                return jsonify({
+                    "answer": f"I apologize, but I could not find any specific Varma points relating to '{search_term}' in the traditional database.",
+                    "sources": [],
+                    "confidence": 0.0,
+                    "debug_intent": intent,
+                    "debug_term": search_term,
+                    "debug_query_received": question
+                }), 200
+            else:
+                context_parts = []
+                for item in results:
+                    json_str = json.dumps(item, indent=2, ensure_ascii=False)
+                    header = f"VARMA POINT: {item.get('varmaName', 'Unknown')}"
+                    context_parts.append(f"[{header}]\n{json_str}")
+                    sources.append(item.get('varmaName', 'Unknown'))
+                context = "\n\n".join(context_parts)
+
+        else:
+            context = "System: Could not determine clear search intent."
+
+        # ------------------------------------------------------------------
+        # STEP 3: GENERATION (LLM SYNTHESIS)
+        # ------------------------------------------------------------------
+        # Update prompt to include the specific intent and strict context
         prompt = build_prompt(question, context, history_text)
         
         print("Generating answer with LLM...")
-        
-        # 4. Generate Answer
-        # Note: generate() in this version might handle 'model' internally or default
         response_text = generate(prompt)
-        
         print("LLM Response received.")
 
-        # 5. Format response
-        # The frontend expects a JSON with 'answer', 'sources', 'confidence'
-        # Since the simpler retriever doesn't return structured source metadata or confidence scores
-        # in the same way, we provide simplified values.
-        
         response = {
             "answer": response_text,
-            "sources": ["Varma Text Index"], # Simplified source
-            "confidence": 1.0 # Placeholder confidence
+            "sources": list(set(sources)),
+            "confidence": 1.0 if sources else 0.5,
+            "debug_intent": intent,
+            "debug_term": search_term
         }
         
         return jsonify(response), 200
         
     except Exception as e:
-        print(f"✗ RAG Query Error: {str(e)}")
+        print(f"✗ Error: {str(e)}")
+        import traceback
+        traceback.print_exc()
         return jsonify({"error": str(e)}), 500
 
 if __name__ == '__main__':
     print("\n" + "="*80)
-    print("STARTING VARMA RAG SERVICE")
+    print("STARTING VARMA RULE-BASED SERVICE")
     print("="*80)
-    print(f"Service running at: http://localhost:5004")
-    print("="*80 + "\n")
-    
-    app.run(debug=True, port=5004, host='0.0.0.0')
+    # Disable debug/reloader to ensure logs are captured in redirection
+    app.run(debug=False, port=5004, host='0.0.0.0')
+

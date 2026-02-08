@@ -1,0 +1,51 @@
+
+--- TEST: In-Domain / Specific Varma ---
+Query: What are the indications for Thilardha Varmam?
+Context Snippet: Varma Name: Thilardha_Varmam
+Signs: Open-mouthed, singultus, ophthalmalgia, otalgia, seizure followed by broncho spasm, mydriasis, ejaculation of semen.
+Pathognomic Sign: Mouth remains opened and look...
+Response:
+According to the provided context, the indications for Thilardha Varmam are:
+
+* Stimulate Suzhumunai naadi
+* Improves attention span in ASD, ADHD, Psycho-somatic disorders
+
+These indications can be found directly in the INFORMATION section under "Indications".
+
+--- TEST: Tamil Literature Extraction ---
+Query: What is the tamil literature for Thilardha Varmam?
+Context Snippet: Varma Name: Thilardha_Varmam
+Signs: Open-mouthed, singultus, ophthalmalgia, otalgia, seizure followed by broncho spasm, mydriasis, ejaculation of semen.
+Pathognomic Sign: Mouth remains opened and look...
+Response:
+The Tamil Literature for Thilardha Varmam is:
+
+“நேர்ப்பா நெற்றண்டு புருவம்தன்னில் நேராக நெல்விடைக்கு தாழ்வாக பாரப்பா நிலத்தகாலம் அதற்குப்பேறு.” “உடனேஅந்த கண்ணாடி காலத்திற்கும் ஒருவிரல்மேல் நிலத்தவாமம் கண்டுகொள்”
+
+--- TEST: Out-of-Domain ---
+Query: Who won the cricket world cup in 2011?
+Context Snippet: Symptom: viyanan will be affected during injury
+Related Varma Points: Anna_Kaalam
+
+Symptom: loss of hearing
+Related Varma Points: Chenni_Varmam, Aasan_Kalam, Kutri_Varmam
+
+Symptom: fever
+Related Varma...
+Response:
+Outside context
+
+--- TEST: Out-of-Domain (Medical) ---
+Query: How do I treat a common cold with antibiotics?
+Context Snippet: Symptom: cough and cold
+Related Varma Points: Asthikanthari_Varmam
+
+Symptom: cold
+Related Varma Points: Chippi_Varmam
+
+Symptom: chillness with fever
+Related Varma Points: Koachu_Varmam
+
+Symptom: coldn...
+Response:
+Outside context.
