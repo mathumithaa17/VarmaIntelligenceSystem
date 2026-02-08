@@ -20,9 +20,8 @@ class RuleBasedRetriever:
         # Path to varma_data.json (backend/src/rag/data/varma_data.json)
         self.varma_data_path = self.base_path.parent / "data" / "varma_data.json"
         
-        # Path to symptom_to_varma.json (backend/data/processed/intermediate_outputs/02_symptom_to_varma.json)
-        # Using parents[2] to go to 'backend' based on verification
-        self.symptom_map_path = self.base_path.parents[2] / "data" / "processed" / "intermediate_outputs" / "02_symptom_to_varma.json"
+        # Path to symptom_to_varma.json (backend/src/rag/data/02_symptom_to_varma.json)
+        self.symptom_map_path = self.base_path.parent / "data" / "02_symptom_to_varma.json"
 
         print(f"Loading Varma Data from: {self.varma_data_path}")
         print(f"Loading Symptom Map from: {self.symptom_map_path}")
@@ -51,6 +50,7 @@ class RuleBasedRetriever:
             if self.symptom_map_path.exists():
                 with open(self.symptom_map_path, 'r', encoding='utf-8') as f:
                     self.symptom_map = json.load(f)
+                    print(f"Successfully loaded {len(self.symptom_map)} symptoms from map.")
             else:
                 print(f"Error: 02_symptom_to_varma.json not found at {self.symptom_map_path}")
 
@@ -58,9 +58,26 @@ class RuleBasedRetriever:
             print(f"Error loading rule-based data: {e}")
 
     def normalize(self, text: str) -> str:
-        """Normalizes text for case-insensitive comparison."""
+        """Normalizes text for case-insensitive comparison and medical roots."""
         if not text: return ""
-        return text.lower().strip().replace("_", " ")
+        text = text.lower().strip().replace("_", " ")
+        
+        # Medical suffix normalization (Common Siddha/Medical terms)
+        replacements = {
+            r"\babdominal\b": "abdomen",
+            r"\bcervical\b": "neck",
+            r"\bgastric\b": "stomach",
+            r"\bocular\b": "eye",
+            r"\bauricular\b": "ear",
+            r"\bdermal\b": "skin",
+            r"\butsi\b": "utchi",
+            r"\buchi\b": "utchi",
+            r"\bvarma\b": "varmam" # Using regex \b for word boundaries
+        }
+        for pattern, replacement in replacements.items():
+            text = re.sub(pattern, replacement, text)
+        
+        return text
 
     def fetch_data(self, term: str, intent: str) -> List[Dict[str, Any]]:
         """
@@ -71,33 +88,87 @@ class RuleBasedRetriever:
         results = []
 
         if intent == "SYMPTOM":
-            # 1. Try exact match in symptom map
-            # We iterate because keys in map might differ in casing/spacing from normalized term
-            # But self.symptom_map keys are raw.
-            
-            # Create a normalized map for lookup if not already efficient, 
-            # but given size, iterating is okay or we can cache.
-            # Let's use the logic we had: check if normalized_term matches any normalized key
-            
             target_varma_names = set()
+            print(f"Retriever: Searching for symptom '{normalized_term}'")
             
-            # Quick lookup if keys were normalized. They aren't in self.symptom_map.
-            # So we scan.
+            # Extract significant words from search term
+            search_words = {w for w in normalized_term.split() if len(w) > 2 and w not in ["pain", "of", "and", "the", "in", "to", "for"]}
+            
+            # Step 1: Matching
             for raw_sym, varma_list in self.symptom_map.items():
-                if self.normalize(raw_sym) == normalized_term:
+                norm_key = self.normalize(raw_sym)
+                key_words = set(norm_key.split())
+                
+                match_found = False
+                
+                # Check A: Exact match
+                if norm_key == normalized_term:
+                    match_found = True
+                # Check B: Direct substring
+                elif normalized_term in norm_key or norm_key in normalized_term:
+                    match_found = True
+                # Check C: Word intersection (Significant words)
+                elif search_words and (search_words & key_words):
+                    match_found = True
+                # Check D: Prefix match (Significant words, len >= 5)
+                else:
+                    for sw in search_words:
+                        if len(sw) < 5: continue
+                        for kw in key_words:
+                            if len(kw) < 5: continue
+                            if sw[:5] == kw[:5]:
+                                match_found = True
+                                break
+                        if match_found: break
+
+                if match_found:
+                    # print(f"  Matched key: '{norm_key}'")
                     for v in varma_list:
                         target_varma_names.add(self.normalize(v))
-            
-            # Fetch details
+
+            # Step 2: Fetching
             for point in self.varma_db:
                 if self.normalize(point.get("varmaName", "")) in target_varma_names:
                     results.append(point)
+            
+            print(f"Retriever: Found {len(results)} records for term '{term}' (intent {intent})")
+
+            # Diagnostic Dump on Failure
+            if not results:
+                debug_path = self.base_path / "debug_retrieval_fail.txt"
+                try:
+                    with open(debug_path, "w", encoding="utf-8") as f:
+                        f.write(f"FAILED SEARCH: '{term}' (Normalized: '{normalized_term}')\n")
+                        f.write(f"Significant Search Words: {search_words}\n")
+                        f.write(f"Sample Symptom Map Keys (First 50):\n")
+                        for k in list(self.symptom_map.keys())[:50]:
+                            f.write(f" - {k} (Normalized: {self.normalize(k)})\n")
+                    print(f"Looked into {len(self.symptom_map)} keys. Debug info written to {debug_path}")
+                except:
+                    pass
 
         elif intent == "VARMA_POINT":
-            # Search for exact Varma name match
+            # Search for Varma name match (Fuzzy)
+            print(f"Retriever: Searching for Varma point '{normalized_term}'")
             for point in self.varma_db:
-                if self.normalize(point.get("varmaName", "")) == normalized_term:
+                point_name = point.get("varmaName", "")
+                norm_name = self.normalize(point_name)
+                
+                match_found = False
+                # Check A: Exact match
+                if norm_name == normalized_term:
+                    match_found = True
+                # Check B: Substring
+                elif normalized_term in norm_name or norm_name in normalized_term:
+                    match_found = True
+                # Check C: Collapsed match (no spaces)
+                elif normalized_term.replace(" ", "") == norm_name.replace(" ", ""):
+                    match_found = True
+                
+                if match_found:
                     results.append(point)
+            
+            print(f"Retriever: Found {len(results)} records for point '{term}'")
         
         return results
 

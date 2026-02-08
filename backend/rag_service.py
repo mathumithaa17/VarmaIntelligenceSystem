@@ -2,6 +2,7 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 import sys
 import os
+import re
 from pathlib import Path
 
 # ==============================================================================
@@ -96,24 +97,61 @@ def rag_query():
         import json
         router_result = {}
         try:
-            # Robust JSON extraction: Find first '{' and last '}'
+            # Depth-based JSON finder (robust against conversational noise)
             start_idx = router_response_raw.find('{')
-            end_idx = router_response_raw.rfind('}')
+            if start_idx != -1:
+                depth = 0
+                for i in range(start_idx, len(router_response_raw)):
+                    if router_response_raw[i] == '{': depth += 1
+                    elif router_response_raw[i] == '}': depth -= 1
+                    if depth == 0:
+                        json_str = router_response_raw[start_idx : i + 1]
+                        router_result = json.loads(json_str)
+                        break
             
-            if start_idx != -1 and end_idx != -1 and start_idx < end_idx:
-                json_str = router_response_raw[start_idx : end_idx + 1]
-                router_result = json.loads(json_str)
-            else:
-                raise ValueError("No JSON object found in response")
+            if not router_result or "intent" not in router_result:
+                raise ValueError("No valid JSON intent found")
 
         except Exception as e:
-            print(f"Router parsing failed: {e}. Raw: {router_response_raw}")
-            # Fallback: Assume symptom if simple failure, or just fail safe
-            router_result = {"intent": "SYMPTOM", "search_term": question}
+            print(f"Router parsing failed: {e}")
+            # Identify intent from keywords as last resort
+            lower_q = question.lower()
+            if any(k in lower_q for k in ["vs", "difference", "compare", "distinguish"]):
+                intent = "VARMA_POINT"
+                # Fallback extraction: Look for capitalized names or quoted strings
+                extracted = re.findall(r"['\"](.*?)['\"]", question)
+                if not extracted:
+                    # Simple heuristic: capitalized words (excluding first word of sentence)
+                    words = question.split()
+                    extracted = [w.strip("?,.!") for i, w in enumerate(words) if i > 0 and w[0].isupper()]
+                search_term = extracted
+            else:
+                intent = "SYMPTOM"
+                search_term = question.split()[-1].strip("?,.!") # Guess last word
+            router_result = {"intent": intent, "search_term": search_term}
 
-        intent = router_result.get("intent") or "SYMPTOM" # Default to SYMPTOM if None or missing
+        intent = router_result.get("intent") or "SYMPTOM"
         search_term = router_result.get("search_term")
-        
+
+        # --- REFINEMENT: Aggressively handle malformed lists or messy strings ---
+        if isinstance(search_term, (str, list)):
+            str_term = str(search_term)
+            # Find everything inside quotes
+            extracted = re.findall(r"['\"](.*?)['\"]", str_term)
+            if not extracted:
+                # If no quotes and it looks list-like, split by comma
+                if '[' in str_term or ',' in str_term:
+                    extracted = [s.strip("[]'\" ") for s in re.split(r'[,;]', str_term) if s.strip()]
+            
+            if extracted:
+                # Filter out garbage
+                search_term = [s for s in extracted if len(s) > 2]
+            elif isinstance(search_term, str):
+                # Just a single string
+                search_term = [search_term]
+            elif not search_term:
+                search_term = []
+
         print(f"Router Decision: Intent={intent}, Term='{search_term}'")
         sys.stdout.flush()
 
@@ -125,7 +163,8 @@ def rag_query():
         # ------------------------------------------------------------------
         context = ""
         sources = []
-        
+        results = [] # Initialize results here to ensure it's always defined
+
         if intent == "OUT_OF_CONTEXT":
             # Early rejection
             return jsonify({
@@ -155,9 +194,15 @@ def rag_query():
             print(f"Retrieved {len(results)} total records")
             
             if not results:
+                # Format search_term for display
+                if isinstance(search_term, list):
+                    display_term = " and ".join([f"'{t}'" for t in search_term])
+                else:
+                    display_term = f"'{search_term}'"
+                
                 # STRICT MODE: Do not generate if no data found.
                 return jsonify({
-                    "answer": f"I apologize, but I could not find any specific Varma points relating to '{search_term}' in the traditional database.",
+                    "answer": f"I apologize, but I could not find any specific Varma points relating to {display_term} in the traditional database.",
                     "sources": [],
                     "confidence": 0.0,
                     "debug_intent": intent,
